@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sensling</title>
+  <style>
+    *{
+        /*background-color: black;*/
+        background-image: url('001.jpg');
+        background-size: cover;
+        color: black;
+        font-size: 200px;
+        text-align: center;
+     }
+     /*sa : Scroll Animaiton*/
+    .sa{
+
+        color: white;
+        opacity: 0;
+        transition: all 1s ease; /*트렌지션이 나타나는 시간 조절 가능 */
+        border: none; 
+        background: transparent;
+    }
+
+    .sa.show {
+        opacity: 1;
+        transform: none;
+    }
+  </style>
+</head>
+<body onload = "showImage()">
+  <header>
+    <h1>아래로<br/>스크롤해 보면</h1>
+  </header>
+  <main> 
+    <div class="sa">당신의</div>
+    <br/>
+    <div class="sa">오늘은</div>
+    <br/>
+    <div class="sa">어땠나요?</div>
+    <br/>
+    <div class="sa">슬픔</div>
+    <div class="sa">걱정</div>
+    <div class="sa">고민</div>
+    <br/>
+    <div class="sa">모두 저희에게</div>
+
+    <div class="sa">털어놓아보세요</div>
+    <br/>
+    <div class="sa">항상</div>
+    <div class="sa">당신의</div>
+    <div class="sa">편에서</div>
+    <br/>
+    <div class="sa">당신의 힐링을 도울게요</div>
+    <br/>
+    <br/>
+    <div class="sa">SENSE</div>
+    <div class="sa">+</div>
+    <div class="sa">HEALING</div>
+    <br/>
+    <div class="sa">오감으로 힐링하는 시간</div>
+    <br/>
+    <br/>
+    <div class="sa">지금,</div>
+    <div class="sa">시작합니다</div>
+    <br />
+    <br />
+    <div class="sa" style="font-size: 300px;">Sensling</div>
+    <div class="sa" style="font-size: 50px">오감으로 힐링하기</div>
+    <br/>
+  </main>
+  <script>
+    // Scroll Animation (sa, 스크롤 애니메이션)
+    const saTriggerMargin = 300; //텍스트 등장 타이밍 조절 가능
+    const saElementList = document.querySelectorAll('.sa');
+
+    const saFunc = function() {
+      for (const element of saElementList) {
+        if (!element.classList.contains('show')) {
+          if (window.innerHeight > element.getBoundingClientRect().top + saTriggerMargin) {
+            element.classList.add('show');
+          }
+        }
+      }
+    }
+
+    window.addEventListener('load', saFunc);
+    window.addEventListener('scroll', saFunc);
+  </script>
+</body>
+</html>

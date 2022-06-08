@@ -17,6 +17,8 @@ function showImage(){
   let randImg3 = randName + randNumArray[2]
   let randImg4 = randName + randNumArray[3]
 
+  console.log(randName + randNumArray[0])
+  
   var objImg = document.getElementById("randImg1");
   objImg.src = 'images/'+ randName + '/' + randImg + '.jpg';
 
@@ -28,4 +30,7 @@ function showImage(){
 
   var objImg = document.getElementById("randImg4");
   objImg.src = 'images/'+ randName + '/' + randImg4 + '.jpg';
+
+  var bgm = document.getElementById("bgm");
+  bgm.src = 'sounds/'+ randName + '.mp3';
 }

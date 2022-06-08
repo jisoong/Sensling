@@ -5,15 +5,15 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sensling</title>
+  <link rel="stylesheet" href="style.css">
   <style>
+
     header{
       background-color: black;
     }
-    *{
-        /*background-color: black;*/
+     main {
         background-image: url('001.jpg');
         background-size: cover;
-        color: black;
         font-size: 100px;
         text-align: center;
      }
@@ -37,15 +37,60 @@
     }
     img{
       object-fit: cover;
+      
+    }
+
+    #randImg1 {
+      animation: img-ani 5s /* 속도 */
+                 cubic-bezier(0, -0.03, 1, -0.67) 0s   /* 처음부터 끝까지 일정 속도로 진행 */
+                 infinite alternate; /* 무한 반복 */
+    }
+
+    #randImg2 {
+      animation: img-ani_v2 3s
+                 cubic-bezier(0, 0, 0, 1.43) 0s
+                 infinite alternate;
+    
+    }
+
+    #randImg3 {
+      animation: img-ani 3s /* 속도 */
+                 cubic-bezier(0.88, 2.15, 0, -0.75) 0s   /* 처음부터 끝까지 일정 속도로 진행 */
+                 infinite alternate; /* 무한 반복 */
+    }
+
+    #randImg4 {
+      animation: img-ani_v2 3s
+                 linear 0s
+                 infinite alternate;
+    }
+    
+    @keyframes img-ani {
+      0% {
+        transform: translate(0, 0px);
+      }
+      100% {
+        transform: translate(0px, 70px);
+      }
+    }
+
+    @keyframes img-ani_v2 {
+      0% {
+        transform: translate(0, 0px);
+      }
+      100% {
+        transform: translate(0px, -80px);
+      }
     }
 
   </style>
   <script src="images.js"></script>
+  <script src="link.js"></script>
 </head>
 <body onload = "showImage()">
   <header>
     <div id="bg">
-      <audio src="sounds/bg_bgm.mp3" controls="controls" loop style="margin-right:80%; background: black;"></audio>
+      <audio id = "bgm" src=bgm.src controls="controls" loop style="margin-left:5%; margin-top:3%;background: black;"></audio>
     </div>
 
   </header>
@@ -77,7 +122,9 @@
     <div class="sa">+</div>
     <div class="sa">HEALING</div>
     <br/>
-    <div class="sa">오감으로 힐링하는 시간</div>
+    <div class="sa">하루에 하나의 오감으로</div>
+    <br/>
+    <div class="sa">힐링하는 시간</div>
     <br/>
     <br/>
     <div class="sa" >지금,</div>
@@ -87,10 +134,21 @@
     <div class="sa" style="font-size: 300px;">Sensling</div>
     <div class="sa" style="font-size: 50px;" >오감으로 힐링하기</div>
     <br/>
-    <img id = "randImg1" src= objImg.src_1 width="196" height="442" >
-    <img id = "randImg2" src= objImg.src_2 width="227" height="540" >
-    <img id = "randImg3" src= objImg.src_3 width="186" height="513" >
-    <img id = "randImg4" src= objImg.src_4 width="230" height="410" >
+    <br/>
+    <a href=link.href id="randLink1" style="color: white">
+      <img class = "sa" id = "randImg1" src= objImg.src width="196" height="442"/>
+    <a href=link.href id="randLink2" style="color: white">
+      <img class = "sa" id = "randImg2" src= objImg.src width="227" height="540" />
+
+    <a href=link.href id="randLink3" style="color: white">
+      <img class = "sa" id = "randImg3" src= objImg.src width="186" height="513" />
+
+    <a href=link.href id="randLink4" style="color: white">
+      <img class = "sa" id = "randImg4" src= objImg.src width="230" height="410" />
+
+    <br/>
+    <br/>
+
   </main>
   <script> 
     // Scroll Animation (sa, 스크롤 애니메이션)
@@ -122,6 +180,6 @@
 
 
   </script>
-
+  <script>randomLink();</script>
 </body>
 </html>

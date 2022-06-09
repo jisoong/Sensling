@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sensling</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="text_motion.css">
   <style>
 
     header{
@@ -18,59 +19,42 @@
         text-align: center;
      }
      /*sa : Scroll Animaiton*/
-    .sa{
-
-        color: white;
-        opacity: 0;
-        transition: all 1s ease; /*트렌지션이 나타나는 시간 조절 가능 */
-        border: none; 
-        background: transparent;
-    }
-
-    .sa.show {
-        opacity: 1;
-        transform: none;
-    }
-    .sa.hide {
-        opacity: 0;
-        transform: none;
-    }
     img{
       object-fit: cover;
       
     }
 
     #randImg1 {
-      animation: img-ani 5s /* 속도 */
-                 cubic-bezier(0, -0.03, 1, -0.67) 0s   /* 처음부터 끝까지 일정 속도로 진행 */
+      animation: img-ani 3.5s /* 속도 */
+                 linear 0s
                  infinite alternate; /* 무한 반복 */
     }
 
     #randImg2 {
-      animation: img-ani_v2 3s
-                 cubic-bezier(0, 0, 0, 1.43) 0s
+      animation: img-ani_v2 1.5s 
+                 linear 0s
                  infinite alternate;
     
     }
 
     #randImg3 {
-      animation: img-ani 3s /* 속도 */
-                 cubic-bezier(0.88, 2.15, 0, -0.75) 0s   /* 처음부터 끝까지 일정 속도로 진행 */
+      animation: img-ani_v3 2.5s /* 속도 */
+                 linear 0s
                  infinite alternate; /* 무한 반복 */
     }
 
     #randImg4 {
-      animation: img-ani_v2 3s
+      animation: img-ani_v4 3.5s
                  linear 0s
                  infinite alternate;
     }
     
     @keyframes img-ani {
       0% {
-        transform: translate(0, 0px);
+        transform: translate(0, -10px);
       }
       100% {
-        transform: translate(0px, 70px);
+        transform: translate(0px, 30px);
       }
     }
 
@@ -79,10 +63,28 @@
         transform: translate(0, 0px);
       }
       100% {
-        transform: translate(0px, -80px);
+        transform: translate(0px, -20px);
       }
     }
 
+    @keyframes img-ani_v3 {
+      0% {
+        transform: translate(0, 20px);
+      }
+      100% {
+        transform: translate(0px, 40px);
+      }
+    }
+
+    @keyframes img-ani_v4 {
+      0% {
+        transform: translate(0, -20px);
+      }
+      100% {
+        transform: translate(0px, 0px);
+      }
+    }
+  
   </style>
   <script src="images.js"></script>
   <script src="link.js"></script>

@@ -26,4 +26,9 @@ function randomLink(){
 
   var link = document.getElementById("randLink4")
   link.href = randName4 + '.html'  
+
+  localStorage.setItem("link1", randName1)
+  localStorage.setItem("link2", randName2)
+  localStorage.setItem("link3", randName3)
+  localStorage.setItem("link4", randName4)
 }

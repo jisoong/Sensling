@@ -7,6 +7,8 @@
   <title>Sensling</title>
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="text_motion.css">
+  <link rel="stylesheet" href="bubble.css">
+  
   <style>
 
     header{
@@ -26,26 +28,26 @@
 
     #randImg1 {
       animation: img-ani 3.5s /* 속도 */
-                 linear 0s
+                 cubic-bezier(0.41, 0.15, 1, 1) 0s
                  infinite alternate; /* 무한 반복 */
     }
 
     #randImg2 {
       animation: img-ani_v2 1.5s 
-                 linear 0s
+                 cubic-bezier(0.12, 0.33, 1, 1) 0s
                  infinite alternate;
     
     }
 
     #randImg3 {
       animation: img-ani_v3 2.5s /* 속도 */
-                 linear 0s
+                 cubic-bezier(0.52, -0.08, 1, 1) 0s
                  infinite alternate; /* 무한 반복 */
     }
 
     #randImg4 {
       animation: img-ani_v4 3.5s
-                 linear 0s
+                 cubic-bezier(0.64, 0.1, 1, 1) 0s
                  infinite alternate;
     }
     
@@ -78,25 +80,42 @@
 
     @keyframes img-ani_v4 {
       0% {
-        transform: translate(0, -20px);
+        transform: translate(0, 0px);
       }
       100% {
-        transform: translate(0px, 0px);
+        transform: translate(0px, 20px);
       }
     }
-  
+    .notification-container {
+      background: rgba(0,0,0,.3);
+      border-radius: 10px;
+      padding: 15px 20px;
+      position: absolute;
+      bottom: 50px;
+      display: none;
+    }
+
+    .notification-container.show {
+      display: block;
+    }
   </style>
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script src="images.js"></script>
   <script src="link.js"></script>
+  <script src="showImage.js"></script>
+  <script src="bubble.js"></script>
 </head>
-<body onload = "showImage()">
+<body>
   <header>
     <div id="bg">
       <audio id = "bgm" src=bgm.src controls="controls" loop style="margin-left:5%; margin-top:3%;background: black;"></audio>
-    </div>
-
+    </div>  
+    <img src="images/MAIN_1.png" class="bubble" id="bubble" data-aos="zoom-in" style="width:15%; height:40%; margin-left:5%; margin-top:3%;"> 
   </header>
   <main> 
+    
+    <br/>
     <br/>
     <br/>
     <div class="sa">당신의</div>
@@ -136,52 +155,36 @@
     <div class="sa" style="font-size: 300px;">Sensling</div>
     <div class="sa" style="font-size: 50px;" >오감으로 힐링하기</div>
     <br/>
-    <br/>
-    <a href=link.href id="randLink1" style="color: white">
-      <img class = "sa" id = "randImg1" src= objImg.src width="196" height="442"/>
-    <a href=link.href id="randLink2" style="color: white">
-      <img class = "sa" id = "randImg2" src= objImg.src width="227" height="540" />
 
-    <a href=link.href id="randLink3" style="color: white">
-      <img class = "sa" id = "randImg3" src= objImg.src width="186" height="513" />
-
-    <a href=link.href id="randLink4" style="color: white">
-      <img class = "sa" id = "randImg4" src= objImg.src width="230" height="410" />
+    <img src="images/MAIN_1.png" class="item" data-aos="zoom-in" style="width:25%; height:50%; margin-right: 60%;">
 
     <br/>
-    <br/>
+    <a href=link.href id="randLink1" style="color: transparent">
+      <img class = "sa" id = "randImg1" width="196" height="442"></img>
+    <a href=link.href id="randLink2" style="color: transparent">
+      <img class = "sa" id = "randImg2" width="227" height="540" />
 
+    <a href=link.href id="randLink3" style="color: transparent">
+      <img class = "sa" id = "randImg3" width="186" height="513" />
+
+    <a href=link.href id="randLink4" style="color: transparent">
+      <img class = "sa" id = "randImg4" width="230" height="410" />
+
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    
+ 
   </main>
-  <script> 
-    // Scroll Animation (sa, 스크롤 애니메이션)
-    const saTriggerMargin = 450; //텍스트 등장 타이밍 조절 가능
-    const saElementList = document.querySelectorAll('.sa');
-
-    const saFunc = function() {
-      for (const element of saElementList) {
-        
-        if (!element.classList.contains('show')) {
-          if (window.innerHeight > element.getBoundingClientRect().top + saTriggerMargin) {
-            element.classList.remove('hide');
-            element.classList.add('show');
-          }
-        }
-
-        if (element.classList.contains('show')) {
-          if (window.innerHeight < element.getBoundingClientRect().top + saTriggerMargin) {
-            element.classList.remove('show');
-            element.classList.add('hide');
-          }
-        }
-      }
-
-    }
-
-    window.addEventListener('load', saFunc);
-    window.addEventListener('scroll', saFunc);
-
-
+  <script>  
+    AOS.init({
+      duration: 800
+    });
   </script>
+  <script>showImg(saTriggerMargin=600);</script>
+  <script>showImage();</script>
   <script>randomLink();</script>
+  <script>showBubble(450);</script>
 </body>
 </html>

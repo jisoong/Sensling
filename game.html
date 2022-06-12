@@ -4,9 +4,41 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Sensling-game</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="text_motion.css">
+  <style>
+    img{
+      object-fit: cover; 
+    }
+  </style>
+  <script src="images.js"></script>
+  <script src="showImage.js"></script>
+  <script src="newTab.js"></script>
 </head>
 <body>
-  <div>game</div>
+  <img class = "sa" id="gameImg" width="196" height="442"/>
+
+  <script>
+    if (localStorage.getItem("link1") == "game"){
+      const newImg = document.getElementById("gameImg");
+      newImg.src = 'images/'+ localStorage.getItem("randName") + '/' + localStorage.getItem("Img1") + '.jpg';
+    }
+    else if (localStorage.getItem("link2") == "game"){
+      const newImg = document.getElementById("gameImg");
+      newImg.src = 'images/'+ localStorage.getItem("randName") + '/' + localStorage.getItem("Img2") + '.jpg';
+    }
+    else if (localStorage.getItem("link3") == "game"){
+      const newImg = document.getElementById("gameImg");
+      newImg.src = 'images/'+ localStorage.getItem("randName") + '/' + localStorage.getItem("Img3") + '.jpg';
+    }
+    else if (localStorage.getItem("link4") == "game"){
+      const newImg = document.getElementById("gameImg");
+      newImg.src = 'images/'+ localStorage.getItem("randName") + '/' + localStorage.getItem("Img4") + '.jpg';
+    }
+  </script>
+  <script>newTab();</script>
+  <script>showImg(saTriggerMargin=500);</script>
+  <script>showImage();</script>
 </body>
 </html>

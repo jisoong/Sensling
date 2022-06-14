@@ -6,19 +6,50 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sensling-scent</title>
   <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="text_motion.css">
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
   <style>
     img{
       object-fit: cover; 
     }
+    #text{
+      text-align:left; 
+      margin-left: 3%;
+      margin-bottom: 3%; 
+      font-size: 20px;
+      color:black;
+      float:inline-end;
+      white-space : normal
+    }
+    #scentImg{
+      float: right;
+      width: 50vw; 
+      height: 120vh;
+      opacity: 1;
+      /* position: absolute; */
+    }
   </style>
   <script src="images.js"></script>
-  <script src="showImage.js"></script>
-  <script src="newTab.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="scentImgScroll.js"></script>
 </head>
 <body>
-  <img class = "sa" id="scentImg" width="196" height="442"/>
-
+  <div>
+  <img id="scentImg" data-aos="fade-down-left" data-aos-anchor-placement="top-center">
+  
+  <div id="text" style="font-size: 8vw; opacity: 0;">공백</div>
+  <div id="text" data-aos="fade-down" data-aos-anchor-placement="top-center" data-aos-duration="2000" style="font-size: 2vw">오늘의 힐링:</div>
+  <div id="text" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="2000"> Today's Music and Scent for You </div>
+  <div id="text" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="2000"> 당신을 위한 음악 한 곡을 준비했어요 </div>
+  <div id="text" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="2000"> 당신을 위한 향기도 같이 준비해봤어요 </div>
+  <div id="text" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="2000"> 음악에 빠지고, 향기에 취해 </div>
+  <div id="text" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="2000"> 마음의 짐을 덜어보아요 </div>
+  <div id="text" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="2000"> LISTEN + SMELL + ENJOY </div>
+  <div id="text" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="2000"> 당신을 위해 준비한 한 곡의 음악과 </div>
+  <div id="text" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="2000"> 공간의 향기 </div>
+  <div id="text" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="2000"> 잠시 음악과 향에 취해보세요 </div>
+  </div>
+  <div style="font-size: 1000px; opacity: 0;">공</div>
   <script>
     if (localStorage.getItem("link1") == "scent"){
       const newImg = document.getElementById("scentImg");
@@ -36,9 +67,12 @@
       const newImg = document.getElementById("scentImg");
       newImg.src = 'images/'+ localStorage.getItem("randName") + '/' + localStorage.getItem("Img4") + '.jpg';
     }
+    
   </script>
-  <script>newTab();</script>
-  <script>showImg(saTriggerMargin=500);</script>
-  <script>showImage();</script
+  <script>  
+    AOS.init({
+      duration: 800   
+    });
+  </script>
 </body>
 </html>

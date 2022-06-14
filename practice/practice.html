@@ -1,48 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="practice.css">
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  <!-- <script src="practice.js"></script> -->
-  <title>Document</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="practice.js"></script>
 </head>
 <body>
-  <div id="Header">
-    <table>
-        <tr>
-            <th>H E A D E R</th>
-        </tr>
-    </table>
-  </div>
-  <div id="Body">
+    <img id = "pencil" src="images/pencil/pencil(1).png" style="overflow-y: scroll;"></img>
+    <div style="font-size: 900px;">
+        hi
+    </div>
     
-  </div>
-  <script>
+    <!-- <script>Imgani();</script> -->
 
-    $(document).ready(function(){       
-    
-        var scroll_pos = 0;
-    
-        $(document).scroll(function() { 
-    
-            scroll_pos = $(this).scrollTop();
-    
-            if(scroll_pos > 500) {
-    
-                $("#header").css('background-color', 'blue');
-    
-            } else {
-    
-                $("#header").css('background-color', 'red');
-    
-            }
-    
-        });
-    
-    });
-    </script>
 </body>
 </html>

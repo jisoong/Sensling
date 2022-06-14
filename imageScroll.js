@@ -30,6 +30,7 @@ $(document).ready(function(){
         else {
           $("#diaryImg").fadeIn(800);
         }
+        
 	});
 
 });

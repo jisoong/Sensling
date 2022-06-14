@@ -8,24 +8,29 @@
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="text_motion.css">
   <link rel="stylesheet" href="bubble.css">
-  
+  <link rel="stylesheet" href="bubble2.css">
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
   <style>
-
+    
     header{
       background-color: black;
     }
-     main {
-        background-image: url('001.jpg');
-        background-size: cover;
-        font-size: 100px;
-        text-align: center;
+    main {
+      background-image: url('001.jpg');
+      background-size: cover;
+      font-size: 100px;
+      text-align: center;
      }
-     /*sa : Scroll Animaiton*/
+     /*sa : Scroll Animaiton*/ 
     img{
       object-fit: cover;
       
     }
-
+    #text {
+      color: white;
+      border: none; 
+      background: transparent;
+    }
     #randImg1 {
       animation: img-ani 3.5s /* 속도 */
                  cubic-bezier(0.41, 0.15, 1, 1) 0s
@@ -86,77 +91,66 @@
         transform: translate(0px, 20px);
       }
     }
-    .notification-container {
-      background: rgba(0,0,0,.3);
-      border-radius: 10px;
-      padding: 15px 20px;
-      position: absolute;
-      bottom: 50px;
-      display: none;
-    }
 
-    .notification-container.show {
-      display: block;
-    }
   </style>
-  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script src="images.js"></script>
   <script src="link.js"></script>
   <script src="showImage.js"></script>
   <script src="bubble.js"></script>
+  <script src="bubble2.js"></script>
 </head>
 <body>
   <header>
     <div id="bg">
       <audio id = "bgm" src=bgm.src controls="controls" loop style="margin-left:5%; margin-top:3%;background: black;"></audio>
     </div>  
-    <img src="images/MAIN_1.png" class="bubble" id="bubble" data-aos="zoom-in" style="width:15%; height:40%; margin-left:5%; margin-top:3%;"> 
+    <img src="images/MAIN_1.png" class="bubble" id="bubble" data-aos="zoom-in" style="width:15%; height:40%; margin-left:5%; margin-top:3%; opacity: 1;"> 
+  
   </header>
   <main> 
     
     <br/>
     <br/>
     <br/>
-    <div class="sa">당신의</div>
+    <div id="text" data-aos="fade-up" data-aos-anchor-placement="center-bottom" data-aos-duration="2000">당신의</div>
     <br/>
-    <div class="sa">오늘은</div>
+    <div id="text" data-aos="fade-up" data-aos-anchor-placement="center-bottom" data-aos-duration="2000">오늘은</div>
     <br/>
-    <div class="sa">어땠나요?</div>
+    <div id="text" data-aos="fade-up" data-aos-anchor-placement="center-bottom" data-aos-duration="2000">어땠나요?</div>
     <br/>
-    <div class="sa">슬픔</div>
-    <div class="sa">걱정</div>
-    <div class="sa">고민</div>
+    <div id="text" data-aos="fade-up" data-aos-anchor-placement="center-bottom" data-aos-duration="2000">슬픔</div>
+    <div id="text" data-aos="fade-up" data-aos-anchor-placement="center-bottom" data-aos-duration="2000">걱정</div>
+    <div id="text" data-aos="fade-up" data-aos-anchor-placement="center-bottom" data-aos-duration="2000">고민</div>
     <br/>
-    <div class="sa">모두 저희에게</div>
+    <div id="text" data-aos="fade-up" data-aos-anchor-placement="center-bottom" data-aos-duration="2000">모두 저희에게</div>
 
-    <div class="sa">털어놓아보세요</div>
+    <div id="text" data-aos="fade-up" data-aos-anchor-placement="center-bottom" data-aos-duration="2000">털어놓아보세요</div>
     <br/>
-    <div class="sa">항상</div>
-    <div class="sa">당신의</div>
-    <div class="sa">편에서</div>
+    <div id="text" data-aos="fade-up" data-aos-anchor-placement="center-bottom" data-aos-duration="2000">항상</div>
+    <div id="text" data-aos="fade-up" data-aos-anchor-placement="center-bottom" data-aos-duration="2000">당신의</div>
+    <div id="text" data-aos="fade-up" data-aos-anchor-placement="center-bottom" data-aos-duration="2000">편에서</div>
     <br/>
-    <div class="sa">당신의 힐링을 도울게요</div>
-    <br/>
-    <br/>
-    <div class="sa">SENSE</div>
-    <div class="sa">+</div>
-    <div class="sa">HEALING</div>
-    <br/>
-    <div class="sa">하루에 하나의 오감으로</div>
-    <br/>
-    <div class="sa">힐링하는 시간</div>
+    <div id="text" data-aos="fade-up" data-aos-anchor-placement="center-bottom" data-aos-duration="2000">당신의 힐링을 도울게요</div>
     <br/>
     <br/>
-    <div class="sa" >지금,</div>
-    <div class="sa">시작합니다</div>
+    <div id="text" data-aos="fade-up" data-aos-anchor-placement="center-bottom" data-aos-duration="2000">SENSE</div>
+    <div id="text" data-aos="fade-up" data-aos-anchor-placement="center-bottom" data-aos-duration="2000">+</div>
+    <div id="text" data-aos="fade-up" data-aos-anchor-placement="center-bottom" data-aos-duration="2000">HEALING</div>
+    <br/>
+    <div id="text" data-aos="fade-up" data-aos-anchor-placement="center-bottom" data-aos-duration="2000">하루에 하나의 오감으로</div>
+    <br/>
+    <div id="text" data-aos="fade-up" data-aos-anchor-placement="center-bottom" data-aos-duration="2000">힐링하는 시간</div>
+    <br/>
+    <br/>
+    <div id="text" data-aos="fade-up" data-aos-anchor-placement="center-bottom" data-aos-duration="2000">지금,</div>
+    <div id="text" data-aos="fade-up" data-aos-anchor-placement="center-bottom" data-aos-duration="2000">시작합니다</div>
     <br />
     <br />
-    <div class="sa" style="font-size: 300px;">Sensling</div>
-    <div class="sa" style="font-size: 50px;" >오감으로 힐링하기</div>
+    <div  data-aos="zoom-in" style="font-size: 300px;">Sensling</div>
+    <div  data-aos="zoom-in" style="font-size: 50px;" >오감으로 힐링하기</div>
     <br/>
-
-    <img src="images/MAIN_1.png" class="item" data-aos="zoom-in" style="width:25%; height:50%; margin-right: 60%;">
+    <img src="images/MAIN_2.png" class="bubble2" id="bubble2" data-aos="zoom-in" style="width:25%; height:50%; margin-right: 60%; opacity: 1;">
 
     <br/>
     <a href=link.href id="randLink1" style="color: transparent">
@@ -179,12 +173,13 @@
   </main>
   <script>  
     AOS.init({
-      duration: 800
+      duration: 800   
     });
   </script>
   <script>showImg(saTriggerMargin=600);</script>
   <script>showImage();</script>
   <script>randomLink();</script>
-  <script>showBubble(450);</script>
+  <script>showBubble();</script>
+  <script>showBubble2();</script>
 </body>
 </html>

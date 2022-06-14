@@ -1,0 +1,13 @@
+
+.bubble2{
+  opacity: 1;
+}
+
+.bubble2.show {
+  opacity: 1;
+  transform: none;
+}
+.bubble2.hide {
+  opacity: 0;
+  transform: none;
+}

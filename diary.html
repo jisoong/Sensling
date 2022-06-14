@@ -21,10 +21,12 @@
       margin-bottom: 3%; 
       font-size: 20px;
       color:black;
+      float:inline-end;
+      white-space : normal
     }
-    /* #scroll {
-      opacity: 1;
-    } */
+    #diaryImg{
+      float: left
+    }
   </style>
   <script src="images.js"></script>
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
@@ -32,37 +34,22 @@
   <script src="imageScroll.js"></script>
 </head>
 <body>
-  <div id="scroll" style="float: left"> 
-    <!-- <img id="diaryImg" width="900vw" height="1100vh"/> -->
+  <div> 
     <img id="diaryImg" style="width: 50vw; height: 100vh; opacity: 1; display: flex;">
+    <div id="text" style="font-size: 2vw; opacity: 0;">공백</div>
+    <div id="text" data-aos="fade-down" data-aos-anchor-placement="top-center" data-aos-duration="2000" style="font-size: 2vw">Write down Your Daily Mood</div>
+    <div id="text" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="2000"> <일기를 쓰며 하루를 정리해주세요> </div>
+    <div id="text" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="2000"> <오늘 당신을 위한 힐링> </div>
+    <div id="text" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="2000"> 일기를 써보며 하루를 정리해주세요 </div>
+    <div id="text" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="2000"> 편안하게 고민할 만한 주제를 드릴게요 </div>
+    <div id="text" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="2000"> 어떠한 얘기를 해도 괜찮아요 </div>
+    <div id="text" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="2000"> 저희가 다 들어드릴게요 </div>
+    <div id="text" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="2000"> SEE + TOUCH + WRITE </div>
+    <div id="text" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="2000"> 오늘의 감정, 일상, 날씨 등을 기록하기 </div>
+    <div id="text" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="2000"> 당신의 오늘 이야기를 들려주세요 </div>
+    </div>
   </div>
-
-  <br/>
-  <br/>
-  <br/>
-  <br/>
-  <br/>
-  <br/>
-  <br/>
-  <br/>
-  <br/>
-  <br/>
-  <br/>
-  <br/>
-
-
-  <div id="text" data-aos="fade-down" data-aos-anchor-placement="top-center" data-aos-duration="2000" style="font-size: 2vw">Write down Your Daily Mood</div>
-  <div id="text" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="2000"><일기를 쓰며 하루를 정리해주세요></div>
-  <div id="text" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="2000"><오늘 당신을 위한 힐링></div>
-  <div id="text" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="2000">일기를 써보며 하루를 정리해주세요</div>
-  
-  <div id="text" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="2000">편안하게 고민할 만한 주제를 드릴게요</div>
-  <div id="text" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="2000">어떠한 얘기를 해도 괜찮아요</div>
-  <div id="text" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="2000">저희가 다 들어드릴게요</div>
-  <div id="text" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="2000">SEE + TOUCH + WRITE</div>
-  <div id="text" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="2000">오늘의 감정, 일상, 날씨 등을 기록하기</div>
-  <div id="text" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="2000">당신의 오늘 이야기를 들려주세요</div>
-  <img id="diaryImg" width="900vw" height="1100vh"/>
+  <div style="font-size: 1000px; opacity: 0;">공</div>
   <script>
     if (localStorage.getItem("link1") == "diary"){
       const newImg = document.getElementById("diaryImg");
@@ -84,12 +71,6 @@
   <script>  
     AOS.init({
       duration: 800   
-    });
-  </script>
-  <script>
-    $(window).on("scroll", function(e) {
-      if ($(window).scrollTop() >= $("#Header").height()) $("#Header").fadeOut(500);
-      else $("#scroll").fadeIn(500);
     });
   </script>
 </body>

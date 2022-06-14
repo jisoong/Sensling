@@ -13,24 +13,29 @@ function poem() {
     "겸허하고 겸허한",
     "하루살이"
   ]
-  
+  for (i=2; (i<poem1.length-2); i++){
+    var id_name = document.getElementById(i)
+    id_name.innerText = poem1[i]
+  }
+  $("#poemTitle").text(poem1[0]);
+  $("#writer").text(poem1[1]);
 }
 
-$(window).scroll(function(){
-  $("#poemTitle").text(poem1[0]);
-});
+// $(window).scroll(function(){
+//   $("#poemTitle").text(poem1[0]);
+// });
 
-$(window).scroll(function(){
-  $("#writer").text(poem1[1]);
-});
+// $(window).scroll(function(){
+//   $("#writer").text(poem1[1]);
+// });
 
-$(window).scroll(function(){
-  for (i=2; (i<poem1.length-2); i++){
-    id_name = "content" + i
-    console.log(id_name)
-    content_name = poem1[i]
-    $("#id_name").text(content_name);
-  }
+// $(window).scroll(function(){
+//   for (i=2; (i<poem1.length-2); i++){
+//     id_name = "content" + i
+//     console.log(id_name)
+//     content_name = poem1[i]
+//     $("#id_name").text(content_name);
+//   }
   
-});
+// });
 

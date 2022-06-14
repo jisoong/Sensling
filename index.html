@@ -6,14 +6,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sensling</title>
   <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="text_motion.css">
   <link rel="stylesheet" href="bubble.css">
-  <link rel="stylesheet" href="bubble2.css">
   <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
   <style>
     
     header{
-      background-color: black;
+      position: fixed;
     }
     main {
       background-image: url('001.jpg');
@@ -96,23 +94,22 @@
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script src="images.js"></script>
   <script src="link.js"></script>
-  <script src="showImage.js"></script>
   <script src="bubble.js"></script>
-  <script src="bubble2.js"></script>
+  <script src="m_player.js"></script>
 </head>
 <body>
   <header>
     <div id="bg">
-      <audio id = "bgm" src=bgm.src controls="controls" loop style="margin-left:5%; margin-top:3%;background: black;"></audio>
+      <audio id = "bgm" src=bgm.src controls="controls" loop style="margin-left:5%; margin-top:3%;"></audio>
     </div>  
-    <img src="images/MAIN_1.png" class="bubble" id="bubble" data-aos="zoom-in" style="width:15%; height:40%; margin-left:5%; margin-top:3%; opacity: 1;"> 
-  
+    <img src="images/MAIN_1.png" id="player" data-aos="zoom-in" style="width:20%; height:30%; margin-left:5%; margin-top:3%; opacity: 1;"> 
   </header>
   <main> 
     
     <br/>
     <br/>
     <br/>
+    <!-- 여기서 data-aos-duration을 조정하면 나오는 시간을 조절할 수 있습니다 -->
     <div id="text" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="2000">당신의</div>
     <br/>
     <div id="text" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="2000">오늘은</div>
@@ -147,25 +144,23 @@
     <div id="text" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="2000">시작합니다</div>
     <br />
     <br />
-    <div  data-aos="zoom-in" style="font-size: 300px;">Sensling</div>
-    <div  data-aos="zoom-in" style="font-size: 50px;" >오감으로 힐링하기</div>
+    <div  data-aos="zoom-in" data-aos-anchor-placement="top-center" data-aos-duration="1000" style="font-size: 300px;">Sensling</div>
+    <div  data-aos="zoom-in" data-aos-anchor-placement="top-center" data-aos-duration="1000" style="font-size: 50px;" >오감으로 힐링하기</div>
     <br/>
-    <img src="images/MAIN_2.png" class="bubble2" id="bubble2" data-aos="zoom-in" style="width:25%; height:50%; margin-right: 60%; opacity: 1;">
+    <img src="images/MAIN_2.png" class="bubble" id="bubble" data-aos="zoom-in" style="width:25%; height:50%; margin-right: 60%; opacity: 1;">
 
     <br/>
     <a href=link.href id="randLink1" style="color: transparent">
-      <img class = "sa" id = "randImg1" width="196" height="442"></img>
+      <img id = "randImg1" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="2000" width="196" height="442"></img>
     <a href=link.href id="randLink2" style="color: transparent">
-      <img class = "sa" id = "randImg2" width="227" height="540" />
+      <img id = "randImg2" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="2000" width="227" height="540" />
 
     <a href=link.href id="randLink3" style="color: transparent">
-      <img class = "sa" id = "randImg3" width="186" height="513" />
+      <img id = "randImg3" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="2000" width="186" height="513" />
 
     <a href=link.href id="randLink4" style="color: transparent">
-      <img class = "sa" id = "randImg4" width="230" height="410" />
+      <img id = "randImg4" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="2000" width="230" height="410" />
 
-    <br/>
-    <br/>
     <br/>
     <br/>
     
@@ -176,10 +171,8 @@
       duration: 800   
     });
   </script>
-  <script>showImg(saTriggerMargin=600);</script>
   <script>showImage();</script>
   <script>randomLink();</script>
   <script>showBubble();</script>
-  <script>showBubble2();</script>
 </body>
 </html>

@@ -19,23 +19,51 @@
       text-align:left; 
       margin-left: 3%;
       margin-bottom: 3%; 
-      font-size: 20px;
+      font-size: 1.5vw;
       color:black;
       float:inline-start;
       white-space : normal
     }
-    #teaImg{
-      float: left
+    #pencil{
+      float: right;
+      width: 50vw; 
+      height: 100vh;
+      display: flex;
     }
+    #poemTitle {
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      align-items: center; 
+      clear: right;
+      margin-top: 15%;
+      font-size: 1.5vw;
+   }
+    hr{
+      float: left;
+      height:1000vh;
+      width:.2vw;
+      margin-top: 10vh;
+      margin-left: .8vw;
+      border-width:0;
+      opacity: 0.3;
+      color:#000;
+      background-color:#000;
+    }
+    
   </style>
   <script src="images.js"></script>
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script src="cup.js"></script>
+  <script src="poem.js"></script>
 </head>
 <body>
   <div> 
+    <hr>
+    <img id = "pencil" src="images/pencil/pencil(1).png" ></img>
     <div id="text" style="font-size: 10vw; opacity: 0;">공백</div>
+
     <div id="text" data-aos="fade-down" data-aos-anchor-placement="top-center" data-aos-duration="2000" style="font-size: 2vw">오늘의 힐링:</div>
     <div id="text" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="2000"> Today's Poem and Tea for You </div>
     <div id="text" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="2000"> 당신을 위한 시를 한 편 준비했어요 </div>
@@ -44,12 +72,24 @@
     <div id="text" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="2000"> SEE + TASTE + READ </div>
     <div id="text" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="2000"> 당신을 위해 준비한 한 편의 시와 한 잔의 차 </div>
     <div id="text" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="2000"> 잠시 시와 차의 공간에 빠져보세요 </div>
-    <img id = "pencil" src="images/pencil/pencil(1).png"></img>
   </div>
+  <div id="poemTitle" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="2000"> 시제목 </div>
+  <div id="writer" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="2000"> 시인 </div>
+  <div id="content2" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="2000"> 내용 </div>
+  <div id="content3" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="2000"> 내용 </div>
+  <div id="content4" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="2000"> 내용 </div>
+  <div id="content5" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="2000"> 내용 </div>
+  <div id="content6" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="2000"> 내용 </div>
+  <div id="content7" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="2000"> 내용 </div>
+  <div id="content8" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="2000"> 내용 </div>
+  <div id="content9" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="2000"> 내용 </div>
+  <div id="content10" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="2000"> 내용 </div>
+
   <script>  
     AOS.init({
       duration: 800   
     });
   </script>
+  <script>poem();</script>
 </body>
 </html>

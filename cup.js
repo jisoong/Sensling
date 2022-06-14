@@ -10,13 +10,13 @@ $(document).ready(function(){
 			if (tmp > last_scrollTop && num <83 && scroll_pos < $("#pencil").height()) {
 				num = num + 1
 				pencil.src = 'images/pencil/pencil' + '('+ + num + ')' + '.png';
-        console.log(pencil.src)
+        // console.log(pencil.src)
 			}
 			else if (tmp <= last_scrollTop && num <=83 && num>1) {
         // console.log()
 				num = num - 1
 				pencil.src = 'images/pencil/pencil' + '('+ + num + ')' + '.png';
-				console.log(pencil.src)
+				// console.log(pencil.src)
 			}
 			last_scrollTop = tmp;
 	});

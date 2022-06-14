@@ -1,14 +1,4 @@
-* {
-  box-sizing: border-box;
-}
-
-.item {
-  width: 200px;
-  height: 200px;
-  margin: 50px auto;
-  padding-top: 75px;
-  background: rgba(255,85,0, .7);
-  text-align: center;
-  color: #4E4C48;
-  font-size: 1.5em;
-}
+html, body { height: 100%; margin: 0; padding: 0; width: 100%; }
+#Header { background: #01fa10; height: 100px; left: 0; position: fixed; top: 0; width: 100%; }
+#Header table { height: 100%; width: 100%; }
+#Body { background: #af10fa; height: 200%; margin-top: 100px; }

@@ -7,12 +7,12 @@ $(document).ready(function(){
 	$(window).scroll(function () {
 			var tmp = $(this).scrollTop();
 			scroll_pos = $(this).scrollTop();
-			if (tmp > last_scrollTop && num <270) {
-				num = num + 2
+			if (tmp > last_scrollTop && num <260) {
+				num = num + 3
 				cup.src = 'images/cup/cup' + '_'+ + num + '.png';
         console.log(cup.src)
 			}
-			else if (tmp <= last_scrollTop && num <=270 && num>1) {
+			else if (tmp <= last_scrollTop && num <=269 && num>1) {
         // console.log()
 				num = num - 1
 				cup.src = 'images/cup/cup' + '_'+ + num + '.png';

@@ -2,9 +2,9 @@
 <html lang="en">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- <meta charset="UTF-8"> -->
+  <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge"> -->
+  <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
   <title>Sensling-diary</title>
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
@@ -40,59 +40,64 @@
       border-style: inset;
       border-width: 1px;
     }
-    body{
-        padding:5%;
-        text-align:center
-    }
-    #background
-    .sch_item_box{
-        border:1px solid #dfdfdf;
-        border-radius:3px
-    }
-    .sch_item_box{
-        position:absolute;
-        right:0;
-        width:100px;
-        height:auto;
-        padding:7px
-    }
-    .sch_head{
-        margin-bottom:10px;
-        color:#6a6a6a
-    }
-    .sch_item{
-        cursor:pointer;
-        padding:2%;
-        border:1px solid #9c9c9c;
-        margin-bottom:10px;
-        border-radius:3px
-    }
-    .imClicked{
-        border-width:2px;
-        background-color:#caeeff
-    }
-    #sch_background{
-        position:absolute;
-        left:0;
-        z-index:3
-    }
-    #sch_eventer{
-        position:absolute;
-        left:0;
-        z-index:10
-    }
-    #printer_canvas{
-        position:absolute;
-        left:0;
-        z-index:1
-    }
+
+
   </style>
   <script src="images.js"></script>
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script src="imageScroll.js"></script>
   <script src="date.js"></script>
+
 </head>
+<style>
+  body{
+    padding:5%;
+    text-align:center
+}
+#background
+.sch_item_box{
+    border:1px solid #dfdfdf;
+    border-radius:3px
+}
+.sch_item_box{
+    position:absolute;
+    right:0;
+    width:100px;
+    height:auto;
+    padding:7px
+}
+.sch_head{
+    margin-bottom:10px;
+    color:#6a6a6a
+}
+.sch_item{
+    cursor:pointer;
+    padding:2%;
+    border:1px solid #9c9c9c;
+    margin-bottom:10px;
+    border-radius:3px
+}
+.imClicked{
+    border-width:2px;
+    background-color:#caeeff
+}
+#sch_background{
+    position:absolute;
+    left:0;
+    z-index:3
+}
+#sch_eventer{
+    position:absolute;
+    left:0;
+    z-index:10
+}
+#printer_canvas{
+    position:absolute;
+    left:0;
+    z-index:1
+}
+</style>
 <body>
   <div> 
     <img id="diaryImg" data-aos="fade-down-right" data-aos-anchor-placement="top-center" style="width: 50vw; height: 120vh; opacity: 1; display: flex;">
@@ -112,7 +117,7 @@
   <div id="diary_date"> 날짜 </div>
   <hr align="right">
   <br>
-  <div id="myCanvas" style="width:35%;height:500px;float:left"></div>
+  <div id="myCanvas" style="width:35%;height:50vh;float:left;"></div>
 
 
   <script>
@@ -139,6 +144,8 @@
     });
   </script>
   <script>date();</script>
+  
 </body>
 </html>
 <script src="scheduler.js"></script>
+<script></script>

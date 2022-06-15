@@ -1,6 +1,7 @@
 
 .bubble{
   opacity: 1;
+  display: flex;
 }
 
 .bubble.show {

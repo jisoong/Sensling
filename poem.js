@@ -203,9 +203,8 @@ function poem() {
   randomNum = randName[Math.floor(Math.random() * 9)]
   $("#poemTitle").text(randomNum[0]);
   $("#writer").text(randomNum[1]);
-  for (i=2; (i<poem1.length); i++){
+  for (i=2; (i<randomNum.length); i++){
     var id_name = document.getElementById("content" + i)
-
     if (randomNum[i] == undefined){
       id_name.innerText = " "
     }

@@ -1,0 +1,157 @@
+<style>
+img{
+  object-fit: cover; 
+}
+div {
+  color:black;
+}
+#text{
+  text-align:left; 
+  margin-left: 3%;
+  margin-bottom: 3%; 
+  font-size: 1.5vw;
+  color:black;
+  float:inline-start;
+  white-space : normal;
+}
+#cup{
+  float: right;
+  margin-bottom: 40vw;
+  margin-left: 10vw;
+  width: 60vw; 
+  height: 150vh;
+  /* height: 80vh; */
+  display: flex;
+  object-fit: contain;
+  position: absolute;
+  left: 30vw;
+  z-index: 1;
+}
+#water{
+  float: center;
+  width: 3vw; 
+  margin-left: 10vw;
+  height: 4.5vh;
+  object-fit: contain;
+  animation-name: waterAni;
+  animation-duration: 5s;
+  animation: waterAni 3s;
+  margin-top : 50vh;
+  margin-right : 20vw;
+  position: absolute;
+  top: -5vh;
+  left: 75vw;
+  z-index: 2;
+  opacity: 0;
+}
+#waterDrop{
+  position: relative;
+}
+#poemTitle {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+  clear: right;
+  margin-top: 7%;
+  font-size: 1.5vw;
+}
+#writer {
+  text-align: right;
+  display: flex;
+  font-size: 1vw;
+  justify-content: right;
+  margin-right: 35vw;
+  z-index: 1;
+} 
+#pencil {
+  position: absolute;
+  right: 10vw;
+  width: 40vw; 
+  height: 50vh;
+  top: 20vh;
+}
+.content{
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  clear: right;
+  width: 100%
+}
+
+
+#poem{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+hr{
+  float: left;
+  height:1000vh;
+  width:.2vw;
+  margin-top: 10vh;
+  margin-left: .8vw;
+  border-width:0;
+  opacity: 0.3;
+  color:#000;
+  background-color:#000;
+}
+.content-section {
+  --scroll-length: 5;
+  height: calc( var(--scroll-length) * 100vh );
+
+}
+.figure{
+    --scale: calc(.8 + 
+  (.2 * var(--scroll-length) * var(--visible-y))
+  );
+  position: sticky;
+  top: 0;
+  left: 0;
+  margin: 0;
+  /* display: block;  */
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  will-change: transform;
+  transform: scale(var(--scale));
+}
+.figure:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  background-color: rgba(black, 1);
+  opacity: calc( var(--visible-y) );
+}
+.figure > img {
+  display: block;
+  will-change: transform;
+  transform: scale(calc(1 / var(--scale)));
+}
+@keyframes waterAni{
+  0% {
+    transform: translate(0, 0vh);
+    width: 3vw; 
+    height: 4.5vh;
+    opacity: 1;
+
+  }
+  30% {
+    width: 5vw; 
+    height: 6.5vh;
+  }
+  80%{
+
+    transform: translate(0vw, 30vh);
+  }
+  90%{
+    opacity: 0;
+  }
+}

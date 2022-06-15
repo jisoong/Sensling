@@ -7,174 +7,82 @@
   <title>Sensling-tea</title>
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
-  <style>
-    img{
-      object-fit: cover; 
-    }
-    div {
-      text-align:left;
-      color:black;
-    }
-    #text{
-      text-align:left; 
-      margin-left: 3%;
-      margin-bottom: 3%; 
-      font-size: 1.5vw;
-      color:black;
-      float:inline-start;
-      white-space : normal;
-      /* visibility:hidden; */
-    }
-    #cup{
-      float: right;
-      /* margin-right: vw;  */
-      width: 60vw; 
-      height: 100vh;
-      display: flex;
-      object-fit: contain; 
-    }
-    #poemTitle {
-      text-align: center;
-      display: flex;
-      justify-content: center;
-      align-items: center; 
-      clear: right;
-      margin-top: 15%;
-      font-size: 1.5vw;
-   }
-   #writer {
-      text-align: right;
-      display: flex;
-      font-size: 1vw;
-      justify-content: right;
-      margin-right: 10vw;
-   }
-   .content {
-      text-align: center;
-      display: flex;
-      font-size: 1vw;
-      justify-content: center;
-   }
-    hr{
-      float: left;
-      height:1000vh;
-      width:.2vw;
-      margin-top: 10vh;
-      margin-left: .8vw;
-      border-width:0;
-      opacity: 0.3;
-      color:#000;
-      background-color:#000;
-    }
-    .content-section {
-      --scroll-length: 5;
-      height: calc( var(--scroll-length) * 100vh );
-
-    }
-    .figure{
-        --scale: calc(.8 + 
-      (.2 * var(--scroll-length) * var(--visible-y))
-      );
-      position: sticky;
-      top: 0;
-      left: 0;
-      margin: 0;
-      display: block; 
-      overflow: hidden;
-      will-change: transform;
-      transform: scale(var(--scale));
-
-    }
-    .figure:before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      z-index: 1;
-      background-color: rgba(black, 1);
-      opacity: calc( var(--visible-y) );
-      }
-      .figure > img {
-        display: block;
-        will-change: transform;
-        transform: scale(calc(1 / var(--scale)));
-      }
-      /* .text:hover {
-        opacity:0.7;
-      }
-
-      .text:hover .text {
-        visibility:visible;
-      } */
-  </style>
+  <link rel="stylesheet" href="tea.css">
   <script src="images.js"></script>
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script src="cup.js"></script>
   <script src="poem.js"></script>
+  <script src="pencil.js"></script>
 </head>
 <body>
   <section class="content-section" data-scroll>
     <hr>
     <div class="figure">
-      <img id = "cup" src="images/cup/cup_1.png" ></img>
-    
+      <div id="waterDrop">
+        <img id = "water" src="images/waterBubb.png" animation-duration: 100s;></img>
+        <img id = "cup" src="images/cup/cup_3.png"></img>
+      </div>
       <div id="text" style="font-size: 10vw; opacity: 0;">공백</div>
-      <div id="text" data-aos="fade-down" data-aos-anchor-placement="top-center" data-aos-duration="2000" style="font-size: 2vw">오늘의 힐링:</div>
-      <div id="text" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="2000"> Today's Poem and Tea for You </div>
-      <div id="text" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="2000"> 당신을 위한 시를 한 편 준비했어요 </div>
-      <div id="text" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="2000"> 당신을 위한 차도 같이 준비해봤어요 </div>
-      <div id="text" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="2000"> 오늘의 시와 차를 음미하며 편안함을 느껴보세요 </div>
-      <div id="text" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="2000"> SEE + TASTE + READ </div>
-      <div id="text" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="2000"> 당신을 위해 준비한 한 편의 시와 한 잔의 차 </div>
-      <div id="text" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="2000"> 잠시 시와 차의 공간에 빠져보세요 </div>
-    </div class="figure">
+      <div id="text" data-aos="fade-down" data-aos-anchor-placement="top-center" data-aos-duration="2000" style="font-size: 2vw; text-align: left">오늘의 힐링:</div>
+      <div id="text" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="2000" data-aos-delay="500" style="text-align: left"> Today's Poem and Tea for You </div>
+      <div id="text" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="2000" data-aos-delay="500" style="text-align: left"> 당신을 위한 시를 한 편 준비했어요 </div>
+      <div id="text" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="2000" data-aos-delay="500" style="text-align: left"> 당신을 위한 차도 같이 준비해봤어요 </div>
+      <div id="text" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="2000" data-aos-delay="500" style="text-align: left"> 오늘의 시와 차를 음미하며 편안함을 느껴보세요 </div>
+      <div id="text" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="2000" data-aos-delay="500" style="text-align: left"> SEE + TASTE + READ </div>
+      <div id="text" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="2000" data-aos-delay="500" style="text-align: left"> 당신을 위해 준비한 한 편의 시와 한 잔의 차 </div>
+      <div id="text" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="2000" data-aos-delay="500" style="text-align: left"> 잠시 시와 차의 공간에 빠져보세요 </div>
+    </div>
   </section>
-  <div>
+
+<section class="content-section" data-scroll>
+  <div class="figure" >
     <div id="poemTitle" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="2000"> 시제목 </div>
     </br>
     </br>
     <div id="writer" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="2000"> 시인 </div>
-    </br>
-    </br>
-    </br>
-    </br>
-    <div class="content" id="content2" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="2000"> </div></br>
-    <div class="content" id="content3" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="2000"> </div></br>
-    <div class="content" id="content4" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="2000"> </div></br>
-    <div class="content" id="content5" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="2000"> </div></br>
-    <div class="content" id="content6" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="2000"> </div></br>
-    <div class="content" id="content7" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="2000"> </div></br>
-    <div class="content" id="content8" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="2000"> </div></br>
-    <div class="content" id="content9" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="2000"> </div></br>
-    <div class="content" id="content10" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="2000"> </div></br>
-    <div class="content" id="content11" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="2000"> </div></br>
-    <div class="content" id="content12" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="2000"> </div></br>
-    <div class="content" id="content13" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="2000"> </div></br>
-    <div class="content" id="content14" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="2000"> </div></br>
-    <div class="content" id="content15" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="2000"> </div></br>
-    <div class="content" id="content16" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="2000"> </div></br>
-    <div class="content" id="content17" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="2000"> </div></br>
-    <div class="content" id="content18" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="2000"> </div></br>
-    <div class="content" id="content19" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="2000"> </div></br>
-    <div class="content" id="content20" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="2000"> </div></br>
-    <div class="content" id="content21" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="2000"> </div></br>
-    <div class="content" id="content22" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="2000"> </div></br>
-    <div class="content" id="content23" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="2000"> </div></br>
-    <div class="content" id="content24" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="2000"> </div></br>
-    <div class="content" id="content25" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="2000"> </div></br>
-    <div class="content" id="content26" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="2000"> </div></br>
-    <div class="content" id="content27" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="2000"> </div></br>
-    <div class="content" id="content28" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="2000"> </div></br>
-    <div class="content" id="content29" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="2000"> </div></br>
+    <img id = "pencil" src="images/pancil/pancil_16.png"></img>
+    <div id = "poem">
+      </br>
+      </br>
+      </br>
+      <div class="content" id="content2" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="2000" > </div></br>
+      <div class="content" id="content4" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="2000" > </div></br>
+      <div class="content" id="content3" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="2000" > </div></br>
+      <div class="content" id="content5" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="2000" > </div></br>
+      <div class="content" id="content6" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="2000" > </div></br>
+      <div class="content" id="content7" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="2000" > </div></br>
+      <div class="content" id="content8" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="2000" > </div></br>
+      <div class="content" id="content9" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="2000" > </div></br>
+      <div class="content" id="content10" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="2000"> </div></br>
+      <div class="content" id="content11" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="2000"> </div></br>
+      <div class="content" id="content12" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="2000"> </div></br>
+      <div class="content" id="content13" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="2000"> </div></br>
+      <div class="content" id="content14" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="2000"> </div></br>
+      <div class="content" id="content15" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="2000"> </div></br>
+      <div class="content" id="content16" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="2000"> </div></br>
+      <div class="content" id="content17" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="2000"> </div></br>
+      <div class="content" id="content18" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="2000"> </div></br>
+      <div class="content" id="content19" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="2000v"> </div></br>
+      <div class="content" id="content20" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="2000"> </div></br>
+      <div class="content" id="content21" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="2000"> </div></br>
+      <div class="content" id="content22" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="2000"> </div></br>
+      <div class="content" id="content23" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="2000"> </div></br>
+      <div class="content" id="content24" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="2000"> </div></br>
+      <div class="content" id="content25" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="2000"> </div></br>
+      <div class="content" id="content26" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="2000"> </div></br>
+      <div class="content" id="content27" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="2000"> </div></br>
+      <div class="content" id="content28" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="2000"> </div></br>
+      <div class="content" id="content29" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="2000"> </div></br>
+      <div class="content" id="content30" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="2000"> </div></br>
+      <div class="content" id="content31" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="2000"> </div></br>
+    </div>
+  </section>
   </div>
   
 
   <script>  
     AOS.init({
-      duration: 800   
     });
   </script>
   <script>poem();</script>

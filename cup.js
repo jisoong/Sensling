@@ -7,16 +7,15 @@ $(document).ready(function(){
 	$(window).scroll(function () {
 			var tmp = $(this).scrollTop();
 			scroll_pos = $(this).scrollTop();
-			if (tmp > last_scrollTop && num <260) {
+			if (tmp > last_scrollTop && num <260  && scroll_pos > $("#cup").height()*0.1) {
 				num = num + 3
 				cup.src = 'images/cup/cup' + '_'+ + num + '.png';
-        console.log(cup.src)
+        // console.log(cup.src)
+
 			}
-			else if (tmp <= last_scrollTop && num <=269 && num>1) {
-        // console.log()
-				num = num - 1
+			else if (tmp <= last_scrollTop && num <=269 && num>5) {
+				num = num - 3
 				cup.src = 'images/cup/cup' + '_'+ + num + '.png';
-				// console.log(pencil.src)
 			}
 			last_scrollTop = tmp;
 	});

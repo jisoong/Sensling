@@ -205,7 +205,14 @@ function poem() {
   $("#writer").text(randomNum[1]);
   for (i=2; (i<poem1.length); i++){
     var id_name = document.getElementById("content" + i)
-    id_name.innerText = randomNum[i]
+
+    if (randomNum[i] == undefined){
+      id_name.innerText = " "
+    }
+    else{
+      id_name.innerText = randomNum[i]
+    }
+    
   }
 
 

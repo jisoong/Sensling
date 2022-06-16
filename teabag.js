@@ -7,7 +7,7 @@ $(document).ready(function(){
 	$(window).scroll(function () {
 			var tmp = $(this).scrollTop();
 			scroll_pos = $(this).scrollTop();
-      // console.log("scroll_pos"+ scroll_pos)
+      console.log("scroll_pos"+ scroll_pos)
 			if (tmp > last_scrollTop && num <190 && scroll_pos>=11750) {
 				num = num + 2
 				teaBag.src = 'images/teaBag/teaBag' + '_'+ + num + '.png';

@@ -7,6 +7,7 @@
   <title>Sensling-game</title>
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <style>
     img{
       object-fit: cover; 
@@ -23,33 +24,220 @@
     #gameImg{
       float: left
     }
+    #game{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      /* flex-direction: column; */
+      /* margin-left: 35vw; */
+      clear: both;
+      position: relative;
+      flex-direction: column;
+    }
+    .bWrap{
+      width: 6vw;
+      height: 6vh;
+      /* top: 2vh;
+      right: 20vh; */
+      object-fit: contain; 
+      z-index: 1;
+      margin-left: -3vw;
+
+    }
+    .pong {
+      animation: pong 0.5s;
+    }
+    #bWrapText{
+      vertical-align: middle;
+      text-align: center;
+      position: absolute;
+      font-size: 1vw;
+    }
+    @keyframes pong {
+      0% {
+        transform: scale(1.0);
+      }
+      50% {
+        transform: scale(0.9);
+        opacity: 0.5;
+      }
+      100% {
+        transform: scale(1.0);
+    }
+    }
+    .bubb{
+      width: 20vw;
+      height: auto;
+      margin-left: 5vw;
+    }
+    .bubb.hide{
+      opacity: 0;
+      animation: bubb 5s;
+    }
+    .bubb.show{
+      opacity: 1;
+    }
+    @keyframes bubb {
+      80%{
+        opacity: 1;
+      }
+      100% {
+        opacity: 0;
+      }
+    }
   </style>
   <script src="images.js"></script>
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script src="gameImgScroll.js"></script>
+
 </head>
 <body>
-  <div> 
-    <img id="gameImg" data-aos="fade-down-right" data-aos-anchor-placement="top-center" style="width: 50vw; height: 120vh; opacity: 1; display: flex;">
-    <div id="text" style="font-size: 8vw; opacity: 0;">공백</div>
-    <div id="text" data-aos="fade-down" data-aos-anchor-placement="top-center" data-aos-duration="2000" style="font-size: 2vw">오늘의 힐링:</div>
-    <div id="text" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="2000"> Play Game and Relieve Your Stress </div>
-    </br>
-    <div id="text" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="2000"> 당신을 위해 소소하지만 재밌는 게임을 준비했어요 </div>
-    </br>
-    <div id="text" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="2000"> 오늘 하루 받은 스트레스 </div>
-    </br>
-    <div id="text" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="2000"> 모두 풀어버리세요 </div>
-    <br/>
-    </br>
-    <div id="text" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="2000"> FEEL + LISTEN + PLAY </div>
-    </br>
-    <div id="text" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="2000"> 미니게임을 하며 고민을 잊고, 스트레스를 날리기 </div>
-    </br>
-    <div id="text" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="2000"> 잠시 게임에 빠져 근심, 걱정을 잊어버리세요 </div>
-  </div>
-  <div style="font-size: 1000px; opacity: 0;">공</div>
+  <section>
+    <div> 
+      <img id="gameImg" data-aos="fade-down-right" data-aos-anchor-placement="top-center" style="width: 50vw; height: 120vh; opacity: 1; ">
+      <div id="text" style="font-size: 8vw; opacity: 0;">공백</div>
+      <div id="text" data-aos="fade-down" data-aos-anchor-placement="top-center" data-aos-duration="2000" style="font-size: 2vw">오늘의 힐링:</div>
+      <div id="text" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="2000"> Play Game and Relieve Your Stress </div>
+      </br>
+      <div id="text" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="2000"> 당신을 위해 소소하지만 재밌는 게임을 준비했어요 </div>
+      </br>
+      <div id="text" data-aos="fade-up" data-flexaos-anchor-placement="top-center" data-aos-duration="2000"> 오늘 하루 받은 스트레스 </div>
+      </br>
+      <div id="text" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="2000"> 모두 풀어버리세요 </div>
+      <br/>
+      </br>
+      <div id="text" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="2000"> FEEL + LISTEN + PLAY </div>
+      </br>
+      <div id="text" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="2000"> 미니게임을 하며 고민을 잊고, 스트레스를 날리기 </div>
+      </br>
+      <div id="text" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="2000"> 잠시 게임에 빠져 근심, 걱정을 잊어버리세요 </div>
+    </div>
+  </section>
+  <div style="font-size: 600px; opacity: 0; z-index: -1;" >공</div>
+  <img class="bubb" src="images/bubble/game_1.png" alt="">
+  <section id="game">
+    <section id = "line1">
+      <img class = "bWrap" src="images/game/before (5).png" alt="">
+
+      <img class = "bWrap" id="1" src="images/game/before (4).png" alt="">
+      <div id ="bWrapText" id="text1" style="top: 2.2vh; left: 33.3vw;"> 1 </div>
+      <img class = "bWrap" id="2" src="images/game/before (3).png" alt="">
+      <div id ="bWrapText" style="top: 2.2vh; left: 36.5vw;"> 2 </div>
+      <img class = "bWrap" id="3" src="images/game/before (2).png" alt="">
+      <div id ="bWrapText" style="top: 2.2vh; left: 39.8vw;"> 3 </div>
+      <img class = "bWrap" id="4" src="images/game/before (1).png" alt="">
+      <div id ="bWrapText" style="top: 2.2vh; left: 43vw;"> 4 </div>
+      <img class = "bWrap" id="5" src="images/game/before (2).png" alt="">
+      <div id ="bWrapText" style="top: 2.2vh; left: 46.3vw;"> 5 </div>
+      <img class = "bWrap" id="6" src="images/game/before (4).png" alt="">
+      <div id ="bWrapText" style="top: 2.2vh; left: 49.5vw;"> 6 </div>
+      <img class = "bWrap" id="7" src="images/game/before (3).png" alt="">
+      <div id ="bWrapText" style="top: 2.2vh; left: 52.6vw;"> 7 </div>
+      <img class = "bWrap" id="8" src="images/game/before (5).png" alt="">
+      <div id ="bWrapText" style="top: 2.2vh; left: 56vw;"> 8 </div>
+      <img class = "bWrap" id="9" src="images/game/before (2).png" alt="">
+      <div id ="bWrapText" style="top: 2.2vh; left: 59vw;"> 9 </div>
+      <img class = "bWrap" id="10" src="images/game/before (4).png" alt="">
+      <div id ="bWrapText" style="top: 2.2vh; left: 62.5vw;"> 0 </div>
+      <img class = "bWrap" id="45" src="images/game/before (5).png" alt="">
+      <div id ="bWrapText" style="top: 2.2vh; left: 65.7vw;"> - </div>
+    </section>
+    <section id = "line2" style="margin-right: 3vw;">
+      <img class = "bWrap"src="images/game/before (4).png" alt="">
+      <img class = "bWrap" id="Q" src="images/game/before (1).png" alt="">
+      <div id ="bWrapText" style="top: 8vh; left: 31.5vw;"> Q </div>
+      <img class = "bWrap" id="W" src="images/game/before (2).png" alt="">
+      <div id ="bWrapText" style="top: 8vh; left: 34.8vw;"> W </div>
+      <img class = "bWrap" id="E" src="images/game/before (3).png" alt="">
+      <div id ="bWrapText" style="top: 8vh; left: 38vw;"> E </div>
+      <img class = "bWrap" id="R" src="images/game/before (4).png" alt="">
+      <div id ="bWrapText" style="top: 8vh; left: 41.4vw;"> R </div>
+      <img class = "bWrap" id="T" src="images/game/before (5).png" alt="">
+      <div id ="bWrapText" style="top: 8vh; left: 44.7vw;"> T </div>
+      <img class = "bWrap" id="Y" src="images/game/before (4).png" alt="">
+      <div id ="bWrapText" style="top: 8vh; left: 48vw;"> Y </div>
+      <img class = "bWrap" id="U" src="images/game/before (2).png" alt="">
+      <div id ="bWrapText" style="top: 8vh; left: 51vw;"> U </div>
+      <img class = "bWrap" id="I" src="images/game/before (5).png" alt="">
+      <div id ="bWrapText" style="top: 8vh; left: 54.5vw;"> I </div>
+      <img class = "bWrap" id="O" src="images/game/before (3).png" alt="">
+      <div id ="bWrapText" style="top: 8vh; left: 57.5vw;"> O </div>
+      <img class = "bWrap" id="P" src="images/game/before (1).png" alt="">
+      <div id ="bWrapText" style="top: 8vh; left: 61vw;"> P </div>
+      <img class = "bWrap" id="91" src="images/game/before (2).png" alt="">
+      <div id ="bWrapText" style="top: 8vh; left: 64vw;"> [ </div>
+    </section>
+    <section id = "line3">
+      <img class = "bWrap" src="images/game/before (5).png" alt="">
+      <img class = "bWrap" id="A" src="images/game/before (4).png" alt="">
+      <div id ="bWrapText" style="top: 14.3vh; left: 33.3vw;"> A </div>
+      <img class = "bWrap" id="S" src="images/game/before (3).png" alt="">
+      <div id ="bWrapText" style="top: 14.3vh; left: 36.5vw;"> S </div>
+      <img class = "bWrap" id="D" src="images/game/before (2).png" alt="">
+      <div id ="bWrapText" style="top: 14.3vh; left: 39.8vw;"> D </div>
+      <img class = "bWrap" id="F" src="images/game/before (1).png" alt="">
+      <div id ="bWrapText" style="top: 14.3vh; left: 43vw;"> F </div>
+      <img class = "bWrap" id="G" src="images/game/before (2).png" alt="">
+      <div id ="bWrapText" style="top: 14.3vh; left: 46.3vw;"> G </div>
+      <img class = "bWrap" id="H" src="images/game/before (4).png" alt="">
+      <div id ="bWrapText" style="top: 14.3vh; left: 49.5vw;"> H </div>
+      <img class = "bWrap" id="J" src="images/game/before (3).png" alt="">
+      <div id ="bWrapText" style="top: 14.3vh; left: 52.6vw;"> J </div>
+      <img class = "bWrap" id="K" src="images/game/before (5).png" alt="">
+      <div id ="bWrapText" style="top: 14.3vh; left: 56vw;"> K </div>
+      <img class = "bWrap" id="L" src="images/game/before (2).png" alt="">
+      <div id ="bWrapText" style="top: 14.3vh; left: 59vw;"> L </div>
+      <img class = "bWrap" id="59" src="images/game/before (4).png" alt="">
+      <div id ="bWrapText" style="top: 14.3vh; left: 62.5vw;"> ; </div>
+      <img class = "bWrap" id="39" src="images/game/before (5).png" alt="">
+    </section>
+    <section id = "line4" style="margin-right: 3vw;">
+      <img class = "bWrap" src="images/game/before (1).png" alt="">
+      <img class = "bWrap" id="Z" src="images/game/before (4).png" alt="">
+      <img class = "bWrap" id="X" src="images/game/before (2).png" alt="">
+      <img class = "bWrap" id="C" src="images/game/before (3).png" alt="">
+      <img class = "bWrap" id="V" src="images/game/before (4).png" alt="">
+      <img class = "bWrap" id="B" src="images/game/before (5).png" alt="">
+      <img class = "bWrap" id="N" src="images/game/before (4).png" alt="">
+      <img class = "bWrap" id="M" src="images/game/before (2).png" alt="">
+      <img class = "bWrap" id="44" src="images/game/before (5).png" alt="">
+      <img class = "bWrap" id="46" src="images/game/before (3).png" alt="">
+      <img class = "bWrap" id="47" src="images/game/before (1).png" alt="">
+      <img class = "bWrap" id="" src="images/game/before (2).png" alt="">
+    </section>
+    <section id = "line3">
+      <img class = "bWrap" src="images/game/before (5).png" alt="">
+      <img class = "bWrap" src="images/game/before (4).png" alt="">
+      <img class = "bWrap" src="images/game/before (3).png" alt="">
+      <img class = "bWrap" src="images/game/before (2).png" alt="">
+      <img class = "bWrap" src="images/game/before (1).png" alt="">
+      <img class = "bWrap" src="images/game/before (2).png" alt="">
+      <img class = "bWrap" src="images/game/before (4).png" alt="">
+      <img class = "bWrap" src="images/game/before (3).png" alt="">
+      <img class = "bWrap" src="images/game/before (5).png" alt="">
+      <img class = "bWrap" src="images/game/before (2).png" alt="">
+      <img class = "bWrap" src="images/game/before (4).png" alt="">
+      <img class = "bWrap" src="images/game/before (5).png" alt="">
+    </section>
+    <section id = "line4" style="margin-right: 3vw;">
+      <img class = "bWrap" src="images/game/before (4).png" alt="">
+      <img class = "bWrap" src="images/game/before (1).png" alt="">
+      <img class = "bWrap" src="images/game/before (2).png" alt="">
+      <img class = "bWrap" src="images/game/before (3).png" alt="">
+      <img class = "bWrap" src="images/game/before (4).png" alt="">
+      <img class = "bWrap" src="images/game/before (5).png" alt="">
+      <img class = "bWrap" src="images/game/before (4).png" alt="">
+      <img class = "bWrap" src="images/game/before (2).png" alt="">
+      <img class = "bWrap" src="images/game/before (5).png" alt="">
+      <img class = "bWrap" src="images/game/before (3).png" alt="">
+      <img class = "bWrap" src="images/game/before (1).png" alt="">
+      <img class = "bWrap" src="images/game/before (2).png" alt="">
+    </section>
+  </section>
+  <audio id="airCap" src="sounds/airCap.mp3"></audio>
+  <div style="font-size: 600px; opacity: 0; z-index: -1;" >공</div>
+  
 
   <script>
     if (localStorage.getItem("link1") == "game"){
@@ -74,5 +262,8 @@
       duration: 800   
     });
   </script>
+  <script src="game.js"></script>
+  <script src="textBubble.js"></script>
 </body>
+
 </html>

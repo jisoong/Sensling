@@ -11,15 +11,18 @@ var pencilNum = 16
 $(window).on('scroll', function(){
 		var pencil_tmp = $(this).scrollTop();
 		pencilnowScrollTop = $(this).scrollTop();
+		console.log(pencilNum)
+		console.log("tmp" + pencil_tmp)
 		if (pencilWheelDelta() == 'down'){
-			if(pencilNum <178 && pencil_tmp>window.innerHeight*3.2){
-				pencilNum = pencilNum + 1
+
+			if(pencilNum <175 && pencil_tmp>window.innerHeight*3.7){
+				pencilNum = pencilNum + 2
 				document.getElementById("pencil").src = 'images/pancil/pancil' + '_'+ pencilNum + '.png';
 			}
 		}
 		if(pencilWheelDelta() == 'up'){
-			if (pencilNum <=180 && pencilNum>20 && pencil_tmp>window.innerHeight*3.2){
-				pencilNum = pencilNum - 1
+			if (pencilNum <=180 && pencilNum>20 && pencil_tmp>window.innerHeight*3.7 && pencil_tmp<window.innerHeight*6.6){
+				pencilNum = pencilNum - 2
 				document.getElementById("pencil").src = 'images/pancil/pancil' + '_'+ pencilNum + '.png';
 			}
 		}

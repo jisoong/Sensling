@@ -27,7 +27,7 @@ $(window).on('scroll', function(){
 			}
 		}
 		if(pencilWheelDelta() == 'up'){
-			if (pencilNum <=180 && pencilNum>20 && pencil_tmp>window.innerHeight*3.8 && pencil_tmp<window.innerHeight*6.1){
+			if (pencilNum <=180 && pencilNum>20 && pencil_tmp>window.innerHeight*3.8 && pencil_tmp<window.innerHeight*6.5){
 				pencilNum = pencilNum - 2
 				document.getElementById("pencil").src = 'images/pancil/pancil' + '_'+ pencilNum + '.png';
 			}

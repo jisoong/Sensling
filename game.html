@@ -26,22 +26,21 @@
     }
     #game{
       display: flex;
-      align-items: center;
-      justify-content: center;
+
       /* flex-direction: column; */
-      /* margin-left: 35vw; */
+      margin-left: 10vw;
       clear: both;
       position: relative;
       flex-direction: column;
     }
     .bWrap{
-      width: 6vw;
-      height: 6vh;
+      width: 12vw;
+      height: 12vh;
       /* top: 2vh;
       right: 20vh; */
       object-fit: contain; 
       z-index: 1;
-      margin-left: -3vw;
+      margin-left: -6vw;
 
     }
     .pong {
@@ -51,7 +50,8 @@
       vertical-align: middle;
       text-align: center;
       position: absolute;
-      font-size: 1vw;
+      font-size: 1.5vw;
+      opacity: 0.5;
     }
     @keyframes pong {
       0% {
@@ -69,15 +69,23 @@
       width: 20vw;
       height: auto;
       margin-left: 5vw;
+      margin-bottom: 2vh;
+      position:relative;
     }
-    .bubb.hide{
-      opacity: 0;
-      animation: bubb 5s;
-    }
+
     .bubb.show{
       opacity: 1;
     }
+    #bubb3{
+      width: 15vw;
+      height: auto;
+      margin-left: 2vw;
+      margin-bottom: 0;
+    }
     @keyframes bubb {
+      0%{
+        opacity: 0;
+      }
       80%{
         opacity: 1;
       }
@@ -114,99 +122,114 @@
       <div id="text" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="2000"> 잠시 게임에 빠져 근심, 걱정을 잊어버리세요 </div>
     </div>
   </section>
-  <div style="font-size: 600px; opacity: 0; z-index: -1;" >공</div>
-  <img class="bubb" src="images/bubble/game_1.png" alt="">
-  <section id="game">
+  <div style="font-size: 15vw; opacity: 0; z-index: -1;" >공</div>
+  <section id="game" style="align-items:flex-start">  
+  <img class="bubb" src="images/bubble/game_1.png" alt="" data-aos="zoom-in">
+  <img class="bubb" src="images/bubble/game_2.png" alt="" data-aos="zoom-in" style="margin-left: 20vw; margin-bottom: 3vh; width: 15vw; height: auto;">
+  </section>
+
+  <section id="game" style="align-items: center; justify-content: center;">
     <section id = "line1">
       <img class = "bWrap" src="images/game/before (5).png" alt="">
 
       <img class = "bWrap" id="1" src="images/game/before (4).png" alt="">
-      <div id ="bWrapText" id="text1" style="top: 2.2vh; left: 33.3vw;"> 1 </div>
+      <div id ="bWrapText" id="text1" style="top: 4.2vh; left: 13.3vw;"> 1 </div>
       <img class = "bWrap" id="2" src="images/game/before (3).png" alt="">
-      <div id ="bWrapText" style="top: 2.2vh; left: 36.5vw;"> 2 </div>
+      <div id ="bWrapText" style="top: 4.2vh; left: 19.5vw;"> 2 </div>
       <img class = "bWrap" id="3" src="images/game/before (2).png" alt="">
-      <div id ="bWrapText" style="top: 2.2vh; left: 39.8vw;"> 3 </div>
+      <div id ="bWrapText" style="top: 4.2vh; left: 25.8vw;"> 3 </div>
       <img class = "bWrap" id="4" src="images/game/before (1).png" alt="">
-      <div id ="bWrapText" style="top: 2.2vh; left: 43vw;"> 4 </div>
+      <div id ="bWrapText" style="top: 4.2vh; left: 32vw;"> 4 </div>
       <img class = "bWrap" id="5" src="images/game/before (2).png" alt="">
-      <div id ="bWrapText" style="top: 2.2vh; left: 46.3vw;"> 5 </div>
+      <div id ="bWrapText" style="top: 4.2vh; left: 38.3vw;"> 5 </div>
       <img class = "bWrap" id="6" src="images/game/before (4).png" alt="">
-      <div id ="bWrapText" style="top: 2.2vh; left: 49.5vw;"> 6 </div>
+      <div id ="bWrapText" style="top: 4.2vh; left: 44.5vw;"> 6 </div>
       <img class = "bWrap" id="7" src="images/game/before (3).png" alt="">
-      <div id ="bWrapText" style="top: 2.2vh; left: 52.6vw;"> 7 </div>
+      <div id ="bWrapText" style="top: 4.2vh; left: 50.6vw;"> 7 </div>
       <img class = "bWrap" id="8" src="images/game/before (5).png" alt="">
-      <div id ="bWrapText" style="top: 2.2vh; left: 56vw;"> 8 </div>
+      <div id ="bWrapText" style="top: 4.2vh; left: 57vw;"> 8 </div>
       <img class = "bWrap" id="9" src="images/game/before (2).png" alt="">
-      <div id ="bWrapText" style="top: 2.2vh; left: 59vw;"> 9 </div>
+      <div id ="bWrapText" style="top: 4.2vh; left: 63vw;"> 9 </div>
       <img class = "bWrap" id="10" src="images/game/before (4).png" alt="">
-      <div id ="bWrapText" style="top: 2.2vh; left: 62.5vw;"> 0 </div>
+      <div id ="bWrapText" style="top: 4.2vh; left: 69.5vw;"> 0 </div>
       <img class = "bWrap" id="45" src="images/game/before (5).png" alt="">
-      <div id ="bWrapText" style="top: 2.2vh; left: 65.7vw;"> - </div>
+      <div id ="bWrapText" style="top: 4.2vh; left: 75.7vw;"> - </div>
     </section>
     <section id = "line2" style="margin-right: 3vw;">
       <img class = "bWrap"src="images/game/before (4).png" alt="">
       <img class = "bWrap" id="Q" src="images/game/before (1).png" alt="">
-      <div id ="bWrapText" style="top: 8vh; left: 31.5vw;"> Q </div>
+      <div id ="bWrapText" style="top: 17vh; left: 11.5vw;"> Q </div>
       <img class = "bWrap" id="W" src="images/game/before (2).png" alt="">
-      <div id ="bWrapText" style="top: 8vh; left: 34.8vw;"> W </div>
+      <div id ="bWrapText" style="top: 17vh; left: 17.7vw;"> W </div>
       <img class = "bWrap" id="E" src="images/game/before (3).png" alt="">
-      <div id ="bWrapText" style="top: 8vh; left: 38vw;"> E </div>
+      <div id ="bWrapText" style="top: 17vh; left: 24vw;"> E </div>
       <img class = "bWrap" id="R" src="images/game/before (4).png" alt="">
-      <div id ="bWrapText" style="top: 8vh; left: 41.4vw;"> R </div>
+      <div id ="bWrapText" style="top: 17vh; left: 30.4vw;"> R </div>
       <img class = "bWrap" id="T" src="images/game/before (5).png" alt="">
-      <div id ="bWrapText" style="top: 8vh; left: 44.7vw;"> T </div>
+      <div id ="bWrapText" style="top: 17vh; left: 36.7vw;"> T </div>
       <img class = "bWrap" id="Y" src="images/game/before (4).png" alt="">
-      <div id ="bWrapText" style="top: 8vh; left: 48vw;"> Y </div>
+      <div id ="bWrapText" style="top: 17vh; left: 43vw;"> Y </div>
       <img class = "bWrap" id="U" src="images/game/before (2).png" alt="">
-      <div id ="bWrapText" style="top: 8vh; left: 51vw;"> U </div>
+      <div id ="bWrapText" style="top: 17vh; left: 49vw;"> U </div>
       <img class = "bWrap" id="I" src="images/game/before (5).png" alt="">
-      <div id ="bWrapText" style="top: 8vh; left: 54.5vw;"> I </div>
+      <div id ="bWrapText" style="top: 17vh; left: 55.5vw;"> I </div>
       <img class = "bWrap" id="O" src="images/game/before (3).png" alt="">
-      <div id ="bWrapText" style="top: 8vh; left: 57.5vw;"> O </div>
+      <div id ="bWrapText" style="top: 17vh; left: 61.5vw;"> O </div>
       <img class = "bWrap" id="P" src="images/game/before (1).png" alt="">
-      <div id ="bWrapText" style="top: 8vh; left: 61vw;"> P </div>
+      <div id ="bWrapText" style="top: 17vh; left: 68vw;"> P </div>
       <img class = "bWrap" id="91" src="images/game/before (2).png" alt="">
-      <div id ="bWrapText" style="top: 8vh; left: 64vw;"> [ </div>
+      <div id ="bWrapText" style="top: 17vh; left: 74vw;"> [ </div>
     </section>
     <section id = "line3">
       <img class = "bWrap" src="images/game/before (5).png" alt="">
       <img class = "bWrap" id="A" src="images/game/before (4).png" alt="">
-      <div id ="bWrapText" style="top: 14.3vh; left: 33.3vw;"> A </div>
+      <div id ="bWrapText" style="top: 28.5vh; left: 13.3vw;"> A </div>
       <img class = "bWrap" id="S" src="images/game/before (3).png" alt="">
-      <div id ="bWrapText" style="top: 14.3vh; left: 36.5vw;"> S </div>
+      <div id ="bWrapText" style="top: 28.5vh; left: 19.5vw;"> S </div>
       <img class = "bWrap" id="D" src="images/game/before (2).png" alt="">
-      <div id ="bWrapText" style="top: 14.3vh; left: 39.8vw;"> D </div>
+      <div id ="bWrapText" style="top: 28.5vh; left: 25.8vw;"> D </div>
       <img class = "bWrap" id="F" src="images/game/before (1).png" alt="">
-      <div id ="bWrapText" style="top: 14.3vh; left: 43vw;"> F </div>
+      <div id ="bWrapText" style="top: 28.5vh; left: 32vw;"> F </div>
       <img class = "bWrap" id="G" src="images/game/before (2).png" alt="">
-      <div id ="bWrapText" style="top: 14.3vh; left: 46.3vw;"> G </div>
+      <div id ="bWrapText" style="top: 28.5vh; left: 38.3vw;"> G </div>
       <img class = "bWrap" id="H" src="images/game/before (4).png" alt="">
-      <div id ="bWrapText" style="top: 14.3vh; left: 49.5vw;"> H </div>
+      <div id ="bWrapText" style="top: 28.5vh; left: 44.5vw;"> H </div>
       <img class = "bWrap" id="J" src="images/game/before (3).png" alt="">
-      <div id ="bWrapText" style="top: 14.3vh; left: 52.6vw;"> J </div>
+      <div id ="bWrapText" style="top: 28.5vh; left: 50.6vw;"> J </div>
       <img class = "bWrap" id="K" src="images/game/before (5).png" alt="">
-      <div id ="bWrapText" style="top: 14.3vh; left: 56vw;"> K </div>
+      <div id ="bWrapText" style="top: 28.5vh; left: 57vw;"> K </div>
       <img class = "bWrap" id="L" src="images/game/before (2).png" alt="">
-      <div id ="bWrapText" style="top: 14.3vh; left: 59vw;"> L </div>
+      <div id ="bWrapText" style="top: 28.5vh; left: 63vw;"> L </div>
       <img class = "bWrap" id="59" src="images/game/before (4).png" alt="">
-      <div id ="bWrapText" style="top: 14.3vh; left: 62.5vw;"> ; </div>
+      <div id ="bWrapText" style="top: 28.5vh; left: 69.5vw;"> ; </div>
       <img class = "bWrap" id="39" src="images/game/before (5).png" alt="">
     </section>
     <section id = "line4" style="margin-right: 3vw;">
       <img class = "bWrap" src="images/game/before (1).png" alt="">
       <img class = "bWrap" id="Z" src="images/game/before (4).png" alt="">
+      <div id ="bWrapText" style="top: 41.5vh; left: 11.5vw;"> Z </div>
       <img class = "bWrap" id="X" src="images/game/before (2).png" alt="">
+      <div id ="bWrapText" style="top: 41.5vh; left: 17.7vw;"> X </div>
       <img class = "bWrap" id="C" src="images/game/before (3).png" alt="">
+      <div id ="bWrapText" style="top: 41.5vh; left: 24vw;"> C </div>
       <img class = "bWrap" id="V" src="images/game/before (4).png" alt="">
+      <div id ="bWrapText" style="top: 41.5vh; left: 30.4vw;"> V </div>
       <img class = "bWrap" id="B" src="images/game/before (5).png" alt="">
+      <div id ="bWrapText" style="top: 41.5vh; left: 36.7vw;"> B </div>
       <img class = "bWrap" id="N" src="images/game/before (4).png" alt="">
+      <div id ="bWrapText" style="top: 41.5vh; left: 43vw;"> N </div>
       <img class = "bWrap" id="M" src="images/game/before (2).png" alt="">
+      <div id ="bWrapText" style="top: 41.5vh; left: 49vw;"> M </div>
       <img class = "bWrap" id="44" src="images/game/before (5).png" alt="">
+      <div id ="bWrapText" style="top: 41.5vh; left: 55.5vw;"> , </div>
       <img class = "bWrap" id="46" src="images/game/before (3).png" alt="">
+      <div id ="bWrapText" style="top: 41.5vh; left: 61.5vw;"> . </div>
       <img class = "bWrap" id="47" src="images/game/before (1).png" alt="">
+      <div id ="bWrapText" style="top: 41.5vh; left: 68vw;"> / </div>
       <img class = "bWrap" id="" src="images/game/before (2).png" alt="">
+      
     </section>
-    <section id = "line3">
+    <!-- <section id = "line3">
       <img class = "bWrap" src="images/game/before (5).png" alt="">
       <img class = "bWrap" src="images/game/before (4).png" alt="">
       <img class = "bWrap" src="images/game/before (3).png" alt="">
@@ -233,11 +256,14 @@
       <img class = "bWrap" src="images/game/before (3).png" alt="">
       <img class = "bWrap" src="images/game/before (1).png" alt="">
       <img class = "bWrap" src="images/game/before (2).png" alt="">
-    </section>
+    </section> -->
   </section>
   <audio id="airCap" src="sounds/airCap.mp3"></audio>
-  <div style="font-size: 600px; opacity: 0; z-index: -1;" >공</div>
-  
+  <div id="game" style="margin-left: 2vw;">
+    <img class = "bubb" id="bubb3" src="images/bubble/game_3.png" alt="" style="margin-top: 5vh;">
+    <a href="index.html#main" target="_blank">
+      <img src="images/home_key.png" alt="" style="width:2vw; height: auto; margin-left: 2vw; margin-top: 2vh;">
+  </div>
 
   <script>
     if (localStorage.getItem("link1") == "game"){

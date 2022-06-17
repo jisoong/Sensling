@@ -20,11 +20,18 @@ div {
   width: 60vw; 
   height: 150vh;
   /* height: 80vh; */
-  display: flex;
   object-fit: contain;
   position: absolute;
-  left: 30vw;
+  left: 12vw;
   z-index: 1;
+}
+#cupMotion{
+  display: flex;
+  position: relative;
+  width: 20vw;
+  height: auto;
+  left: 20vw;
+  flex-direction:column;
 }
 #water{
   float: center;
@@ -43,8 +50,21 @@ div {
   z-index: 2;
   opacity: 0;
 }
+#smoke{
+  position: absolute;
+  width: 40vw;
+  height: auto;
+  left: 35vw;
+  top: 24vh;
+  z-index: 3;
+}
 #waterDrop{
   position: relative;
+  display: flex;
+  clear: both;
+  width: 30vw;
+  height: 20vh;
+  flex-direction: column;
 }
 #poemTitle {
   text-align: center;
@@ -102,7 +122,8 @@ div {
   justify-content: center;
   align-items: center;
   clear: right;
-  width: 100%
+  width: 100%;
+  z-index: 3;
 }
 #teaTitle {
   text-align: right;
@@ -131,6 +152,7 @@ div {
   justify-content: center;
   flex-direction: column;
   margin-left: 35vw;
+
 }
 #teaContent {
   display: flex;

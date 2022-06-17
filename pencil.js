@@ -11,13 +11,19 @@ var pencilNum = 16
 $(window).on('scroll', function(){
 		var pencil_tmp = $(this).scrollTop();
 		pencilnowScrollTop = $(this).scrollTop();
-		console.log(pencilNum)
-		console.log("tmp" + pencil_tmp)
+		var content = document.querySelectorAll(".content");
 		if (pencilWheelDelta() == 'down'){
-
-			if(pencilNum <175 && pencil_tmp>window.innerHeight*3.7){
+			if (pencilNum <175 && pencil_tmp>window.innerHeight*3.7){
 				pencilNum = pencilNum + 2
 				document.getElementById("pencil").src = 'images/pancil/pancil' + '_'+ pencilNum + '.png';
+				// if (pencilNum > 130) {
+
+				// 	setTimeout(function() {
+				// 		for (i=0; i<20; i++){
+				// 			content[i].style.opacity = 1;
+
+				// 		}}, 600);
+				// }
 			}
 		}
 		if(pencilWheelDelta() == 'up'){

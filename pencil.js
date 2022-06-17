@@ -1,30 +1,29 @@
+var pencilPrevScrollTop = 0;
+var pencilnowScrollTop = 0;
+var pencil_scroll_pos = 0;
+var pencil_last_scrollTop = 0;
 
-$(document).ready(function(){       
-	var scroll_pos = 0;
-	var last_scrollTop = 0;
-	var num = 16
-	const pencil = document.getElementById("pencil");
-	
-	$(window).scroll(function () {
-			var tmp = $(this).scrollTop();
-			scroll_pos = $(this).scrollTop();
-			// console.log(scroll_pos)
-			// console.log("scroll_pos"+ scroll_pos)
-			if (tmp > last_scrollTop && num <179 && scroll_pos>=6000) {
+function pencilWheelDelta(){
+    return pencilPrevScrollTop - pencilnowScrollTop > 0 ? 'up' : 'down';
+};
 
-				num = num + 1
-				pencil.src = 'images/pancil/pancil' + '_'+ + num + '.png';
-				
+var pencilNum = 16
+$(window).on('scroll', function(){
+		var pencil_tmp = $(this).scrollTop();
+		pencilnowScrollTop = $(this).scrollTop();
+		if (pencilWheelDelta() == 'down'){
+			if(pencilNum <179 && pencil_tmp>window.innerHeight*3.2){
+				pencilNum = pencilNum + 1
+				document.getElementById("pencil").src = 'images/pancil/pancil' + '_'+ pencilNum + '.png';
 			}
-			else if (tmp <= last_scrollTop && num <=179 && num>20 && scroll_pos>=5530) {
-        // console.log()
-				num = num - 1
-				pencil.src = 'images/pancil/pancil' + '_'+ + num + '.png';
-			
-
+		}
+		if(pencilWheelDelta() == 'up'){
+			if (pencilNum <=180 && pencilNum>20 && pencil_tmp>window.innerHeight*3.2){
+				pencilNum = pencilNum - 1
+				document.getElementById("pencil").src = 'images/pancil/pancil' + '_'+ pencilNum + '.png';
 			}
-			last_scrollTop = tmp;
-	});
-
-	});
+		}
+		pencilPrevScrollTop = pencilnowScrollTop;
+		pencil_last_scrollTop = pencil_tmp;
+});
 

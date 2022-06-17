@@ -1,24 +1,33 @@
 
-$(document).ready(function(){       
-	var scroll_pos = 0;
-	var last_scrollTop = 0;
-	var num = 0
-	const teaBag = document.getElementById("teaBag");
-	$(window).scroll(function () {
-			var tmp = $(this).scrollTop();
-			scroll_pos = $(this).scrollTop();
-      console.log("scroll_pos"+ scroll_pos)
-			if (tmp > last_scrollTop && num <190 && scroll_pos>=11750) {
-				num = num + 2
-				teaBag.src = 'images/teaBag/teaBag' + '_'+ + num + '.png';
-        // console.log(teaBag.src)
+var teaBagprevScrollTop = 0;
+var teaBagnowScrollTop = 0;
+var teaBag_scroll_pos = 0;
+var teaBag_last_scrollTop = 0;
 
-			}
-			else if (tmp <= last_scrollTop && num <=190 && num>5 && scroll_pos>=11750) {
-				num = num - 2
-				teaBag.src = 'images/teaBag/teaBag' + '_'+ + num + '.png';
-			}
-			last_scrollTop = tmp;
-	});
+function teaBagWheelDelta(){
+    return teaBagprevScrollTop - teaBagnowScrollTop > 0 ? 'up' : 'down';
+};
 
-	});
+var teaBagNum = 1
+$(window).on('scroll', function(){
+		var teaBag_tmp = $(this).scrollTop();
+		// console.log(teaBag_tmp) 6500
+		// console.log(innerHeight*6.8)
+		teaBagnowScrollTop = $(this).scrollTop();
+		if (teaBagWheelDelta() == 'down'){
+			if(teaBagNum <199 && teaBag_tmp>window.innerHeight*6.8){
+				teaBagNum = teaBagNum + 2
+				document.getElementById("teaBag").src = 'images/teaBag/teaBag' + '_'+ teaBagNum + '.png';
+				// console.log("hi")
+			}
+		}
+		if(teaBagWheelDelta() == 'up'){
+			if ( teaBagNum <=199 && teaBagNum>2 && teaBag_tmp>=window.innerHeight*6.8){
+				teaBagNum = teaBagNum - 2
+				document.getElementById("teaBag").src = 'images/teaBag/teaBag' + '_'+ teaBagNum + '.png';
+				// console.log("bye")
+			}
+		}
+		teaBagprevScrollTop = teaBagnowScrollTop;
+		teaBag_last_scrollTop = teaBag_tmp;
+});

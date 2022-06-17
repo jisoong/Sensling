@@ -52,7 +52,7 @@ div {
   justify-content: center;
   align-items: center; 
   clear: right;
-  margin-top: 7%;
+  margin-top: -3vh;
   font-size: 1.5vw;
   margin-left: 35vw;
   z-index: 1;
@@ -82,7 +82,7 @@ div {
   height: 50vh;
   top: 8vh;
   left: 50vw;
-  
+  object-fit: contain;
 }
 #blurTop{
   display: flex;
@@ -113,6 +113,7 @@ div {
   margin-top: 7%;
   font-size: 1.5vw;
   margin-left: 7vw; 
+
   z-index: 1;
 }
 .tea{
@@ -150,7 +151,7 @@ hr{
   background-color:#000;
 }
 .content-section {
-  --scroll-length: 5;
+  --scroll-length: 3.5;
   height: calc( var(--scroll-length) * 100vh );
 
 }

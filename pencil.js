@@ -16,14 +16,6 @@ $(window).on('scroll', function(){
 			if (pencilNum <175 && pencil_tmp>window.innerHeight*3.8){
 				pencilNum = pencilNum + 2
 				document.getElementById("pencil").src = 'images/pancil/pancil' + '_'+ pencilNum + '.png';
-				// if (pencilNum > 130) {
-
-				// 	setTimeout(function() {
-				// 		for (i=0; i<20; i++){
-				// 			content[i].style.opacity = 1;
-
-				// 		}}, 600);
-				// }
 			}
 		}
 		if(pencilWheelDelta() == 'up'){

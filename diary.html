@@ -53,7 +53,8 @@
 <style>
   body{
     padding:5%;
-    text-align:center
+    text-align:center;
+    overflow-x: hidden;
 }
 #background
 .sch_item_box{
@@ -97,9 +98,17 @@
     left:0;
     z-index:1
 }
+#area{
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%;
+}
+#screen{
+
+}
 </style>
 <body>
-  <!-- <div> 
+  <div> 
     <img id="diaryImg" data-aos="fade-down-right" data-aos-anchor-placement="top-center" style="width: 50vw; height: 120vh; opacity: 1; display: flex;">
     <div id="text" style="font-size: 8vw; opacity: 0;">공백</div>
     <div id="text" data-aos="fade-down" data-aos-anchor-placement="top-center" data-aos-duration="2000" style="font-size: 2vw">오늘의 힐링:</div>
@@ -112,14 +121,17 @@
     <div id="text" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="2000"> SEE + TOUCH + WRITE </div>
     <div id="text" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="2000"> 오늘의 감정, 일상, 날씨 등을 기록하기 </div>
     <div id="text" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="2000"> 당신의 오늘 이야기를 들려주세요 </div>
-  </div> -->
-  <!-- <div style="font-size: 35vh; opacity: 0;">공백</div> -->
+  </div> 
+  <iframe id = "screen" src="scheduler.html" style="width: 100%; height: 100vh; display: flex; " scrolling="yes" ></iframe>
+  <div id="text" style="font-size: 14vw; opacity: 0;">공백</div> 
+
+  <!-- <div style="font-size: 35vh; opacity: 0;">공백</div>
   <div id="diary_date"> 날짜 </div>
   <hr align="right">
   <br>
   <div style="margin-left: 3%; font-size: 40px;" align= "left"> My daliy routine </div>
-  <div id="myCanvas" style="width:35%;height:60vh;float:left;"></div>
-  <!-- <div id="text" style="font-size: 100vw; opacity: 0;">공백</div> -->
+  <div id="myCanvas" style="width:35%;height:60vh;float:left;"></div> 
+  <div id="text" style="font-size: 100vw; opacity: 0;">공백</div> -->
 
 
 
@@ -147,7 +159,7 @@
     });
   </script>
   <script>date();</script>
-  
+  <script src="saveImg.js"></script>
 </body>
 </html>
 <script src="scheduler.js"></script>

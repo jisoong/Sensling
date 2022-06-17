@@ -4,11 +4,14 @@
 <head>
     <title>Canvas</title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
 </head>
 <style>
     body {
         padding: 5%;
-        text-align: center
+        text-align: center;
+        overflow-y: hidden;
     }
 
     #background .sch_item_box {
@@ -59,11 +62,152 @@
         left: 0;
         z-index: 1
     }
+    #title{
+        text-align: left;  
+        margin-left: 3vw;
+        margin-bottom: -4vh;
+    }
+    #diary{
+        margin-top: -2vw;
+        display: flex;
+        flex-direction: column;
+    }
+    #text {
+        width: 30vw;
+        height: 27vh;
+        padding: 1vw;
+        border: 1px solid #999;
+        margin-left: 24vw;
+        align-items: center;
+        justify-items: center;
+    }
+    #imageBox{
+        display: flex;
+        position: relative;
+        clear: both;
+        top: -15vh;
+    }
+    #question{
+        align-items: center;
+        justify-items: center;
+        margin-left: 22vw;
+        margin-top: 2vh;
+        margin-bottom: 2vh;
+    }
+    .sticker{
+        width: 5vw; 
+        height: auto;
+        
+        margin-top: 1vw;
+        /* align-items: center;
+        justify-content: center; */
+        clear: both; 
+    }
+    #diary_date{
+      text-align:right; 
+      margin-right: 3%;
+      font-size: 40px;
+      font-weight: bold;
+      color:black;
+      float:inline-end;
+      white-space : normal
+    }
+    #drag{
+        text-align:left;
+        position: absolute;
+        margin-left: 13vw;
+        margin-top: 5vh;
+    }
+    #clock{
+        width: 18vw;
+        height: auto;
+        position: absolute;
+        margin-top: 19.5vh;
+        margin-left: 32vw;
+    }
+    #hours{
+        position: absolute;
+        font-size: 5vw;
+        margin-left: 34vw;
+        margin-top: 22vh;
+        color:
+    }
+    #minutes{
+        position: absolute;
+        font-size: 5vw;
+        margin-left: 42.5vw;
+        margin-top: 22vh;
+    }
+    #colon{
+        position: absolute;
+        font-size: 5vw;
+        margin-left: 40.5vw;
+        margin-top: 22vh;
+    }
+    #button{
+        border-radius: 70vw;
+        width: 8vw;
+        height: 3vh;
+        background-color: black;
+        color:white;
+        font-size:1vw;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        margin-top: -30vh;
+    }
 </style>
 
 <body>
-    <br>
-    <div id="myCanvas" style="width:35%;height:650px;float:left"></div>
+    <div id = "title"> My daily routine</div>
+    <div id="myCanvas" style="width:35%;height:650px;float:left" ></div>
+    <section id="diary">
+        <div id="diary_date"> </div>
+        <hr align="right" style="width: 30vw; margin-right: 2vw;">
+        <div id="question" > 질문 </div>
+
+        <div id = "text" contentEditable="true" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+    </section>
+    <p id="drag"> Drag and Drop Stickers</p>
+    <div id="imageBox" style="width: 35vw; height: 50vh;" ondrop="drop(event)" ondragover="allowDrop(event)">
+    
+        <section>
+            <img class="sticker" id="drag1" src="images/sticker/sticker1.png" draggable="true" ondragstart="drag(event)">
+            <img class="sticker" id="drag2" src="images/sticker/sticker2.png" draggable="true" ondragstart="drag(event)">
+            <img class="sticker" id="drag3" src="images/sticker/sticker3.png" draggable="true" ondragstart="drag(event)">
+            <img class="sticker" id="drag4" src="images/sticker/sticker4.png" draggable="true" ondragstart="drag(event)">
+            <img class="sticker" id="drag5" src="images/sticker/sticker5.png" draggable="true" ondragstart="drag(event)">
+            <img class="sticker" id="drag6" src="images/sticker/sticker6.png" draggable="true" ondragstart="drag(event)">
+            <img class="sticker" id="drag7" src="images/sticker/sticker7.png" draggable="true" ondragstart="drag(event)">
+            <img class="sticker" id="drag8" src="images/sticker/sticker8.png" draggable="true" ondragstart="drag(event)">
+        </section>
+        <section>
+            <img class="sticker" id="drag9" src="images/sticker/sticker9.png" draggable="true" ondragstart="drag(event)">
+            <img class="sticker" id="drag10" src="images/sticker/sticker10.png" draggable="true" ondragstart="drag(event)">
+            <img class="sticker" id="drag11" src="images/sticker/sticker11.png" draggable="true" ondragstart="drag(event)">
+            <img class="sticker" id="drag12" src="images/sticker/sticker12.png" draggable="true" ondragstart="drag(event)">
+            <img class="sticker" id="drag13" src="images/sticker/sticker13.png" draggable="true" ondragstart="drag(event)">
+            <img class="sticker" id="drag14" src="images/sticker/sticker14.png" draggable="true" ondragstart="drag(event)">
+            <img class="sticker" id="drag15" src="images/sticker/sticker15.png" draggable="true" ondragstart="drag(event)">
+            <img class="sticker" id="drag16" src="images/sticker/sticker16.png" draggable="true" ondragstart="drag(event)">
+        </section>
+        <section style="color:#7D7D7D">
+            <img id="clock" src="images/clock.png" alt="">
+            <div id="hours"></div>
+            <div id="colon">:</div>
+            <div id="minutes"></div>
+        </section>
+
+
+
+        </div>
+    
+    <button id = "button" type="button" onclick="PrintDiv($('#title'));"> save </button>
+  
+    <!-- <div id="text" style="font-size: 8vw; opacity: 0;">공백</div> -->
+    <!-- <div id = "div1" ondrop="drop(event)" ondragover="allowDrop(event)"></div> -->
+    
+    
     <!-- <div style="text-align:left; width:40%; float:left; padding:2rem;"> -->
         <!-- 
 <div style='color : blue'>1. 원형 내부 스케줄은 더블클릭시 사라집니다.</div>  
@@ -118,8 +262,122 @@ let option = {
 <div>rts06069.getImageData(function(blobData){ console.log(blobData) }); //이미지를 블랍으로 받습니다.</div>
 <div>rts06069.clearAll() //스케줄 내부를 초기화 합니다.</div>
 <div>rts06069.resizeOnOff = true //반응형 여부를 설정 합니다.</div> </div>  -->
-</body>
+<script>
+  questions = [
+    "당신의 삶의 목적은 무엇인가요?",
+    "하루동안 초능력을 가질 수 있다면 어떤 것을 원하나요?",
+    "마지막으로 수영을 한 적은 언제인가요?",
+    "당신이 몇시간 후에 죽게된다면 무엇을 할 것인가요?",
+    "지금 여행을 간다면 가고싶은 곳은?",
+    "좋아하는 단어가 있나요? 그 이유는 무엇인가요?",
+    "1년뒤 나에게 질문 1가지를 해주세요",
+    "무슨 날씨를 좋아하나요?",
+    "무슨 꿈을 꾸고 싶은가요?",
+    "당신은 어떤 모습으로 살아가길 바라나요?",
+    "당신은 감정을 잘 숨기는 편인가요?",
+    "이상형은 어떤 사람인가요?",
+    "오늘 당신을 웃게 한 것은 무엇인가요?",
+    "지나고 보니 아무것도 아니었던 일이 있나요?",
+    "깨달음을 얻었던 순간이 있다면 어떤 순간이었나요?",
+    "오늘 하루 중 언제가 가장 좋았나요?",
+    "당신이 가장 치열하게 노력했던 순간은 무엇인가요?",
+    "어린 시절 먹었던 음식 중 다시 먹어보고 싶은 것이 있나요?",
+    "최근 당신을 열받게 한 사람에게 보내는 메시지!",
+    "당신이 지금 제일 사랑하는 친구는 누구인가요?",
+    "스스로가 나라서 참 좋다고 느낀 순간은?",
+    "과거를 바꿀 수 있다면 어떤 일을 바꾸고 싶은가요?",
+    "당신은 언제 행복을 느끼나요?",
+    "당신이 생각하는 소중한 것 3가지는?",
+    "오늘 일어난 멋진 일 한가지는?",
+    "무얼 했더라면 오늘 하루가 더 만족스러웠을까요?",
+    "당신은 무엇을 이야기할 때 가장 눈이 반짝거리나요?",
+    "타임머신을 타고 어떤 시절로 돌아가고 싶나요?",
+    "당신이 올해 가장 맛나게 먹은 음식은?",
+    "올해 초와 비교해 크게 달라진 점은?"
+  ]
+  randomNum = Math.floor(Math.random() * 30)
+  randomQuest = questions[randomNum]
+  textBox = document.getElementById("question").innerText = randomQuest
+  console.log(randomNum)
+</script>
+<script>
+    function allowDrop(ev){
+        ev.preventDefault();
+    }
+    function drag(ev){
+        ev.dataTransfer.setData("text", ev.target.id);
+    }
+    function drop(ev){
+        ev.preventDefault();
+        var data = ev.dataTransfer.getData("text");
+        ev.target.appendChild(document.getElementById(data));
+    }
+</script>
+<script>
 
+
+    let today = new Date();
+
+    let year = today.getFullYear(); // 년도
+    let month = today.getMonth() + 1;  // 월
+    let date = today.getDate();  // 날짜
+
+    let hours = today.getHours();
+    if (hours < 10){
+        hours = "0" + hours
+    }
+    let minutes = today.getMinutes();
+    if (minutes < 10){
+        minutes = "0" + minutes
+    }
+
+    document.getElementById("diary_date").innerText = year + ' / ' + month + ' / ' + date;  
+    
+    document.getElementById("hours").innerText = hours
+    document.getElementById("minutes").innerText = minutes
+
+</script>
+<script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+<script>
+    function PrintDiv(div){
+        div = div[0]
+        html2canvas(div).then(function(canvas){
+            var myImage = canvas.toDataURL();
+            downloadURI(myImage, "diary.png") 
+        });
+    }
+
+    function downloadURI(uri, name){
+        var link = document.createElement("a")
+        link.download = name;
+        link.href = uri;
+        document.body.appendChild(link);
+        link.click();
+    }
+</script>
+<script>
+    $(function(){
+        $(document.body).on("click",function(){
+            html2canvas(document.querySelector("#capture")).then(canvas => {
+                saveAs(canvas.toDataURL('image/jpg'),"diary.jpg");
+            });
+        });
+    function saveAs(uri, filename){
+        var link = document.createElement('a');
+        if(typeof link.download === 'string'){
+            link.href = uri;
+            link.download = filename;
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+        } else {
+            window.open(uri)
+        }
+        
+    }
+    });
+</script>
+</body>
 </html>
 <script src="scheduler.js"></script>
 <script></script>

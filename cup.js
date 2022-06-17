@@ -73,7 +73,7 @@ $(window).on('scroll', function(){
 			}
 		}
 		if(cupWheelDelta() == 'up'){
-			if (cupNum <=260 && cupNum>5 && cup_tmp<window.innerHeight*3){
+			if (cupNum <=270 && cupNum>5 && cup_tmp<window.innerHeight*3){
 				cupNum = cupNum - 4
 				document.getElementById("cup").src = 'images/cup/cup' + '_'+ cupNum + '.png';
 				

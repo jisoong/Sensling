@@ -12,7 +12,7 @@ $(window).on('scroll', function(){
 		var pencil_tmp = $(this).scrollTop();
 		pencilnowScrollTop = $(this).scrollTop();
 		if (pencilWheelDelta() == 'down'){
-			if(pencilNum <179 && pencil_tmp>window.innerHeight*3.2){
+			if(pencilNum <178 && pencil_tmp>window.innerHeight*3.2){
 				pencilNum = pencilNum + 1
 				document.getElementById("pencil").src = 'images/pancil/pancil' + '_'+ pencilNum + '.png';
 			}

@@ -10,7 +10,6 @@ div {
   margin-bottom: 3%; 
   font-size: 1.5vw;
   color:black;
-  float:inline-start;
   white-space : normal;
 }
 #cup{
@@ -18,12 +17,12 @@ div {
   margin-bottom: 40vw;
   margin-left: 10vw;
   width: 60vw; 
-  height: 150vh;
-  /* height: 80vh; */
+  height: 170vh;
   object-fit: contain;
   position: absolute;
   left: 12vw;
-  z-index: 1;
+  top: -3vh;
+  z-index: 2;
 }
 #cupMotion{
   display: flex;
@@ -34,20 +33,17 @@ div {
   flex-direction:column;
 }
 #water{
-  float: center;
   width: 3vw; 
   margin-left: 10vw;
   height: 4.5vh;
   object-fit: contain;
-  animation-name: waterAni;
-  animation-duration: 5s;
   animation: waterAni 3s;
   margin-top : 50vh;
   margin-right : 20vw;
   position: absolute;
   top: -5vh;
-  left: 75vw;
-  z-index: 2;
+  left: 77vw;
+  z-index: 3;
   opacity: 0;
 }
 #smoke{
@@ -62,9 +58,10 @@ div {
   position: relative;
   display: flex;
   clear: both;
-  width: 30vw;
-  height: 20vh;
+  /* width: 30vw;
+  height: 20vh; */
   flex-direction: column;
+  
 }
 #poemTitle {
   text-align: center;
@@ -173,7 +170,7 @@ hr{
   background-color:#000;
 }
 .content-section {
-  --scroll-length: 4.5;
+  --scroll-length: 3.5;
   height: calc( var(--scroll-length) * 100vh );
 
 }

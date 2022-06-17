@@ -173,9 +173,29 @@ hr{
   background-color:#000;
 }
 .content-section {
-  --scroll-length: 3.5;
+  --scroll-length: 4.5;
   height: calc( var(--scroll-length) * 100vh );
 
+}
+#home{
+  display: flex;
+
+  /* flex-direction: column; */
+  margin-left: 10vw;
+  clear: both;
+  position: relative;
+  flex-direction: column;
+}
+.bubb{
+  width: 20vw;
+  height: auto;
+  margin-left: 5vw;
+  margin-bottom: 2vh;
+  position:relative;
+}
+
+.bubb.show{
+  opacity: 1;
 }
 .figure{
     --scale: calc(.8 + 

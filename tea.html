@@ -16,7 +16,7 @@
   <script src="tea.js"></script>
 
 </head>
-<body onload="showBubble">
+<body>
   <section class="content-section" data-scroll>
     <hr>
     <div class="figure">
@@ -42,7 +42,7 @@
   <div id="text" style="font-size: 20vw; opacity: 0;">공백</div>
   <section class="content-section" data-scroll>
   <div class="figure" >
-    <img src="images/bubble/tea_1.png" class="bubble" id="bubble" data-aos="zoom-in" style="width:20%; height:50%; margin-left: 75vw; margin-top: 5vh; opacity: 1;">
+    <img src="images/bubble/tea_1.png" class="bubb" id="bubble" data-aos="zoom-in" style="width:20%; height:50%; margin-left: 75vw; margin-top: 5vh; opacity: 1;">
     <div id="poemTitle" data-aos="fade-down" data-aos-anchor-placement="top-center" data-aos-duration="2000"> 시제목 </div>
     </br>
     </br>
@@ -87,7 +87,7 @@
   </section>
   </div>
   <div id="text" style="font-size: 14vw; opacity: 0;">공백</div>
-  <img src="images/bubble/tea_2.png" class="bubble" id="bubble" data-aos="zoom-in" style="width:16%; height:10%; margin-left: 65vw; margin-top: 6vh; opacity: 1;">
+  <img src="images/bubble/tea_2.png" class="bubb" id="bubble" data-aos="zoom-in" style="width:16%; height:10%; margin-left: 65vw; margin-top: 6vh; opacity: 1;">
   <section class="content-section" data-scroll>
     <div class="figure" >
       
@@ -119,12 +119,17 @@
       </div>   
       </div>
   </section> 
-  <a href="index.html" target="_blank">클릭</a>
+  <div id="home" style="margin-left: 2vw;">
+    <img class = "bubb" id="bubb3" src="images/bubble/home.png" alt="" style="margin-top: 5vh;">
+    <a href="index.html#main" target="_blank">
+      <img src="images/home_key.png" alt="" style="width:2vw; height: auto; margin-left: 2vw; margin-top: -2vh;">
+  </div>
   <script src="cup.js"></script>
   <script src="poem.js"></script>
   <script src="pencil.js"></script>
   <script src="teabag.js"></script>
   <script src="smoke.js"></script>
+  <script src="textBubble.js"></script>
   <script>  
     AOS.init({
     });
@@ -133,5 +138,6 @@
   <script>poem();</script>
   <script>showBubble();</script>
   <script>tea();</script>
+  
 </body>
 </html>

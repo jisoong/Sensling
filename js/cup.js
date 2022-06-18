@@ -7,11 +7,9 @@ function cupWheelDelta(){
 };
 
 var cupNum = 1
-console.log(window.innerHeight)
 $(window).on('scroll', function(){
 
 		var cup_tmp = $(this).scrollTop();
-		console.log(cup_tmp)
 		cupNowScrollTop = $(this).scrollTop();
 		if (cupWheelDelta() == 'down'){
 			if(cupNum <260 && cup_tmp<window.innerHeight*2.6){

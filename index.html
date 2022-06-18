@@ -5,118 +5,18 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sensling</title>
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="bubble.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/bubble.css">
   <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo&display=swap" rel="stylesheet">
-  <style>
-    
-    header{
-      position: fixed;
-    }
-    main {
-      background-image: url('001.png');
-      background-size: cover;
-      font-size: 2.1vw;
-      text-align: center;
-      font-family: 'Nanum Myeongjo', serif;
-     } 
-    img{
-      object-fit: cover;
-      
-    }
-    .text {
-      color: white;
-      border: none; 
-      background: transparent;
-    }
-    #text_yellow {
-      color: rgb(255, 255, 198);
-      border: none; 
-      background: transparent;
-    }
-    #text_yellow2 {
-      color: rgba(255, 255, 99, 0.662);
-      border: none; 
-      background: transparent;
-    }
-    #text_proposal{
-      font-family: 'Nanum Myeongjo', serif;
-      margin-left: 77vw;
-      margin-bottom: 3vh; 
-      font-size: 1.2vw;
-      color:black;
-      white-space : normal
-    }
-    #randImg1 {
-      animation: img-ani 3.5s 
-                 cubic-bezier(0.41, 0.15, 1, 1) 0s
-                 infinite alternate; 
-    }
-
-    #randImg2 {
-      animation: img-ani_v2 1.5s 
-                 cubic-bezier(0.12, 0.33, 1, 1) 0s
-                 infinite alternate;
-    
-    }
-
-    #randImg3 {
-      animation: img-ani_v3 2.5s 
-                 cubic-bezier(0.52, -0.08, 1, 1) 0s
-                 infinite alternate;
-    }
-
-    #randImg4 {
-      animation: img-ani_v4 3.5s
-                 cubic-bezier(0.64, 0.1, 1, 1) 0s
-                 infinite alternate;
-    }
-    
-    @keyframes img-ani {
-      0% {
-        transform: translate(0, -10px);
-      }
-      100% {
-        transform: translate(0px, 30px);
-      }
-    }
-
-    @keyframes img-ani_v2 {
-      0% {
-        transform: translate(0, 0px);
-      }
-      100% {
-        transform: translate(0px, -20px);
-      }
-    }
-
-    @keyframes img-ani_v3 {
-      0% {
-        transform: translate(0, 20px);
-      }
-      100% {
-        transform: translate(0px, 40px);
-      }
-    }
-
-    @keyframes img-ani_v4 {
-      0% {
-        transform: translate(0, 0px);
-      }
-      100% {
-        transform: translate(0px, 20px);
-      }
-    }
-
-  </style>
+  <link rel="stylesheet" href="css/index.css">
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script src="images.js"></script>
-  <script src="link.js"></script>
-  <script src="bubble.js"></script>
-  <script src="m_player.js"></script>
+  <script src="js/images.js"></script>
+  <script src="js/link.js"></script>
+  <script src="js/bubble.js"></script>
+  <script src="js/m_player.js"></script>
 </head>
 <body>
   <header>
@@ -301,12 +201,10 @@
 
 
 
-
-
-
     </pre>
+    <div id="main" style="font-size: 5vw; opacity: 0;">공</div> 
     <div data-aos="zoom-in"  data-aos-duration="1500" style="font-size: 7vw;">Sensling</div>
-    <div id="main" data-aos="zoom-in"  data-aos-duration="1500" style="font-size: 1.5vw;" >오감으로 힐링하기</div>
+    <div data-aos="zoom-in"  data-aos-duration="1500" style="font-size: 1.5vw;" >오감으로 힐링하기</div>
     <br/>
     <img src="images\bubble\speech bubble\main_2speech_b_.png" class="bubble" id="bubble" data-aos="zoom-in" style="width:20%; height:45%; margin-left: 7vw; margin-bottom: 1vh; opacity: 1;">
 

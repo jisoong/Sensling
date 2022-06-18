@@ -1,0 +1,97 @@
+header{
+  position: fixed;
+}
+main {
+  background-image: url('../images/001.png');
+  background-size: cover;
+  font-size: 2.1vw;
+  text-align: center;
+  font-family: 'Nanum Myeongjo', serif;
+ } 
+img{
+  object-fit: cover;
+  
+}
+.text {
+  color: white;
+  border: none; 
+  background: transparent;
+}
+#text_yellow {
+  color: rgb(255, 255, 198);
+  border: none; 
+  background: transparent;
+}
+#text_yellow2 {
+  color: rgba(255, 255, 99, 0.662);
+  border: none; 
+  background: transparent;
+}
+#text_proposal{
+  font-family: 'Nanum Myeongjo', serif;
+  margin-left: 77vw;
+  margin-bottom: 3vh; 
+  font-size: 1.2vw;
+  color:black;
+  white-space : normal
+}
+#randImg1 {
+  animation: img-ani 3.5s 
+             cubic-bezier(0.41, 0.15, 1, 1) 0s
+             infinite alternate; 
+}
+
+#randImg2 {
+  animation: img-ani_v2 1.5s 
+             cubic-bezier(0.12, 0.33, 1, 1) 0s
+             infinite alternate;
+
+}
+
+#randImg3 {
+  animation: img-ani_v3 2.5s 
+             cubic-bezier(0.52, -0.08, 1, 1) 0s
+             infinite alternate;
+}
+
+#randImg4 {
+  animation: img-ani_v4 3.5s
+             cubic-bezier(0.64, 0.1, 1, 1) 0s
+             infinite alternate;
+}
+
+@keyframes img-ani {
+  0% {
+    transform: translate(0, -10px);
+  }
+  100% {
+    transform: translate(0px, 30px);
+  }
+}
+
+@keyframes img-ani_v2 {
+  0% {
+    transform: translate(0, 0px);
+  }
+  100% {
+    transform: translate(0px, -20px);
+  }
+}
+
+@keyframes img-ani_v3 {
+  0% {
+    transform: translate(0, 20px);
+  }
+  100% {
+    transform: translate(0px, 40px);
+  }
+}
+
+@keyframes img-ani_v4 {
+  0% {
+    transform: translate(0, 0px);
+  }
+  100% {
+    transform: translate(0px, 20px);
+  }
+}

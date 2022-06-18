@@ -99,8 +99,6 @@ function music() {
     randMusic = textMusic[randomNum-1];
     coverImg.src = 'images/music/' + randName + '.png';
     coverMusic.src = 'sounds/music/' + randName + '.mp3';
-    // coverMusic.src = 'sounds/music/' + localStorage.getItem("randName") + '.mp3';
-    console.log(randMusic)
     $("#scene").text(randMusic[0]);
     $("#musicTitle").text(randMusic[1]);
     $("#by").text(randMusic[2]);
@@ -113,7 +111,6 @@ function music() {
     var musicPlay = document.getElementById("musicPlay")
     var bgm = document.getElementById("bgm")
 
-    console.log(musicPlay);
 
     cover.onclick = function(){
         document.getElementById('music0').play()

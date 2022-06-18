@@ -1,0 +1,206 @@
+header{
+  position: fixed;
+  z-index: 10;
+}
+img{
+  object-fit: cover;
+}
+hr{
+  float: left;
+  height:180vh;
+  width:.2vw;
+  margin-left: .8vw;
+  border-width:0;
+  opacity: 0.3;
+  color:#000;
+  background-color:#000;
+}
+#text{
+  font-family: 'Nanum Myeongjo', serif;
+  text-align:left; 
+  margin-left: 3%;
+  margin-bottom: 3%; 
+  font-size: 1.2vw;
+  color:black;
+  float:inline-end;
+  white-space : normal
+}
+#text_english{
+  font-family: 'Playfair Display', serif;
+  text-align:left; 
+  margin-left: 3%;
+  margin-bottom: 3%; 
+  font-size: 2.2vw;
+  color:black;
+  float:inline-end;
+  white-space : normal
+}
+
+#scentImg{
+  float: right;
+  opacity: 1; 
+}
+#cdPlayer{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  clear: both;
+  position: relative;
+  left: -26vw;
+}
+#album{
+  width : 25vw;
+  height : auto;
+  vertical-align: middle;
+  text-align: center;
+  position: absolute;
+}
+#cover{
+  width : 13vw;
+  height : auto;
+  vertical-align: middle;
+  text-align: center;
+  position: absolute;
+  margin-left: 2%;
+  top: 1.5vh;
+}
+#music{
+  display: flex;
+  margin-left: 10vw;
+  clear: both;
+  position: relative;
+  flex-direction: column;
+}
+.cd{
+  width: 15vw;
+  height: auto;
+  margin-left: 5vw;
+  margin-bottom: 2vh;
+  position:relative;
+}
+.content{
+  display: flex;
+  text-align: center;
+  justify-content: left;
+  align-items: center;
+  clear: right;
+  width: 100%;
+}
+#textMusic{
+  font-family: 'Nanum Myeongjo', serif;
+  font-size: 1vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-left: -11vw;
+  margin-right: 10vw;
+  margin-top: 30vh;
+}
+#textScent{
+  font-family: 'Nanum Myeongjo', serif;
+  color : white;
+  font-size: 1vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-left: 25vw;
+  margin-top: 30vh;
+}
+#background{
+  display: flex;
+  align-items: left;
+  justify-content: left;
+  clear: both;
+  position: relative;
+}
+#backImg{
+  width : 100vw;
+  height : auto;
+  vertical-align: middle;
+  text-align: center;
+}
+#backImg2{
+  width : 100vw;
+  height : auto;
+  vertical-align: middle;
+  text-align: center;
+  position: absolute;
+}
+#scent{
+  display: flex;
+  clear: right;
+  position: relative;
+  flex-direction: column;
+  margin-right: 35vw;
+  left: 13vw;
+  top: 210vh;
+}
+#scentImg2{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  clear: both;
+  position: relative;
+  margin-left: -70vw;
+  margin-top: 168vh;
+}
+#stick{
+  width : 40vw;
+  height : auto;
+  vertical-align: middle;
+  text-align: center;
+  position: absolute;
+}
+#video{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  clear: both;
+  position: absolute;
+  width: 100%;
+}
+#home{
+display: flex;
+margin-left: 10vw;
+margin-top: 50vh;
+clear: both;
+position: absolute;
+flex-direction: column;
+}
+.bubb{
+width: 20vw;
+height: auto;
+margin-left: 5vw;
+margin-top: -20vh;
+top: -20vh;
+position: absolute;
+}
+.content-section {
+--scroll-length: 3.5;
+height: calc( var(--scroll-length) * 50vh );
+}
+.bubb.show{
+opacity: 1;
+}
+.pong {
+  animation: pong 0.5s;
+}
+@keyframes pong {
+  0% {
+    transform: scale(1.0);
+  }
+  50% {
+    transform: scale(0.9);
+    opacity: 0.5;
+  }
+  100% {
+    transform: scale(1.0);
+}
+}
+@keyframes rotateImg{
+  100%{
+    transform: rotate(360deg);
+  }
+}

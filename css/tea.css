@@ -17,6 +17,7 @@ div {
   font-size: 1.2vw;
   color:black;
   white-space : normal;
+  z-index: 10;
 }
 #text_english{
   font-family: 'Playfair Display', serif;
@@ -174,9 +175,8 @@ div {
 }
 hr{
   float: left;
-  height:1100vh;
+  height:1200vh;
   width:.2vw;
-  margin-top: 10vh;
   margin-left: .8vw;
   border-width:0;
   opacity: 0.3;

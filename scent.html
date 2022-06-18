@@ -5,259 +5,22 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sensling-scent</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
-  <link rel="stylesheet" href="music.css">
+  <link rel="stylesheet" href="css/music.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,500&display=swap" rel="stylesheet">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo&display=swap" rel="stylesheet">
-
-  <style>
-    header{
-      position: fixed;
-      z-index: 10;
-    }
-    img{
-      object-fit: cover;
-    }
-    hr{
-      float: left;
-      height:160vh;
-      width:.2vw;
-      margin-top: 10vh;
-      margin-left: .8vw;
-      border-width:0;
-      opacity: 0.3;
-      color:#000;
-      background-color:#000;
-    }
-   #text{
-      font-family: 'Nanum Myeongjo', serif;
-      text-align:left; 
-      margin-left: 3%;
-      margin-bottom: 3%; 
-      font-size: 1.2vw;
-      color:black;
-      float:inline-end;
-      white-space : normal
-    }
-    #text_english{
-      font-family: 'Playfair Display', serif;
-      text-align:left; 
-      margin-left: 3%;
-      margin-bottom: 3%; 
-      font-size: 2.2vw;
-      color:black;
-      float:inline-end;
-      white-space : normal
-    }
-    /* #scentImg{
-      float: right;
-      width: 50vw; 
-      height: 120vh;
-      opacity: 1;
-      /* position: absolute; } */
-    
-    #scentImg{
-      float: right;
-      opacity: 1; 
-    }
-    #cdPlayer{
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      clear: both;
-      position: relative;
-      left: -26vw;
-    }
-    /* #stringEffect{
-      width : 25vw;
-      height : auto;
-      vertical-align: middle;
-      text-align: center;
-      position: absolute;
-      top: 4.5vh;
-      left: -1.5vw;
-    } */
-    #album{
-      width : 25vw;
-      height : auto;
-      vertical-align: middle;
-      text-align: center;
-      position: absolute;
-      /* left: 11vw;
-      top: 4.5vh; */
-    }
-    #cover{
-      width : 13vw;
-      height : auto;
-      vertical-align: middle;
-      text-align: center;
-      position: absolute;
-      margin-left: 2%;
-      top: 1.5vh;
-    }
-    #music{
-      display: flex;
-
-      /* flex-direction: column; */
-      margin-left: 10vw;
-      clear: both;
-      position: relative;
-      flex-direction: column;
-    }
-    .cd{
-      width: 15vw;
-      height: auto;
-      margin-left: 5vw;
-      margin-bottom: 2vh;
-      position:relative;
-    }
-    .content{
-      display: flex;
-      text-align: center;
-      justify-content: left;
-      align-items: center;
-      clear: right;
-      width: 100%;
-    }
-    #textMusic{
-      font-family: 'Nanum Myeongjo', serif;
-      font-size: 1vw;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-direction: column;
-      margin-left: -11vw;
-      margin-right: 10vw;
-      margin-top: 30vh;
-    }
-    #textScent{
-      font-family: 'Nanum Myeongjo', serif;
-      color : white;
-      font-size: 1vw;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-direction: column;
-      margin-left: 25vw;
-      margin-top: 30vh;
-      /* left: 50vw; */
-      /* margin-left: 35vw; */
-    }
-    #background{
-      display: flex;
-      align-items: left;
-      justify-content: left;
-      clear: both;
-      position: relative;
-    }
-    #backImg{
-      width : 100vw;
-      height : auto;
-      vertical-align: middle;
-      text-align: center;
-      /* position: absolute; */
-    }
-    #backImg2{
-      width : 100vw;
-      height : auto;
-      vertical-align: middle;
-      text-align: center;
-      position: absolute;
-    }
-    #scent{
-      display: flex;
-      clear: right;
-      position: relative;
-      flex-direction: column;
-      margin-right: 35vw;
-      left: 13vw;
-      top: 210vh;
-    }
-    #scentImg2{
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      clear: both;
-      position: relative;
-      margin-left: -70vw;
-      margin-top: 168vh;
-    }
-    #stick{
-      width : 40vw;
-      height : auto;
-      vertical-align: middle;
-      text-align: center;
-      position: absolute;
-      /* left: -23vw;
-      top: 30vh; */
-    }
-    #video{
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      clear: both;
-      position: absolute;
-      width: 100%;
-    }
-    #home{
-    display: flex;
-
-    /* flex-direction: column; */
-    margin-left: 10vw;
-    margin-top: 50vh;
-    clear: both;
-    position: absolute;
-    flex-direction: column;
-    }
-    .bubb{
-    width: 20vw;
-    height: auto;
-    margin-left: 5vw;
-    margin-top: -20vh;
-    top: -20vh;
-    position: absolute;
-    }
-    .content-section {
-    --scroll-length: 3.5;
-    height: calc( var(--scroll-length) * 50vh );
-    }
-    .bubb.show{
-    opacity: 1;
-    }
-    .pong {
-      animation: pong 0.5s;
-    }
-    @keyframes pong {
-      0% {
-        transform: scale(1.0);
-      }
-      50% {
-        transform: scale(0.9);
-        opacity: 0.5;
-      }
-      100% {
-        transform: scale(1.0);
-    }
-    }
-    @keyframes rotateImg{
-      100%{
-        transform: rotate(360deg);
-      }
-    }
-  </style>
-  <script src="images.js"></script>
+  <link rel="stylesheet" href="css/scent.css">
+  <script src="js/images.js"></script>
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  <script src="scentImgScroll.js"></script>
-  <script src="music.js"></script>
-  <script src="scent.js"></script>
-  <script src="m_player.js"></script>
-  <!-- <script src="music_play.js"></script> -->
+  <script src="js/scentImgScroll.js"></script>
+  <script src="js/music.js"></script>
+  <script src="js/scent.js"></script>
 
 </head>
 <body>
@@ -274,16 +37,18 @@
       <div id="text" data-aos="fade-down" data-aos-anchor-placement="top-center" data-aos-duration="2000" style="font-size: 2vw">오늘의 힐링:</div>
       <br/>
       <div id="text_english" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="2000"> Today's Music and Scent for You </div>
-      <br/>
-      <br/>
-      <br/>
-      <br/>
-      <br/>
-      <br/>
-      <br/>
-      <br/>
-      <br/>
-      <br/>
+      <pre>
+
+
+
+
+
+
+
+
+
+
+      </pre>
       <div id="text" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="2000"> 당신을 위한 음악 한 곡을 준비했어요 </div>
       </br>
       <div id="text" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="2000"> 당신을 위한 향기도 같이 준비해봤어요 </div>
@@ -291,15 +56,18 @@
       <div id="text" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="2000"> 음악에 빠지고, 향기에 취해 </div>
       </br>
       <div id="text" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="2000"> 마음의 짐을 덜어보아요 </div>
-      <br/>
-      <br/>
-      <br/>
-      <br/>
-      <br/>
-      <br/>
-      <br/>
-      <br/>
-      <br/>
+      <pre>
+
+
+
+
+
+
+        
+
+
+
+      </pre>
       <div id="text_english" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="2000"> LISTEN + SMELL + ENJOY </div>
       <br/>
       <div id="text" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="2000"> 당신을 위해 준비한 한 곡의 음악과 </div>
@@ -316,7 +84,6 @@
   
   <div style="font-size: 30vw; opacity: 0; z-index: -1;" >공</div>
 <!-- 첫 화면과 음악 플레이리스트 화면 구분 -->
-  <!-- <div style="font-size: 15vw; opacity: 0; z-index: -1;" >공</div> -->
   <section>
     <section id="music" style="align-items:flex-start">  
       <img class="cd" src="images\bubble\speech bubble\4-1speech_b_.png" alt="" data-aos="zoom-in" style="margin-left: 25vw; margin-bottom: 3vh; width: 15vw; height: auto;">
@@ -324,7 +91,6 @@
 
     <section id="cdPlayer">
       <section>
-        <!-- <img id="stringEffect" src="images\scent\player_l.png"> -->
         <img id="album" src="images\scent\player_h.png">
         <img id="cover" class = "hand">
       </section>
@@ -342,19 +108,6 @@
     </section>
   </section>
   <div style="font-size: 30vw; opacity: 0; z-index: -1;" >공</div>
-
-<!-- 음악 플레이리스트 화면과 향기 화면 구분 -->
-<!-- 배경 이미지 설정 -->
-  <!-- <section>
-    <img id="backImg" src="images\scent\background.png">
-  </section> -->
-  <!-- <section id="background">
-    
-  </section> -->
-  <!-- <div style="font-size: 10vw; opacity: 0; z-index: -1;" >공</div> -->
-  
-  
-
   <!-- 향기 화면 구성 -->
   <section>
     <section id="background">
@@ -401,7 +154,6 @@
 
   <audio id="musicPlay"></audio>
   <audio id="music0" src="sounds/music/music0.mp3"></audio>
-  <!-- <div style="font-size: 10vw; opacity: 0; z-index: -1;" >공</div> -->
   
   <script>
     if (localStorage.getItem("link1") == "scent"){
@@ -431,6 +183,7 @@
   </script>
   <script>music()</script>
   <script>scent()</script>
-  <!-- <script>music_play()</script> -->
+  <script src="js/m_player.js"></script>
+
 </body>
 </html>

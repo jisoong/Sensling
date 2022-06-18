@@ -55,7 +55,6 @@ function scent() {
   
     randName = [Lavender, Rose, Jasmine, teaTree, Mint, Eucalyptus, Rosemary, Lemon]
     randomNum = randName[Math.floor(Math.random() * 8)]
-    console.log(randomNum);
     for (i=0; (i<randomNum.length); i++){
       var id_name = document.getElementById("scent" + i)
       
@@ -68,8 +67,4 @@ function scent() {
       
     }
     
-    // var blurTop = document.getElementById("blurTop");
-    // var blurUnder = document.getElementById("blurUnder");
-    // blurTop.src = 'images/blur/' + randomNum[0] + '.png'
-    // blurUnder.src = 'images/blur/' + randomNum[0] + '.png'
   }

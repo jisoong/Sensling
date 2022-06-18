@@ -86,7 +86,6 @@
       align-items: center;
       clear: right;
       width: 100%;
-
     }
     #textMusic{
       font-size: 1vw;
@@ -96,8 +95,14 @@
     #textScent{
       color : white;
       font-size: 1vw;
-      margin-left: 20vw;
-      margin-top: 18vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      margin-left: -20vw;
+      margin-top: 10vh;
+      left: 50vw;
+      /* margin-left: 35vw; */
     }
     #background{
       display: flex;
@@ -148,6 +153,14 @@
       left: -23vw;
       top: 30vh;
     }
+    #video{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      clear: both;
+      position: absolute;
+      left: 10vw;
+    }
 
     .pong {
       animation: pong 0.5s;
@@ -175,6 +188,7 @@
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script src="scentImgScroll.js"></script>
   <script src="music.js"></script>
+  <script src="scent.js"></script>
   <!-- <script src="music_play.js"></script> -->
 
 </head>
@@ -214,10 +228,10 @@
       </section>
     </section>
     <section id="textMusic">
-        <div class="content" id="scene" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="10000"  data-aos-delay="1100000"> </div></br>
-        <div class="content" id="musicTitle" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="10000"  data-aos-delay="1100000"> </div></br>
-        <div class="content" id="by" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="10000"  data-aos-delay="1100000"> </div></br>
-        <div class="content" id="singer" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="10000"  data-aos-delay="1100000"> </div></br>
+      <div class="content" id="scene" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="10000"  data-aos-delay="1100000"> </div></br>
+      <div class="content" id="musicTitle" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="10000"  data-aos-delay="1100000"> </div></br>
+      <div class="content" id="by" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="10000"  data-aos-delay="1100000"> </div></br>
+      <div class="content" id="singer" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="10000"  data-aos-delay="1100000"> </div></br>
     </section>
   </section>
   <div style="font-size: 13vw; opacity: 0; z-index: -1;" >공</div>
@@ -230,14 +244,18 @@
   <section id="background">
     <section>
       <img id="backImg2" src="images\scent\black.png">
+      <div id="video">
+        <video loop="" autoplay="" muted="" width="50%" height="auto">
+          <source src="videos/smoke.mp4" style="z-index: -1;">
+        </video>
+      </div>
     </section>
   </section>
-  <div style="font-size: 10vw; opacity: 0; z-index: -1;" >공</div>
+  <!-- <div style="font-size: 10vw; opacity: 0; z-index: -1;" >공</div> -->
   
   <!-- 향기 화면 구성 -->
-  <!-- <video src="videos/smoke.mp4" style="z-index: 4; width: 10vw; height:auto;"></vido> -->
-
   <section>
+    
     <section id="scent" style="align-items:flex-start">  
       <img class="cd" src="images\scent\ment_2.png" alt="" data-aos="zoom-in" style="margin-left: 40vw; margin-bottom: 3vh; width: 15vw; height: auto;">
     </section>
@@ -246,12 +264,19 @@
         <img id="stick" src="images\scent\incense holder.png">
       </section>
     </section>
-    </section>
     <section id="textScent">
-        <div class="content" id="scene" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="10000"  data-aos-delay="1100000"> </div></br>
-        <div class="content" id="musicTitle" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="10000"  data-aos-delay="1100000"> </div></br>
-        <div class="content" id="by" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="10000"  data-aos-delay="1100000"> </div></br>
-        <div class="content" id="singer" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="10000"  data-aos-delay="1100000"> </div></br>
+      <section>
+          <div class="content" id="scent0" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="10000"  data-aos-delay="1100000"> </div></br>
+          <div class="content" id="scent1" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="10000"  data-aos-delay="1100000"> </div></br>
+          <div class="content" id="scent2" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="10000"  data-aos-delay="1100000"> </div></br>
+          <div class="content" id="scent3" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="10000"  data-aos-delay="1100000"> </div></br>
+          <div class="content" id="scent4" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="10000"  data-aos-delay="1100000"> </div></br>
+          <div class="content" id="scent5" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="10000"  data-aos-delay="1100000"> </div></br>
+          <div class="content" id="scent6" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="10000"  data-aos-delay="1100000"> </div></br>
+          <div class="content" id="scent7" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="10000"  data-aos-delay="1100000"> </div></br>
+          <div class="content" id="scent8" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="10000"  data-aos-delay="1100000"> </div></br>
+          <div class="content" id="scent9" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="10000"  data-aos-delay="1100000"> </div></br>
+      </section>
     </section>
   </section>
 
@@ -283,6 +308,7 @@
     });
   </script>
   <script>music()</script>
+  <script>scent()</script>
   <!-- <script>music_play()</script> -->
 </body>
 </html>

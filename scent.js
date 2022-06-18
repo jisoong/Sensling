@@ -93,10 +93,10 @@ function scent() {
   
     randName = [Lavender, Rose, Jasmine, teaTree, Mint, Eucalyptus, Rosemary, Lemon]
     randomNum = randName[Math.floor(Math.random() * 8)]
-    $("#scentTitle").text(randomNum[1]);
-    for (i=2; (i<randomNum.length); i++){
+    console.log(randomNum);
+    for (i=0; (i<randomNum.length); i++){
       var id_name = document.getElementById("scent" + i)
-  
+      
       if (randomNum[i] == undefined){
         id_name.innerText = " "
       }
@@ -105,6 +105,7 @@ function scent() {
       }
       
     }
+    
     // var blurTop = document.getElementById("blurTop");
     // var blurUnder = document.getElementById("blurUnder");
     // blurTop.src = 'images/blur/' + randomNum[0] + '.png'

@@ -6,11 +6,11 @@
     animation: spin 4s infinite linear;
 }
 .spin{
-    animation: spin 5s infinite linear;   
+    animation: spin 0.5s infinite linear;   
     animation-play-state: paused;
 }
 .spinStop{
-    animation: spin 5s infinite linear;   
+    animation: spin 0.5s infinite linear;   
     animation-play-state: running;
 }
 @-webkit-keyframes spin {

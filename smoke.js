@@ -14,7 +14,7 @@ $(window).on('scroll', function(){
 
 		smokeNowScrollTop = $(this).scrollTop();
 		if (smokeWheelDelta() == 'down'){
-			if(smokeNum <27 && smoke_tmp<window.innerHeight*2.8 && smoke_tmp > window.innerHeight*1.8){
+			if(smokeNum <27 && smoke_tmp<window.innerHeight*2.8 && smoke_tmp > window.innerHeight*1.4){
 				smokeNum = smokeNum + 1
 				document.getElementById("smoke").src = 'images/smoke/smoke' + '_'+ smokeNum + '.png';
         document.getElementById("smoke").style.left += 1

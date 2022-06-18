@@ -13,8 +13,6 @@ function bubbleShow_D(i) {
 $(window).scroll(function () {
   var tmp = $(this).scrollTop();
   scroll_pos = $(this).scrollTop();
-  // console.log(tmp)
-  // console.log(window.innerHeight*0.75) 
   if (tmp > window.innerHeight*1.1){
 
     bubbleHide_D(0)
@@ -23,7 +21,6 @@ $(window).scroll(function () {
     bubbleHide_D(1)
     targetB[1].classList.remove('show')
     targetB[1].classList.add('hide')
-    // console.log("hide")
   }
   if (tmp > window.innerHeight*2.6) {
     bubbleHide_D(3)

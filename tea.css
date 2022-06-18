@@ -73,8 +73,6 @@ div {
   position: relative;
   display: flex;
   clear: both;
-  /* width: 30vw;
-  height: 20vh; */
   flex-direction: column;
   
 }
@@ -144,8 +142,6 @@ div {
   font-family: 'Nanum Myeongjo', serif;
   text-align: right;
   display: flex;
-  /* justify-content: center;
-  align-items: center;  */
   clear: right;
   margin-top: 7%;
   font-size: 1.5vw;
@@ -157,8 +153,6 @@ div {
   font-family: 'Nanum Myeongjo', serif;
   display: flex;
   text-align: right;
-  /* justify-content: center;
-  align-items: center; */
   margin-left: 44vw; 
   clear: right;
   width: 100%
@@ -196,8 +190,6 @@ hr{
 }
 #home{
   display: flex;
-
-  /* flex-direction: column; */
   margin-left: 10vw;
   clear: both;
   position: relative;
@@ -222,7 +214,6 @@ hr{
   top: 0;
   left: 0;
   margin: 0;
-  /* display: block;  */
   display: flex;
   flex-direction: column;
   overflow: hidden;

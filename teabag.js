@@ -11,7 +11,6 @@ function teaBagWheelDelta(){
 var teaBagNum = 1
 $(window).on('scroll', function(){
 		var teaBag_tmp = $(this).scrollTop();
-		// console.log(teaBag_tmp)
 		teaBagnowScrollTop = $(this).scrollTop();
 		if (teaBagWheelDelta() == 'down'){
 			if(teaBagNum <199 && teaBag_tmp>window.innerHeight*7.3){

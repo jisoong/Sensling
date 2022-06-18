@@ -8,25 +8,47 @@
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
   <link rel="stylesheet" href="music.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,500&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo&display=swap" rel="stylesheet">
+
   <style>
     img{
       object-fit: cover;
     }
-    #text{
+   #text{
+      font-family: 'Nanum Myeongjo', serif;
       text-align:left; 
       margin-left: 3%;
       margin-bottom: 3%; 
-      font-size: 20px;
+      font-size: 1.2vw;
       color:black;
       float:inline-end;
       white-space : normal
     }
-    #scentImg{
+    #text_english{
+      font-family: 'Playfair Display', serif;
+      text-align:left; 
+      margin-left: 3%;
+      margin-bottom: 3%; 
+      font-size: 2.2vw;
+      color:black;
+      float:inline-end;
+      white-space : normal
+    }
+    /* #scentImg{
       float: right;
       width: 50vw; 
       height: 120vh;
       opacity: 1;
-      /* position: absolute; */
+      /* position: absolute; } */
+    
+    #scentImg{
+      float: right;
+      opacity: 1; 
     }
     #cdPlayer{
       display: flex;
@@ -88,6 +110,7 @@
       width: 100%;
     }
     #textMusic{
+      font-family: 'Nanum Myeongjo', serif;
       font-size: 1vw;
       display: flex;
       align-items: center;
@@ -97,6 +120,7 @@
       margin-top: 30vh;
     }
     #textScent{
+      font-family: 'Nanum Myeongjo', serif;
       color : white;
       font-size: 1vw;
       display: flex;
@@ -218,19 +242,48 @@
 <body>
   <section>
     <div>
-      <img id="scentImg" data-aos="fade-down-left" data-aos-anchor-placement="top-center">
+      <img id="scentImg" data-aos="fade-down-left" data-aos-anchor-placement="top-center" style="width: 50vw; height: 180vh;">
       <div id="text" style="font-size: 8vw; opacity: 0;">공백</div>
-      <div id="text" data-aos="fade-down" data-aos-anchor-placement="top-center" data-aos-duration="2000" style="font-size: 2vw"> 4. music & scent starting ment </div>
       <div id="text" data-aos="fade-down" data-aos-anchor-placement="top-center" data-aos-duration="2000" style="font-size: 2vw">오늘의 힐링:</div>
-      <div id="text" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="2000"> Today's Music and Scent for You </div>
+      <br/>
+      <div id="text_english" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="2000"> Today's Music and Scent for You </div>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
       <div id="text" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="2000"> 당신을 위한 음악 한 곡을 준비했어요 </div>
+      </br>
       <div id="text" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="2000"> 당신을 위한 향기도 같이 준비해봤어요 </div>
+      </br>
       <div id="text" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="2000"> 음악에 빠지고, 향기에 취해 </div>
+      </br>
       <div id="text" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="2000"> 마음의 짐을 덜어보아요 </div>
-      <div id="text" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="2000"> LISTEN + SMELL + ENJOY </div>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <div id="text_english" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="2000"> LISTEN + SMELL + ENJOY </div>
+      <br/>
       <div id="text" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="2000"> 당신을 위해 준비한 한 곡의 음악과 </div>
+      <br/>
       <div id="text" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="2000"> 공간의 향기 </div>
+      <br/>
       <div id="text" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="2000"> 잠시 음악과 향에 취해보세요 </div>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
     </div>
   </section>  
   
@@ -253,10 +306,12 @@
     
     <section id="textMusic">
       <section>
-        <div class="content" id="scene" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="10000"  data-aos-delay="1100000"> </div></br>
-        <div class="content" id="musicTitle" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="10000"  data-aos-delay="1100000"> </div></br>
-        <div class="content" id="by" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="10000"  data-aos-delay="1100000"> </div></br>
-        <div class="content" id="singer" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="10000"  data-aos-delay="1100000"> </div></br>        
+        <br/>
+        <br/>
+        <div class="content" id="scene" data-aos="fade-up"  data-aos-duration="10000"  data-aos-delay="1100000"> </div></br>
+        <div class="content" id="musicTitle" data-aos="fade-up" data-aos-duration="10000"  data-aos-delay="1100000"> </div></br></br>
+        <div class="content" id="by" data-aos="fade-up"  data-aos-duration="10000"  data-aos-delay="1100000"> </div></br>
+        <div class="content" id="singer" data-aos="fade-up"  data-aos-duration="10000"  data-aos-delay="1100000"> </div></br>        
       </section>
     </section>
   </section>
@@ -298,16 +353,16 @@
     </section>
     <section id="textScent">
       <section>
-          <div class="content" id="scent0" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="10000"  data-aos-delay="1100000"> </div></br>
-          <div class="content" id="scent1" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="10000"  data-aos-delay="1100000"> </div></br>
-          <div class="content" id="scent2" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="10000"  data-aos-delay="1100000"> </div></br>
-          <div class="content" id="scent3" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="10000"  data-aos-delay="1100000"> </div></br>
-          <div class="content" id="scent4" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="10000"  data-aos-delay="1100000"> </div></br>
-          <div class="content" id="scent5" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="10000"  data-aos-delay="1100000"> </div></br>
-          <div class="content" id="scent6" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="10000"  data-aos-delay="1100000"> </div></br>
-          <div class="content" id="scent7" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="10000"  data-aos-delay="1100000"> </div></br>
-          <div class="content" id="scent8" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="10000"  data-aos-delay="1100000"> </div></br>
-          <div class="content" id="scent9" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="10000"  data-aos-delay="1100000"> </div></br>
+          <div class="content" id="scent0" data-aos="fade-up"  data-aos-duration="10000"  data-aos-delay="1100000"> </div></br><br/>
+          <div class="content" id="scent1" data-aos="fade-up" data-aos-duration="10000"  data-aos-delay="1100000"> </div></br>
+          <div class="content" id="scent2" data-aos="fade-up"  data-aos-duration="10000"  data-aos-delay="1100000"> </div></br>
+          <div class="content" id="scent3" data-aos="fade-up"  data-aos-duration="10000"  data-aos-delay="1100000"> </div></br>
+          <div class="content" id="scent4" data-aos="fade-up" data-aos-duration="10000"  data-aos-delay="1100000"> </div></br>
+          <div class="content" id="scent5" data-aos="fade-up"  data-aos-duration="10000"  data-aos-delay="1100000"> </div></br>
+          <div class="content" id="scent6" data-aos="fade-up"  data-aos-duration="10000"  data-aos-delay="1100000"> </div></br>
+          <div class="content" id="scent7" data-aos="fade-up"  data-aos-duration="10000"  data-aos-delay="1100000"> </div></br>
+          <div class="content" id="scent8" data-aos="fade-up"  data-aos-duration="10000"  data-aos-delay="1100000"> </div></br>
+          <div class="content" id="scent9" data-aos="fade-up"  data-aos-duration="10000"  data-aos-delay="1100000"> </div></br>
       </section>
     </section>
   </section>

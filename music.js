@@ -114,7 +114,7 @@ function music() {
 
     console.log(musicPlay);
 
-    stringEffect.onclick = function(){
+    cover.onclick = function(){
         document.getElementById('music0').play()
 
         if (count == 0){

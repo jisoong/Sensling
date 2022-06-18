@@ -20,19 +20,29 @@ $(window).scroll(function () {
     bubbleHide_D(0)
     targetB[0].classList.remove('show')
     targetB[0].classList.add('hide')
-
-    // console.log("hide")
-  }
-  if (tmp > window.innerHeight*2.5) {
     bubbleHide_D(1)
     targetB[1].classList.remove('show')
     targetB[1].classList.add('hide')
+    // console.log("hide")
+  }
+  if (tmp > window.innerHeight*2.6) {
+    bubbleHide_D(3)
+    targetB[3].classList.remove('show')
+    targetB[3].classList.add('hide')
     bubbleHide_D(2)
     targetB[2].classList.remove('show')
     targetB[2].classList.add('hide')
   }
+
+  if (targetB[2].classList.contains('hide')){
+    if (tmp < window.innerHeight*2.4){
+      bubbleShow_D(2)
+      targetB[2].classList.remove('hide');
+      targetB[2].classList.add('show');  
+    }
+  }
   if (targetB[1].classList.contains('hide')){
-    if (tmp < window.innerHeight*2.0){
+    if (tmp < window.innerHeight*1.9){
       bubbleShow_D(1)
       targetB[1].classList.remove('hide');
       targetB[1].classList.add('show');  
@@ -45,11 +55,11 @@ $(window).scroll(function () {
       targetB[0].classList.add('show');  
     }
   }
-  if (targetB[0].classList.contains('hide')){
-    if (tmp < window.innerHeight*2.0) {
+  if (targetB[3].classList.contains('hide')){
+    if (tmp < window.innerHeight*2.4) {
       bubbleShow_D(2)
-      targetB[2].classList.remove('hide');
-      targetB[2].classList.add('show')
+      targetB[3].classList.remove('hide');
+      targetB[3].classList.add('show')
     }
   }
 

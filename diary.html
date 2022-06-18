@@ -20,6 +20,17 @@
       position: fixed;
       z-index: 10;
     }
+    hr{
+      float: right;
+      height:170vh;
+      width:.2vw;
+      margin-top: 10vh;
+      margin-right: .8vw;
+      border-width:0;
+      opacity: 0.3;
+      color:#000;
+      background-color:#000;
+    }
     img{
       object-fit: cover; 
     }
@@ -85,8 +96,7 @@
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script src="imageScroll.js"></script>
-  <script src="date.js"></script>
-  <script src="m_player.js"></script>
+
 </head>
 <body>
   <header>
@@ -96,7 +106,7 @@
     <!-- <img src="images\bubble\speech bubble\1-1speech_b_.png" id="player" data-aos="zoom-in" style="width:20vw; height:auto; margin-left:3vw; margin-top:2vh; opacity: 1;">  -->
   </header>
   <section>
-
+    <hr>
     <div>
       <img id="diaryImg" data-aos="fade-down-right" data-aos-anchor-placement="top-center" style="width: 50vw; height: 180vh; opacity: 1; ">
       <div id="text" style="font-size: 8vw; opacity: 0;">공백</div>
@@ -149,9 +159,9 @@
   <img class = "bubb" src="images\bubble\speech bubble\1-2speech_b_.png" alt="" data-aos="zoom-in" style="margin-bottom: 0vh; height: 8vh; width: auto; margin-left: 68vw; ">
   <div id="text" style="font-size: 14vw; opacity: 0;">공백</div> 
   <div id="home" style="margin-left: 2vw;">
-    <img class = "bubb" src="images\bubble\speech bubble\1-3speech_b_.png" alt="" data-aos="zoom-in" style="width: 6vw; height: auto;  margin-left: 10vw;">
+    <img class = "bubb" src="images\bubble\speech bubble\1-3speech_b_.png" alt="" data-aos="zoom-in" style="margin-left: 2vw; width: 15vw; height: auto;">
     <a href="index.html#main" target="_blank">
-      <img src="images/home_key.png" alt="" style="width:2vw; height: auto; padding-bottom: 4vh;">
+      <img src="images/home_key.png" alt="" style="width:2vw; height: auto; margin-left: 2vw; margin-top: 2vh; padding-bottom: 4vh;">
      
   </div>
   <script>
@@ -180,8 +190,7 @@
       duration: 800   
     });
   </script>
-  <script>date();</script>
-  <script src="saveImg.js"></script>
+  <script src="textBubble_diary.js"></script>
 </body>
 </html>
 <script src="scheduler.js"></script>

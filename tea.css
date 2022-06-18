@@ -89,7 +89,7 @@ div {
   clear: right;
   margin-top: 6vh;
   font-size: 1.5vw;
-  margin-left: 30vw;
+  margin-left: 25vw;
   z-index: 1;
 }
 
@@ -99,16 +99,16 @@ div {
   display: flex;
   font-size: 1vw;
   justify-content: right;
-  margin-right: 15vw;
+  margin-right: 25vw;
   z-index: 1;
 } 
 #pencil {
   position: absolute;
   right: 10vw;
   width: 52vw; 
-  height: 50vh;
-  top: 35vh;
-  left: 66vw;
+  height: 70vh;
+  top: 20vh;
+  left: 60vw;
 }
 #teaBag {
 
@@ -170,7 +170,7 @@ div {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  margin-left: 30vw;
+  margin-left: 25vw;
 
 }
 #teaContent {

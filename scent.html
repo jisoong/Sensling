@@ -7,6 +7,7 @@
   <title>Sensling-scent</title>
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+  <link rel="stylesheet" href="music.css">
   <style>
     img{
       object-fit: cover; 
@@ -27,29 +28,145 @@
       opacity: 1;
       /* position: absolute; */
     }
+    #cdPlayer{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      clear: both;
+      position: relative;
+      left: -15vw;
+    }
+    #stringEffect{
+      width : 15vw;
+      height : auto;
+      vertical-align: middle;
+      text-align: center;
+      position: absolute;
+      top: 4.5vh;
+      /* left: -1.5vw; */
+    }
+    #album{
+      width : 15vw;
+      height : auto;
+      vertical-align: middle;
+      text-align: center;
+      position: absolute;
+      /* left: 11vw;
+      top: 4.5vh; */
+    }
+    #cover{
+      width : 10vw;
+      height : auto;
+      vertical-align: middle;
+      text-align: center;
+      position: absolute;
+      left: 53.4vw;
+      top: 4vh;
+    }
+    #music{
+      display: flex;
+
+      /* flex-direction: column; */
+      margin-left: 10vw;
+      clear: both;
+      position: relative;
+      flex-direction: column;
+    }
+    .cd{
+      width: 20vw;
+      height: auto;
+      margin-left: 5vw;
+      margin-bottom: 2vh;
+      position:relative;
+    }
+    .content{
+      display: flex;
+      text-align: center;
+      justify-content: center;
+      align-items: center;
+      clear: right;
+      width: 100%;
+
+    }
+    #textMusic{
+      font-size: 1vw;
+      margin-left: 20vw;
+      margin-top: 18vh;
+    }
+
+    .pong {
+      animation: pong 0.5s;
+    }
+    @keyframes pong {
+      0% {
+        transform: scale(1.0);
+      }
+      50% {
+        transform: scale(0.9);
+        opacity: 0.5;
+      }
+      100% {
+        transform: scale(1.0);
+    }
+    }
+    @keyframes rotateImg{
+      100%{
+        transform: rotate(360deg);
+      }
+    }
   </style>
   <script src="images.js"></script>
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script src="scentImgScroll.js"></script>
+  <script src="music.js"></script>
 </head>
 <body>
-  <div>
-  <img id="scentImg" data-aos="fade-down-left" data-aos-anchor-placement="top-center">
+  <section>
+    <div>
+      <img id="scentImg" data-aos="fade-down-left" data-aos-anchor-placement="top-center">
+      <div id="text" style="font-size: 8vw; opacity: 0;">공백</div>
+      <div id="text" data-aos="fade-down" data-aos-anchor-placement="top-center" data-aos-duration="2000" style="font-size: 2vw"> 4. music & scent starting ment </div>
+      <div id="text" data-aos="fade-down" data-aos-anchor-placement="top-center" data-aos-duration="2000" style="font-size: 2vw">오늘의 힐링:</div>
+      <div id="text" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="2000"> Today's Music and Scent for You </div>
+      <div id="text" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="2000"> 당신을 위한 음악 한 곡을 준비했어요 </div>
+      <div id="text" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="2000"> 당신을 위한 향기도 같이 준비해봤어요 </div>
+      <div id="text" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="2000"> 음악에 빠지고, 향기에 취해 </div>
+      <div id="text" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="2000"> 마음의 짐을 덜어보아요 </div>
+      <div id="text" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="2000"> LISTEN + SMELL + ENJOY </div>
+      <div id="text" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="2000"> 당신을 위해 준비한 한 곡의 음악과 </div>
+      <div id="text" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="2000"> 공간의 향기 </div>
+      <div id="text" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="2000"> 잠시 음악과 향에 취해보세요 </div>
+    </div>
+  </section>  
   
-  <div id="text" style="font-size: 8vw; opacity: 0;">공백</div>
-  <div id="text" data-aos="fade-down" data-aos-anchor-placement="top-center" data-aos-duration="2000" style="font-size: 2vw">오늘의 힐링:</div>
-  <div id="text" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="2000"> Today's Music and Scent for You </div>
-  <div id="text" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="2000"> 당신을 위한 음악 한 곡을 준비했어요 </div>
-  <div id="text" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="2000"> 당신을 위한 향기도 같이 준비해봤어요 </div>
-  <div id="text" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="2000"> 음악에 빠지고, 향기에 취해 </div>
-  <div id="text" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="2000"> 마음의 짐을 덜어보아요 </div>
-  <div id="text" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="2000"> LISTEN + SMELL + ENJOY </div>
-  <div id="text" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="2000"> 당신을 위해 준비한 한 곡의 음악과 </div>
-  <div id="text" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="2000"> 공간의 향기 </div>
-  <div id="text" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="2000"> 잠시 음악과 향에 취해보세요 </div>
-  </div>
-  <div style="font-size: 1000px; opacity: 0;">공</div>
+  <div style="font-size: 600px; opacity: 0; z-index: -1;" >공</div>
+
+  </section>
+  <div style="font-size: 15vw; opacity: 0; z-index: -1;" >공</div>
+  <section id="music" style="align-items:flex-start">  
+  <!-- <img class="bubb" src="images/bubble/game_1.png" alt="" data-aos="zoom-in"> -->
+  <img class="cd" src="images\scent\ment_1.png" alt="" data-aos="zoom-in" style="margin-left: 40vw; margin-bottom: 3vh; width: 15vw; height: auto;">
+  </section>
+
+  <section>
+    <section id="cdPlayer">
+      <section>
+        <img id="stringEffect" src="images\scent\string.png">
+        <img id="album" src="images\scent\cd_player.png">
+        <img id="cover" class = "hand">
+      </section>
+    </section>
+    <section id="textMusic">
+        <div class="content" id="scene" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="10000"  data-aos-delay="1100000"> </div></br>
+        <div class="content" id="musicTitle" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="10000"  data-aos-delay="1100000"> </div></br>
+        <div class="content" id="by" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="10000"  data-aos-delay="1100000"> </div></br>
+        <div class="content" id="singer" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="10000"  data-aos-delay="1100000"> </div></br>
+    </section>
+  </section>
+  <audio id="music0" src="sounds/music/music0.mp3"></audio>
+  <div style="font-size: 800px; opacity: 0; z-index: -1;" >공</div>
+
   <script>
     if (localStorage.getItem("link1") == "scent"){
       const newImg = document.getElementById("scentImg");
@@ -74,5 +191,6 @@
       duration: 800   
     });
   </script>
+  <script>music()</script>
 </body>
 </html>

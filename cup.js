@@ -62,21 +62,25 @@ function cupWheelDelta(){
 };
 
 var cupNum = 1
+console.log(window.innerHeight)
 $(window).on('scroll', function(){
+
 		var cup_tmp = $(this).scrollTop();
+		console.log(cup_tmp)
 		cupNowScrollTop = $(this).scrollTop();
 		// console.log(cupNum)
 		if (cupWheelDelta() == 'down'){
 			if(cupNum <260 && cup_tmp<window.innerHeight*3){
 				cupNum = cupNum + 4
 				document.getElementById("cup").src = 'images/cup/cup' + '_'+ cupNum + '.png';
+				console.log("hi")
 			}
 		}
 		if(cupWheelDelta() == 'up'){
-			if (cupNum <=260 && cupNum>5 && cup_tmp<window.innerHeight*3){
+			if (cupNum <=270 && cupNum>5 && cup_tmp<window.innerHeight*3){
 				cupNum = cupNum - 4
 				document.getElementById("cup").src = 'images/cup/cup' + '_'+ cupNum + '.png';
-				
+				console.log("bye")
 			}
 		}
 		cupPrevScrollTop = cupNowScrollTop;

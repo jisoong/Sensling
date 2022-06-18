@@ -183,4 +183,3 @@ function checkKeyPressed(e) {
   }
   document.getElementById('airCap').play()
 }
-

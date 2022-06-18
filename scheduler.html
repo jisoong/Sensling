@@ -84,9 +84,12 @@
         border-style: solid;
         flex-direction: column;
         margin-top: 3vh;
-        margin-left: 6vw;
+        margin-left: 11vw;
         align-items: center;
         justify-content: center;
+    }
+    #timer{
+        margin-left: 20vw;
     }
     #onePage{
         display: flex;
@@ -164,10 +167,9 @@
         color:white;
         font-size:1vw;
         text-align: center;
-        align-items: center;
-        justify-content: center;
-        margin-top: 27vh;
-        margin-left: 22vw; 
+        justify-content: left;
+        margin-top: -9vh;
+        margin-right: 27vw;
     }
     body {
         padding: 5%;
@@ -180,22 +182,23 @@
     <div id = "title"> My daily routine</div>
     <div id="myCanvas" style="width:35%;height:650px;float:left" ></div>
     <!-- <img class = "bubb" id="bubb3" src="images/bubble/diary_1.png" alt="" style="margin-bottom: 5vh; width: 15vw;"> -->
+    
     <section id="diary">
         <div id="diary_date"> </div>
         <hr align="right" style="width: 30vw; margin-right: 2vw;">
         <div id="question" > 질문 </div>
+        <section style="display: flex; margin-right: 0vw;">
 
-        <div id = "text" contentEditable="true" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div id = "text" contentEditable="true" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+        </section>
+
     </section style="margin-bottom">
     <section id="onePage">
-        <section>
+        <section id="timer">
             <img id="clock" src="images/clock.png" alt="">
             <div id="hours"></div>
             <div id="colon">:</div>
             <div id="minutes"></div>
-        </section>
-        <section>
-            <button id = "button" type="button" onclick="PrintDiv($(document.body));"> save </button>
         </section>
         <section style="display: flex; flex-direction:column;">
             <div style="margin-top: 3vh;"> Drag and Drop Stickers</div>
@@ -225,7 +228,7 @@
         </section>
 
     </section>
-    
+    <button id = "button" type="button" onclick="PrintDiv($(document.body));"> save </button>
 <script>
   questions = [
     "당신의 삶의 목적은 무엇인가요?",

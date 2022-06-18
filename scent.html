@@ -82,15 +82,19 @@
     .content{
       display: flex;
       text-align: center;
-      justify-content: center;
+      justify-content: left;
       align-items: center;
       clear: right;
       width: 100%;
     }
     #textMusic{
       font-size: 1vw;
-      margin-left: 20vw;
-      margin-top: 18vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      margin-left: 10vw;
+      margin-top: 30vh;
     }
     #textScent{
       color : white;
@@ -249,10 +253,12 @@
     </section>
     
     <section id="textMusic">
-      <div class="content" id="scene" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="10000"  data-aos-delay="1100000"> </div></br>
-      <div class="content" id="musicTitle" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="10000"  data-aos-delay="1100000"> </div></br>
-      <div class="content" id="by" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="10000"  data-aos-delay="1100000"> </div></br>
-      <div class="content" id="singer" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="10000"  data-aos-delay="1100000"> </div></br>
+      <section>
+        <div class="content" id="scene" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="10000"  data-aos-delay="1100000"> </div></br>
+        <div class="content" id="musicTitle" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="10000"  data-aos-delay="1100000"> </div></br>
+        <div class="content" id="by" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="10000"  data-aos-delay="1100000"> </div></br>
+        <div class="content" id="singer" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="10000"  data-aos-delay="1100000"> </div></br>        
+      </section>
     </section>
   </section>
   <div style="font-size: 13vw; opacity: 0; z-index: -1;" >공</div>

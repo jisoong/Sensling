@@ -9,6 +9,10 @@
   <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <style>
+    header{
+      position: fixed;
+      z-index: 10;
+    }
     img{
       object-fit: cover; 
     }
@@ -101,6 +105,11 @@
 
 </head>
 <body>
+  <header>
+    <div id="bg">
+      <audio id = "bgm" src=bgm.src controls="controls" loop style="margin-left:5%; margin-top:3%;"></audio>
+    </div> 
+  </header>
   <section>
     <div> 
       <img id="gameImg" data-aos="fade-down-right" data-aos-anchor-placement="top-center" style="width: 50vw; height: 120vh; opacity: 1; ">
@@ -229,34 +238,6 @@
       <img class = "bWrap" id="" src="images/game/before (2).png" alt="">
       
     </section>
-    <!-- <section id = "line3">
-      <img class = "bWrap" src="images/game/before (5).png" alt="">
-      <img class = "bWrap" src="images/game/before (4).png" alt="">
-      <img class = "bWrap" src="images/game/before (3).png" alt="">
-      <img class = "bWrap" src="images/game/before (2).png" alt="">
-      <img class = "bWrap" src="images/game/before (1).png" alt="">
-      <img class = "bWrap" src="images/game/before (2).png" alt="">
-      <img class = "bWrap" src="images/game/before (4).png" alt="">
-      <img class = "bWrap" src="images/game/before (3).png" alt="">
-      <img class = "bWrap" src="images/game/before (5).png" alt="">
-      <img class = "bWrap" src="images/game/before (2).png" alt="">
-      <img class = "bWrap" src="images/game/before (4).png" alt="">
-      <img class = "bWrap" src="images/game/before (5).png" alt="">
-    </section>
-    <section id = "line4" style="margin-right: 3vw;">
-      <img class = "bWrap" src="images/game/before (4).png" alt="">
-      <img class = "bWrap" src="images/game/before (1).png" alt="">
-      <img class = "bWrap" src="images/game/before (2).png" alt="">
-      <img class = "bWrap" src="images/game/before (3).png" alt="">
-      <img class = "bWrap" src="images/game/before (4).png" alt="">
-      <img class = "bWrap" src="images/game/before (5).png" alt="">
-      <img class = "bWrap" src="images/game/before (4).png" alt="">
-      <img class = "bWrap" src="images/game/before (2).png" alt="">
-      <img class = "bWrap" src="images/game/before (5).png" alt="">
-      <img class = "bWrap" src="images/game/before (3).png" alt="">
-      <img class = "bWrap" src="images/game/before (1).png" alt="">
-      <img class = "bWrap" src="images/game/before (2).png" alt="">
-    </section> -->
   </section>
   <audio id="airCap" src="sounds/airCap.mp3"></audio>
   <div id="game" style="margin-left: 2vw;">
@@ -282,6 +263,9 @@
       const newImg = document.getElementById("gameImg");
       newImg.src = 'images/'+ localStorage.getItem("randName") + '/' + localStorage.getItem("Img4") + '.jpg';
     }
+    const bgm = document.getElementById("bgm");
+    bgm.src = 'sounds/' + localStorage.getItem("randName") + '.mp3'
+    bgm.play()
   </script>
   <script>  
     AOS.init({
@@ -289,7 +273,7 @@
     });
   </script>
   <script src="game.js"></script>
-  <script src="textBubble.js"></script>
+  <script src="textBubble_game.js"></script>
 </body>
 
 </html>

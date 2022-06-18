@@ -16,14 +16,18 @@
   <script src="tea.js"></script>
 
 </head>
-<body onload="showBubble">
+<body>
   <section class="content-section" data-scroll>
     <hr>
     <div class="figure">
-      <div id="waterDrop">
+      <div id ="waterDrop">
         <img id = "water" src="images/waterBubb.png" animation-duration: 100s;></img>
-        <img id = "cup" src="images/cup/cup_3.png"></img>
+        <div id = "cupMotion">
+          <img id="smoke" src="images/smoke/smoke_0.png" alt="">
+          <img id = "cup" src="images/cup/cup_1.png"></img>
+        </div>
       </div>
+
       <div id="text" style="font-size: 10vw; opacity: 0;">공백</div>
       <div id="text" data-aos="fade-down" data-aos-anchor-placement="top-center" data-aos-duration="2000" style="font-size: 2vw; text-align: left">오늘의 힐링:</div>
       <div id="text" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="2000" data-aos-delay="500" style="text-align: left"> Today's Poem and Tea for You </div>
@@ -32,14 +36,14 @@
       <div id="text" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="2000" data-aos-delay="500" style="text-align: left"> 오늘의 시와 차를 음미하며 편안함을 느껴보세요 </div>
       <div id="text" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="2000" data-aos-delay="500" style="text-align: left"> SEE + TASTE + READ </div>
       <div id="text" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="2000" data-aos-delay="500" style="text-align: left"> 당신을 위해 준비한 한 편의 시와 한 잔의 차 </div>
-      <div id="text" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="2000" data-aos-delay="500" style="text-align: left"> 잠시 시와 차의 공간에 빠져보세요 </div>
+      <div id="text" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="2000" data-aos-delay="500" style="text-align: left; margin-bottom: 20vh;"> 잠시 시와 차의 공간에 빠져보세요 </div>
     </div>
   </section>
-
-<section class="content-section" data-scroll>
+  <div id="text" style="font-size: 20vw; opacity: 0;">공백</div>
+  <section class="content-section" data-scroll>
   <div class="figure" >
-    <img src="images/bubble/tea_1.png" class="bubble" id="bubble" data-aos="zoom-in" style="width:20%; height:50%; margin-left: 75vw; margin-top: 6vh; opacity: 1;">
-    <div id="poemTitle" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="2000"> 시제목 </div>
+    <img src="images/bubble/tea_1.png" class="bubb" id="bubble" data-aos="zoom-in" style="width:20%; height:50%; margin-left: 75vw; margin-top: 5vh; opacity: 1;">
+    <div id="poemTitle" data-aos="fade-down" data-aos-anchor-placement="top-center" data-aos-duration="2000"> 시제목 </div>
     </br>
     </br>
     <div id="writer" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="2000"> 시인 </div>
@@ -48,41 +52,42 @@
       </br>
       </br>
       </br>
-      <div class="content" id="content2" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="10000"  data-aos-delay="1100000"> </div></br>
-      <div class="content" id="content4" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="10000"  data-aos-delay="1100000"> </div></br>
-      <div class="content" id="content3" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="10000"  data-aos-delay="1100000"> </div></br>
-      <div class="content" id="content5" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="10000"  data-aos-delay="1100000"> </div></br>
-      <div class="content" id="content6" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="10000"  data-aos-delay="1100000"> </div></br>
-      <div class="content" id="content7" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="10000"  data-aos-delay="1100000"> </div></br>
-      <div class="content" id="content8" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="10000"  data-aos-delay="1100000"> </div></br>
-      <div class="content" id="content9" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="10000"  data-aos-delay="1100000"> </div></br>
-      <div class="content" id="content10" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="10000" data-aos-delay="1100000"> </div></br>
-      <div class="content" id="content11" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="10000" data-aos-delay="1100000"> </div></br>
-      <div class="content" id="content12" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="10000" data-aos-delay="1100000"> </div></br>
-      <div class="content" id="content13" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="10000" data-aos-delay="1100000"> </div></br>
-      <div class="content" id="content14" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="10000" data-aos-delay="1100000"> </div></br>
-      <div class="content" id="content15" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="10000" data-aos-delay="1100000"> </div></br>
-      <div class="content" id="content16" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="10000" data-aos-delay="1100000"> </div></br>
-      <div class="content" id="content17" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="10000" data-aos-delay="1100000"> </div></br>
-      <div class="content" id="content18" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="10000" data-aos-delay="1100000"> </div></br>
-      <div class="content" id="content19" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="10000" data-aos-delay="1100000"> </div></br>
-      <div class="content" id="content20" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="10000" data-aos-delay="1100000"> </div></br>
-      <div class="content" id="content21" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="10000" data-aos-delay="1100000"> </div></br>
-      <div class="content" id="content22" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="10000" data-aos-delay="1100000"> </div></br>
-      <div class="content" id="content23" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="10000" data-aos-delay="1100000"> </div></br>
-      <div class="content" id="content24" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="10000" data-aos-delay="1100000"> </div></br>
-      <div class="content" id="content25" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="10000" data-aos-delay="1100000"> </div></br>
-      <div class="content" id="content26" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="10000" data-aos-delay="1100000"> </div></br>
-      <div class="content" id="content27" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="10000" data-aos-delay="1100000"> </div></br>
-      <div class="content" id="content28" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="10000" data-aos-delay="1100000"> </div></br>
-      <div class="content" id="content29" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="10000" data-aos-delay="1100000"> </div></br>
-      <div class="content" id="content30" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="10000" data-aos-delay="1100000"> </div></br>
-      <div class="content" id="content31" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="10000" data-aos-delay="1100000"> </div></br>
+      <div class="content" id="content2"  data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="2000"> </div></br>
+      <div class="content" id="content4"  data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="2000"> </div></br>
+      <div class="content" id="content3"  data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="2000"> </div></br>
+      <div class="content" id="content5"  data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="2000"> </div></br>
+      <div class="content" id="content6"  data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="2000"> </div></br>
+      <div class="content" id="content7"  data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="2000"> </div></br>
+      <div class="content" id="content8"  data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="2000"> </div></br>
+      <div class="content" id="content9"  data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="2000"> </div></br>
+      <div class="content" id="content10" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="2000"> </div></br>
+      <div class="content" id="content11" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="2000"> </div></br>
+      <div class="content" id="content12" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="2000"> </div></br>
+      <div class="content" id="content13" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="2000"> </div></br>
+      <div class="content" id="content14" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="2000"> </div></br>
+      <div class="content" id="content15" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="2000"> </div></br>
+      <div class="content" id="content16" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="2000"> </div></br>
+      <div class="content" id="content17" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="2000"> </div></br>
+      <div class="content" id="content18" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="2000"> </div></br>
+      <div class="content" id="content19" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="2000"> </div></br>
+      <div class="content" id="content20" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="2000"> </div></br>
+      <div class="content" id="content21" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="2000"> </div></br>
+      <div class="content" id="content22" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="2000"> </div></br>
+      <div class="content" id="content23" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="2000"> </div></br>
+      <div class="content" id="content24" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="2000"> </div></br>
+      <div class="content" id="content25" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="2000"> </div></br>
+      <div class="content" id="content26" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="2000"> </div></br>
+      <div class="content" id="content27" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="2000"> </div></br>
+      <div class="content" id="content28" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="2000"> </div></br>
+      <div class="content" id="content29" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="2000"> </div></br>
+      <div class="content" id="content30" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="2000"> </div></br>
+      <div class="content" id="content31" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="2000"> </div></br>
     </div>
     </div>
   </section>
   </div>
-  <img src="images/bubble/tea_2.png" class="bubble" id="bubble" data-aos="zoom-in" style="width:16%; height:10%; margin-left: 65vw; margin-top: 6vh; opacity: 1;">
+  <div id="text" style="font-size: 14vw; opacity: 0;">공백</div>
+  <img src="images/bubble/tea_2.png" class="bubb" id="bubble" data-aos="zoom-in" style="width:16%; height:10%; margin-left: 65vw; margin-top: 6vh; opacity: 1;">
   <section class="content-section" data-scroll>
     <div class="figure" >
       
@@ -108,17 +113,23 @@
         <div class="tea" id="tea13" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="2000"> </div></br>
         <div class="tea" id="tea14" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="2000"> </div></br>
         <div class="tea" id="tea15" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="2000"> </div></br>
-        <img src="images/bubble/tea_3.png" class="bubble" id="bubble" data-aos="zoom-in" style="width:16%; height:10%; margin-right: 75vw; margin-top: 1vh; opacity: 1;">
+        <img src="images/bubble/tea_3.png" class="bubb" id="bubble" data-aos="zoom-in" style="width:16%; height:10%; margin-right: 75vw; margin-top: 1vh; opacity: 1;">
         <img id="blurUnder" data-aos="fade-up" data-aos-anchor-placement="top" data-aos-duration="2000" style="width: 35vw; height: 40vh; margin-top: 20vh; margin-left:96vw;"></img>
         <div id="text" style="font-size: 8vw; opacity: 0;">공백</div>
       </div>   
       </div>
   </section> 
-  <a href="index.html" target="_blank">클릭</a>
+  <div id="home" style="margin-left: 2vw;">
+    <img class = "bubb" id="bubb3" src="images/bubble/home.png" alt="" style="margin-top: 5vh;">
+    <a href="index.html#main" target="_blank">
+      <img src="images/home_key.png" alt="" style="width:2vw; height: auto; margin-left: 2vw; margin-top: -2vh; padding-bottom: 4vh;">
+  </div>
   <script src="cup.js"></script>
   <script src="poem.js"></script>
   <script src="pencil.js"></script>
   <script src="teabag.js"></script>
+  <script src="smoke.js"></script>
+  <script src="textBubble_tea.js"></script>
   <script>  
     AOS.init({
     });
@@ -127,5 +138,6 @@
   <script>poem();</script>
   <script>showBubble();</script>
   <script>tea();</script>
+  
 </body>
 </html>

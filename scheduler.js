@@ -183,10 +183,10 @@ parcelRequire = function (e, r, t, n) {
                                 var i = document.createElement("div");
                                 i.className = "sch_item", i.style.color = t.color, i.innerText = t.name, i.setAttribute("clickedIndex", e), r[0].append(i)
                             })), this.map.set("", ""), this.option && this.option.showPrinter) {
-                            var a = document.createElement("button");
-                            a.innerText = "디버깅 출력", a.addEventListener("click", function (e) {
-                                t.printer()
-                            }), r[0].append(a)
+                            // var a = document.createElement("button");
+                            // a.innerText = "디버깅 출력", a.addEventListener("click", function (e) {
+                            //     t.printer()
+                            // }), r[0].append(a)
                         }
                         var s = document.querySelectorAll(".sch_item");
 

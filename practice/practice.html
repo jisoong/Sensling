@@ -6,24 +6,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="practice.js"></script>
-    <script src="https://rawgit.com/web-animations/web-animations-js/master/web-animations.min.js"></script>
-    <style>
-        /* html {
-            background: #f2f2f2;
-        }
-        .box {
-            width: 100px;
-            height: 100px;
-            background: #FFF;
-            box-shadow: 0 10px 20px rgba(0,0,0,0.5);
-        } */
-    </style>
+    <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
 </head>
 <body>
-    <!-- <div class="box" style="transform: translate(100px, 100px);" -->
-    <div class="pulse" style="width: 150px;">
-        Hello world!
+    <div id="main_capture">
+        <h3>A B C D E F G</h3>
     </div>
+    <button id="pick">Download</button>
+    <script>
+        $(function(){
+            $("#pick").on("click",function(){
+                html2canvas(document.querySelector("#main_capture")).then(canvas => {
+                    saveAs(canvas.toDataURL('image/jpg'),"diary.jpg");
+                });
+            });
+        function saveAs(uri, filename){
+            var link = document.createElement('a');
+            if(typeof link.download === 'string'){
+                link.href = uri;
+                link.download = filename;
+                document.body.appendChild(link);
+                link.click();
+                document.body.removeChild(link);
+            } else {
+                window.open(uri)
+            }
+            
+        }
+        });
+    </script>
 </body>
 </html>

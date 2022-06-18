@@ -31,6 +31,7 @@ function showImage(){
 
   var bgm = document.getElementById("bgm");
   bgm.src = 'sounds/'+ randName + '.mp3';
+  bgm.play()
 
   localStorage.setItem("randName", randName)
   localStorage.setItem("Img1", randImg1)

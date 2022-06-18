@@ -10,7 +10,6 @@ div {
   margin-bottom: 3%; 
   font-size: 1.5vw;
   color:black;
-  float:inline-start;
   white-space : normal;
 }
 #cup{
@@ -18,33 +17,51 @@ div {
   margin-bottom: 40vw;
   margin-left: 10vw;
   width: 60vw; 
-  height: 150vh;
-  /* height: 80vh; */
-  display: flex;
+  height: 170vh;
   object-fit: contain;
   position: absolute;
-  left: 30vw;
-  z-index: 1;
+  left: 12vw;
+  top: -3vh;
+  z-index: 2;
+}
+#cupMotion{
+  display: flex;
+  position: relative;
+  width: 20vw;
+  height: auto;
+  left: 20vw;
+  flex-direction:column;
 }
 #water{
-  float: center;
   width: 3vw; 
   margin-left: 10vw;
   height: 4.5vh;
   object-fit: contain;
-  animation-name: waterAni;
-  animation-duration: 5s;
   animation: waterAni 3s;
   margin-top : 50vh;
   margin-right : 20vw;
   position: absolute;
   top: -5vh;
-  left: 75vw;
-  z-index: 2;
+  left: 77vw;
+  z-index: 3;
   opacity: 0;
+}
+#smoke{
+  position: absolute;
+  width: 40vw;
+  height: auto;
+  left: 35vw;
+  top: 24vh;
+  z-index: 3;
 }
 #waterDrop{
   position: relative;
+  display: flex;
+  clear: both;
+  /* width: 30vw;
+  height: 20vh; */
+  flex-direction: column;
+  
 }
 #poemTitle {
   text-align: center;
@@ -52,7 +69,7 @@ div {
   justify-content: center;
   align-items: center; 
   clear: right;
-  margin-top: -3vh;
+  margin-top: 6vh;
   font-size: 1.5vw;
   margin-left: 35vw;
   z-index: 1;
@@ -102,7 +119,8 @@ div {
   justify-content: center;
   align-items: center;
   clear: right;
-  width: 100%
+  width: 100%;
+  z-index: 3;
 }
 #teaTitle {
   text-align: right;
@@ -131,6 +149,7 @@ div {
   justify-content: center;
   flex-direction: column;
   margin-left: 35vw;
+
 }
 #teaContent {
   display: flex;
@@ -141,7 +160,7 @@ div {
 }
 hr{
   float: left;
-  height:1000vh;
+  height:1100vh;
   width:.2vw;
   margin-top: 10vh;
   margin-left: .8vw;
@@ -154,6 +173,26 @@ hr{
   --scroll-length: 3.5;
   height: calc( var(--scroll-length) * 100vh );
 
+}
+#home{
+  display: flex;
+
+  /* flex-direction: column; */
+  margin-left: 10vw;
+  clear: both;
+  position: relative;
+  flex-direction: column;
+}
+.bubb{
+  width: 20vw;
+  height: auto;
+  margin-left: 5vw;
+  margin-bottom: 2vh;
+  position:relative;
+}
+
+.bubb.show{
+  opacity: 1;
 }
 .figure{
     --scale: calc(.8 + 

@@ -8,13 +8,15 @@
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="bubble.css">
   <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo&display=swap" rel="stylesheet">
   <style>
     
     header{
       position: fixed;
     }
     main {
-      @import url 'https://fonts.googleapis.com/css2?family=Nanum+Myeongjo&display=swap';
       background-image: url('001.png');
       background-size: cover;
       font-size: 2.1vw;
@@ -28,6 +30,11 @@
     }
     #text {
       color: white;
+      border: none; 
+      background: transparent;
+    }
+    #text_yellow {
+      color: rgb(255, 255, 198);
       border: none; 
       background: transparent;
     }
@@ -102,9 +109,12 @@
 <body>
   <header>
     <div id="bg">
-      <audio id = "bgm" src=bgm.src controls="controls" loop style="margin-left:5%; margin-top:3%;"></audio>
+      <!-- <audio id = "bgm" src=bgm.src controls="controls" loop style="margin-left:5%; margin-top:3%;"></audio> -->
+      <audio id = "bgm" src=bgm.src controls="controls" loop style="margin-left:3vw; margin-top:3vh;"></audio>
+      
     </div>  
-    <img src="images/bubble/MAIN_1.png" id="player" data-aos="zoom-in" style="width:20%; height:30%; margin-left:5%; margin-top:1%; opacity: 1;"> 
+    <!-- <img src="images/bubble/MAIN_1.png" id="player" data-aos="zoom-in" style="width:20%; height:30%; margin-left:5%; margin-top:1%; opacity: 1;">  -->
+    <img src="images/bubble/MAIN_1.png" id="player" data-aos="zoom-in" style="width:20vw; height:auto; margin-left:3vw; margin-top:2vh; opacity: 1;">
   </header>
   <main> 
     
@@ -183,11 +193,11 @@
     <br/>
     <br/>
     <br/>
-    <div id="text" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="2000">SENSE</div>
+    <div id="text_yellow" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="2000">SENSE</div>
     <br/>
-    <div id="text" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="2000">+</div>
+    <div id="text_yellow" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="2000">+</div>
     <br/>
-    <div id="text" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="2000">HEALING</div>
+    <div id="text_yellow" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="2000">HEALING</div>
     <br/>
     <br/>
     <br/>

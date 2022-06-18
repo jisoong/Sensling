@@ -116,7 +116,6 @@ function music() {
 
     cover.onclick = function(){
         document.getElementById('music0').play()
-
         if (count == 0){
             cover.classList.add('spinStop')
             cover.classList.remove('spin')

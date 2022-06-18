@@ -28,37 +28,3 @@ function musicPlay(){
        
     }
 }
-    
-
-
-    // cover.onclick = function(){
-    //     cover.style.animation-play-state= "paused";
-    // }
-
-    // function stop() {
-    //     cover.onclick = function () {
-    //         if(cover.classList.contains('spin')){
-    //             cover.classList.add('spinStop')
-    //             cover.classList.remove('spin')
-    //         }
-    //     }
-
-    // }
-
-    // function setRotate() {
-    //     $('#cover').click('.hand','imgRotate')
-    // }
-
-    // function setRotateStop() {
-    //     $('#cover').click('.hand','imgRotateStop')
-    // }
-    // cover.addEventListener("click", cover.classList.add('spin'))
-
-    // cover.onclick = function() {
-    //     if(cover.classList.contains('spin')){
-    //         cover.classList.remove('spin')
-    //     }
-    // }
-
-
-    // animation-play-state: paused;

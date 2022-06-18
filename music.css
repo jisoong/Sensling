@@ -1,4 +1,4 @@
-/* 이미지 회전 */
+
 .imgRotate {
     -webkit-animation: spin 4s infinite linear;
     -o-animation: spin 4s infinite linear;
@@ -64,7 +64,7 @@
       transform: scale(1.0);
   }
   }
-/* 이미지 회전 중지 */
+
 .imgRotateStop {
     -webkit-animation-play-state: paused;
     -moz-animation-play-state: paused;

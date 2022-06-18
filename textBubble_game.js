@@ -13,7 +13,7 @@ function bubbleShow(i) {
 $(window).scroll(function () {
   var tmp = $(this).scrollTop();
   scroll_pos = $(this).scrollTop();
-  console.log(tmp)
+  // console.log(tmp)
   // console.log(window.innerHeight*0.75) 
   if (tmp > window.innerHeight*0.5){
     bubbleHide(1)

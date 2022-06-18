@@ -1,9 +1,4 @@
 window.addEventListener("keypress", checkKeyPressed, false);
-// const animation = document.querySelectorAll(".bWrap");
-
-
-
-// console.log(target[1].classList)
 
 function checkKeyPressed(e) {
   console.log(e.keyCode)
@@ -11,7 +6,6 @@ function checkKeyPressed(e) {
 	if (e.keyCode === 49) {
     
 		document.getElementById("1").src = "images/game/after (1).png"
-    // target.classList.add('ani');
     target[1].classList.add('pong')
 
      

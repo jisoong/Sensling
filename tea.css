@@ -33,13 +33,13 @@ div {
   float: right;
   margin-bottom: 40vw;
   margin-left: 10vw;
-  width: 60vw; 
+  width: 80vw; 
   height: 170vh;
   object-fit: contain;
   position: absolute;
-  left: 12vw;
-  top: -3vh;
-  z-index: 2;
+  left: -5vw;
+  top: -7vh;
+  z-index: 1;
 }
 #cupMotion{
   display: flex;
@@ -67,7 +67,7 @@ div {
   position: absolute;
   width: 40vw;
   height: auto;
-  left: 35vw;
+  left: 28vw;
   top: 24vh;
   z-index: 3;
 }

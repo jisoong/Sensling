@@ -21,16 +21,14 @@ $(window).on('scroll', function(){
 			}
 		}
 		if(cupWheelDelta() == 'up'){
-<<<<<<< HEAD
 			if (cupNum <=270 && cupNum>5 && cup_tmp<window.innerHeight*3){
-=======
-			if (cupNum <=270 && cupNum>5 && cup_tmp<window.innerHeight*2.7){
->>>>>>> refs/remotes/origin/main
-				cupNum = cupNum - 4
-				document.getElementById("cup").src = 'images/cup/cup' + '_'+ cupNum + '.png';
-				console.log("bye")
-			}
+				// if (cupNum <=270 && cupNum>5 && cup_tmp<window.innerHeight*2.7){
+					cupNum = cupNum - 4
+					document.getElementById("cup").src = 'images/cup/cup' + '_'+ cupNum + '.png';
+					console.log("bye")
+				// }
 		}
+	}
 		cupPrevScrollTop = cupNowScrollTop;
 		cup_last_scrollTop = cup_tmp;
 });

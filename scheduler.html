@@ -8,11 +8,7 @@
     <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
 </head>
 <style>
-    body {
-        padding: 5%;
-        text-align: center;
-        overflow-y: hidden;
-    }
+
 
     #background .sch_item_box {
         border: 1px solid #dfdfdf;
@@ -82,10 +78,14 @@
         justify-items: center;
     }
     #imageBox{
+        flex-direction: column;
+        margin-bottom: 12vh;
+    }
+    #onePage{
         display: flex;
         position: relative;
         clear: both;
-        top: -15vh;
+        position: absolute;
     }
     #question{
         align-items: center;
@@ -95,7 +95,7 @@
         margin-bottom: 2vh;
     }
     .sticker{
-        width: 5vw; 
+        width: 4vw; 
         height: auto;
         
         margin-top: 1vw;
@@ -115,34 +115,35 @@
     #drag{
         text-align:left;
         position: absolute;
-        margin-left: 13vw;
-        margin-top: 5vh;
+        margin-left: 10vw;
+        margin-top: -4vh;
     }
+
     #clock{
         width: 18vw;
         height: auto;
         position: absolute;
-        margin-top: 19.5vh;
-        margin-left: 32vw;
+        margin-top: 14vh;
+        margin-left: 34vw;
     }
     #hours{
         position: absolute;
         font-size: 5vw;
-        margin-left: 34vw;
-        margin-top: 22vh;
-        color:
+        margin-left: 36vw;
+        margin-top: 18vh;
+
     }
     #minutes{
         position: absolute;
         font-size: 5vw;
-        margin-left: 42.5vw;
-        margin-top: 22vh;
+        margin-left: 44.5vw;
+        margin-top: 18vh;
     }
     #colon{
         position: absolute;
         font-size: 5vw;
-        margin-left: 40.5vw;
-        margin-top: 22vh;
+        margin-left: 42.5vw;
+        margin-top: 17vh;
     }
     #button{
         border-radius: 70vw;
@@ -154,115 +155,60 @@
         text-align: center;
         align-items: center;
         justify-content: center;
-        margin-top: -30vh;
+        margin-top: 30vh;
+    }
+    body {
+        padding: 5%;
+        text-align: center;
+        overflow: hidden;
     }
 </style>
 
 <body>
-    <section>
     <div id = "title"> My daily routine</div>
     <div id="myCanvas" style="width:35%;height:650px;float:left" ></div>
+    <img class = "bubb" id="bubb3" src="images/bubble/diary_1.png" alt="" style="margin-bottom: 5vh; width: 15vw;">
     <section id="diary">
         <div id="diary_date"> </div>
         <hr align="right" style="width: 30vw; margin-right: 2vw;">
         <div id="question" > 질문 </div>
 
         <div id = "text" contentEditable="true" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
-    </section>
-    <p id="drag"> Drag and Drop Stickers</p>
-    <div id="imageBox" style="width: 35vw; height: 50vh;" ondrop="drop(event)" ondragover="allowDrop(event)">
-    
-        <section>
-            <img class="sticker" id="drag1" src="images/sticker/sticker1.png" draggable="true" ondragstart="drag(event)">
-            <img class="sticker" id="drag2" src="images/sticker/sticker2.png" draggable="true" ondragstart="drag(event)">
-            <img class="sticker" id="drag3" src="images/sticker/sticker3.png" draggable="true" ondragstart="drag(event)">
-            <img class="sticker" id="drag4" src="images/sticker/sticker4.png" draggable="true" ondragstart="drag(event)">
-            <img class="sticker" id="drag5" src="images/sticker/sticker5.png" draggable="true" ondragstart="drag(event)">
-            <img class="sticker" id="drag6" src="images/sticker/sticker6.png" draggable="true" ondragstart="drag(event)">
-            <img class="sticker" id="drag7" src="images/sticker/sticker7.png" draggable="true" ondragstart="drag(event)">
-            <img class="sticker" id="drag8" src="images/sticker/sticker8.png" draggable="true" ondragstart="drag(event)">
-        </section>
-        <section>
-            <img class="sticker" id="drag9" src="images/sticker/sticker9.png" draggable="true" ondragstart="drag(event)">
-            <img class="sticker" id="drag10" src="images/sticker/sticker10.png" draggable="true" ondragstart="drag(event)">
-            <img class="sticker" id="drag11" src="images/sticker/sticker11.png" draggable="true" ondragstart="drag(event)">
-            <img class="sticker" id="drag12" src="images/sticker/sticker12.png" draggable="true" ondragstart="drag(event)">
-            <img class="sticker" id="drag13" src="images/sticker/sticker13.png" draggable="true" ondragstart="drag(event)">
-            <img class="sticker" id="drag14" src="images/sticker/sticker14.png" draggable="true" ondragstart="drag(event)">
-            <img class="sticker" id="drag15" src="images/sticker/sticker15.png" draggable="true" ondragstart="drag(event)">
-            <img class="sticker" id="drag16" src="images/sticker/sticker16.png" draggable="true" ondragstart="drag(event)">
-        </section>
-        <section style="color:#7D7D7D">
+    </section style="margin-bottom">
+    <div id="onePage">
+        <div id="imageBox" style="width: 35vw; height: 50vh;" ondrop="drop(event)" ondragover="allowDrop(event)">
+            
+            <p id="drag"> Drag and Drop Stickers</p>
+            <section>
+                <img class="sticker" id="drag1" src="images/sticker/sticker1.png" draggable="true" ondragstart="drag(event)">
+                <img class="sticker" id="drag2" src="images/sticker/sticker2.png" draggable="true" ondragstart="drag(event)">
+                <img class="sticker" id="drag3" src="images/sticker/sticker3.png" draggable="true" ondragstart="drag(event)">
+                <img class="sticker" id="drag4" src="images/sticker/sticker4.png" draggable="true" ondragstart="drag(event)">
+                <img class="sticker" id="drag5" src="images/sticker/sticker5.png" draggable="true" ondragstart="drag(event)">
+                <img class="sticker" id="drag6" src="images/sticker/sticker6.png" draggable="true" ondragstart="drag(event)">
+                <img class="sticker" id="drag7" src="images/sticker/sticker7.png" draggable="true" ondragstart="drag(event)">
+                <img class="sticker" id="drag8" src="images/sticker/sticker8.png" draggable="true" ondragstart="drag(event)">
+                <img class="sticker" id="drag9" src="images/sticker/sticker9.png" draggable="true" ondragstart="drag(event)">
+                <img class="sticker" id="drag10" src="images/sticker/sticker10.png" draggable="true" ondragstart="drag(event)">
+                <img class="sticker" id="drag11" src="images/sticker/sticker11.png" draggable="true" ondragstart="drag(event)">
+                <img class="sticker" id="drag12" src="images/sticker/sticker12.png" draggable="true" ondragstart="drag(event)">
+                <img class="sticker" id="drag13" src="images/sticker/sticker13.png" draggable="true" ondragstart="drag(event)">
+                <img class="sticker" id="drag14" src="images/sticker/sticker14.png" draggable="true" ondragstart="drag(event)">
+                <img class="sticker" id="drag15" src="images/sticker/sticker15.png" draggable="true" ondragstart="drag(event)">
+                <img class="sticker" id="drag16" src="images/sticker/sticker16.png" draggable="true" ondragstart="drag(event)">
+            </section>
+        </div> 
+        <section style="color:#7D7D7D; ">
             <img id="clock" src="images/clock.png" alt="">
             <div id="hours"></div>
             <div id="colon">:</div>
             <div id="minutes"></div>
         </section>
-
-
-
+        <img class = "bubb" id="bubb3" src="images/bubble/diary_2.png" alt="" style="height: 6vh; margin-left: 4vw; margin-top: 30vh; position: absolute;">
+        <button id = "button" type="button" onclick="PrintDiv($(document.body));"> save </button>
+        <img class = "bubb" id="bubb3" src="images/bubble/diary_3.png" alt="" style="height: 6vh; margin-left: -20vw; margin-top: 34vh;">
     </div>
-    </section>
-    <button id = "button" type="button" onclick="PrintDiv($('#title'));"> save </button>
-  
-    <!-- <div id="text" style="font-size: 8vw; opacity: 0;">공백</div> -->
-    <!-- <div id = "div1" ondrop="drop(event)" ondragover="allowDrop(event)"></div> -->
     
-    
-    <!-- <div style="text-align:left; width:40%; float:left; padding:2rem;"> -->
-        <!-- 
-<div style='color : blue'>1. 원형 내부 스케줄은 더블클릭시 사라집니다.</div>  
-<div style='color : blue'>2. 스케줄 추가는 우측 매뉴에서 아이템을 클릭하고 원형 스케줄에 마우스를 누른 채 움직 입니다.</div>  
-<div style='color : blue'>3. 반응형을 지원하나 좌우측 스크롤바가 생긴 경우는 아직 지원되지 않습니다.</div>  
-<div> 4. 여기서 조작은 <span style="color : red">할 수 없으나</span> 제공되는 옵션입니다.
-    <textArea style="width: 100%; height: 350px;font-size: 12px;">
-let option = {                
-    beforWorking : function(){  //스케줄러를 만들기 전 행동.
-        console.log('befor')
-    },
-    showPrinter: true, //디버깅용 버튼을 만듭니다.
-
-    lineColor :'#aaaaaa',  //내부 선 색깔 입니다.
-    lineWidth : 0.7,  //내부 선 두께 입니다.
-    lineShow : true,   //내부 선 표시여부 입니다.
-
-    circleColor : '#aaaaaa',   //원형 색깔 입니다.
-    circleWidth : 3,   //원형 선 두께 입니다.
-
-    sectorShow : false,  //부채꼴 테두리 입니다.
-    sectorWidth : 3,  // 부채꼴 테두리 두께 입니다.
-    sectorColor : 'white',  //부채꼴 테두리 색상 입니다.
-
-    timeColor : '#aaaaaa',   //외부 시간 색깔  입니다.
-    timeFontStyle : '21px sans-serif',  //외부 시간 글씨 타입 입니다.
-    timeTextPadding : 2,  //외부 시간 여백입니다.(양수면 왼쪽, 음수면 오른쪽)
-
-    innerTextShow : true,  //내부 글씨 표출여부 입니다.
-    innerFontColor : 'white', //내부 글씨 색깔 입니다.
-    innerTextPadding : -5, //내부 글씨 여백입니다.(양수면 왼쪽, 음수면 오른쪽)
-    innerFontStyle : '13px sans-serif',  //내부 글씨 타입 입니다.
-
-    middleCicleRate : 0.18,  //중앙 원 크기 비율입니다.
-    middleFontOnOff : true,  //중앙 시간을 표시할지말지 여부 입니다.
-    middleFontSize : 14,  //중앙 글씨 크기 입니다.
-    middleFontPadding : 5,  //중앙 글씨 여백 입니다. (양수면 왼쪽, 음수면 오른쪽)
-
-    afterWorking : function(timeData){  //스케줄러가 다 만들어지고 나서의 행동.
-        console.log('after',timeData)
-    }
-}  
-    </textArea>
-</div>
-<br>
-<div style='color : blue'>5. 아래는 콘솔에서 사용 가능한 함수 입니다.</div>  
-
-<div>rts06069.getTimePureData(); //가공되지 않는 순수 시간과 관련된 값을 반환 합니다.</div>
-<div>rts06069.getTimeData(); //시간단위로 값을 반환 합니다.</div>
-<div>rts06069.getSummeryData(); //스케줄을 그룹핑하여 시간단위로 반환 합니다.</div>
-<div>rts06069.exportImage('사진.png'); //이미지를 출력합니다. 이름은 옵셔널 입니다.</div>
-<div>rts06069.getImageData(function(blobData){ console.log(blobData) }); //이미지를 블랍으로 받습니다.</div>
-<div>rts06069.clearAll() //스케줄 내부를 초기화 합니다.</div>
-<div>rts06069.resizeOnOff = true //반응형 여부를 설정 합니다.</div> </div>  -->
 <script>
   questions = [
     "당신의 삶의 목적은 무엇인가요?",
@@ -358,7 +304,7 @@ let option = {
 </script>
 <script>
     $(function(){
-        $(document.body).on("click",function(){
+        $("document.body").on("click",function(){
             html2canvas(document.querySelector("#capture")).then(canvas => {
                 saveAs(canvas.toDataURL('image/jpg'),"diary.jpg");
             });

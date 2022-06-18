@@ -61,7 +61,7 @@
     #title{
         text-align: left;  
         margin-left: 3vw;
-        margin-bottom: -4vh;
+        margin-bottom: 0vh;
     }
     #diary{
         margin-top: -2vw;
@@ -121,7 +121,8 @@
       font-weight: bold;
       color:black;
       float:inline-end;
-      white-space : normal
+      white-space : normal;
+      font-family: 'Nanum Myeongjo', serif;
     }
     #drag{
         text-align:left;
@@ -135,7 +136,7 @@
         height: auto;
         margin-top: 13vh;
         margin-left: 7vw;
-
+        font-family: 'Nanum Myeongjo', serif;
     }
 
     #hours{
@@ -179,14 +180,14 @@
 </style>
 
 <body>
-    <div id = "title"> My daily routine</div>
+    <div id = "title" style="font-size: 1vw; top: 5vw; margin-right: 5vw; font-family: 'Nanum Myeongjo', serif;"> My daily routine</div>
     <div id="myCanvas" style="width:35%;height:650px;float:left" ></div>
     <!-- <img class = "bubb" id="bubb3" src="images/bubble/diary_1.png" alt="" style="margin-bottom: 5vh; width: 15vw;"> -->
     
     <section id="diary">
         <div id="diary_date"> </div>
         <hr align="right" style="width: 30vw; margin-right: 2vw;">
-        <div id="question" > 질문 </div>
+        <div id="question" style="font-size: 1vw; margin-right: 5vw; font-family: 'Nanum Myeongjo', serif;"> 질문 </div>
         <section style="display: flex; margin-right: 0vw;">
 
             <div id = "text" contentEditable="true" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
@@ -201,7 +202,7 @@
             <div id="minutes"></div>
         </section>
         <section style="display: flex; flex-direction:column;">
-            <div style="margin-top: 3vh;"> Drag and Drop Stickers</div>
+            <div style="margin-top: 3vh; margin-left: -10vw; font-size: 1vw; font-family: 'Nanum Myeongjo', serif;"> Drag and Drop Stickers</div>
             <div id="imageBox">
                 <section>
                     <img class="sticker" id="drag1" src="images/sticker/sticker1.png" draggable="true" ondragstart="drag(event)">

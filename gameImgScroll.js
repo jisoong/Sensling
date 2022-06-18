@@ -5,13 +5,13 @@ $(document).ready(function(){
 
 	$(document).scroll(function() { 
 			scroll_pos = $(this).scrollTop();
-
-        if(scroll_pos >= $("#gameImg").height()*0.4) {
-          $("#gameImg").fadeOut(4000);
-        } 
-        else {
-          $("#gameImg").fadeIn(800);
-        }
+      // console.log(scroll_pos)
+      if(scroll_pos >= $("#gameImg").height()*0.4) {
+        $("#gameImg").fadeOut(4000);
+      } 
+      else {
+        $("#gameImg").fadeIn(2000);
+      }
         
 	});
 

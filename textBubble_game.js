@@ -28,21 +28,21 @@ $(window).scroll(function () {
     // console.log("hide")
   }
   if (target[1].classList.contains('hide')){
-    if (tmp < window.innerHeight*0.6){
+    if (tmp < window.innerHeight*1.4){
       bubbleShow(1)
       target[1].classList.remove('hide');
       target[1].classList.add('show');  
     }
   }
   if (target[0].classList.contains('hide')){
-    if (tmp < window.innerHeight*0.6){
+    if (tmp < window.innerHeight*1.4){
       bubbleShow(0)
       target[0].classList.remove('hide');
       target[0].classList.add('show');  
     }
   }
   if (target[0].classList.contains('hide')){
-    if (tmp < window.innerHeight*0.6) {
+    if (tmp < window.innerHeight*2) {
       bubbleShow(2)
       target[2].classList.remove('hide');
       target[2].classList.add('show')

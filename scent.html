@@ -16,11 +16,23 @@
   <link href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo&display=swap" rel="stylesheet">
 
   <style>
-    body{
-      overflow-x: hidden;
+    header{
+      position: fixed;
+      z-index: 10;
     }
     img{
       object-fit: cover;
+    }
+    hr{
+      float: left;
+      height:160vh;
+      width:.2vw;
+      margin-top: 10vh;
+      margin-left: .8vw;
+      border-width:0;
+      opacity: 0.3;
+      color:#000;
+      background-color:#000;
     }
    #text{
       font-family: 'Nanum Myeongjo', serif;
@@ -61,17 +73,17 @@
       position: relative;
       left: -26vw;
     }
-    #stringEffect{
-      width : 15vw;
+    /* #stringEffect{
+      width : 25vw;
       height : auto;
       vertical-align: middle;
       text-align: center;
       position: absolute;
       top: 4.5vh;
-      /* left: -1.5vw; */
-    }
+      left: -1.5vw;
+    } */
     #album{
-      width : 15vw;
+      width : 25vw;
       height : auto;
       vertical-align: middle;
       text-align: center;
@@ -80,13 +92,13 @@
       top: 4.5vh; */
     }
     #cover{
-      width : 10vw;
+      width : 13vw;
       height : auto;
       vertical-align: middle;
       text-align: center;
       position: absolute;
-      margin-left: 3.3%;
-      top: 4vh;
+      margin-left: 2%;
+      top: 1.5vh;
     }
     #music{
       display: flex;
@@ -189,7 +201,7 @@
       justify-content: center;
       clear: both;
       position: absolute;
-      width: 100vw;
+      width: 100%;
     }
     #home{
     display: flex;
@@ -208,7 +220,10 @@
     margin-bottom: -2vh;
     position: absolute;
     }
-
+    .content-section {
+    --scroll-length: 3.5;
+    height: calc( var(--scroll-length) * 50vh );
+    }
     .bubb.show{
     opacity: 1;
     }
@@ -239,11 +254,18 @@
   <script src="scentImgScroll.js"></script>
   <script src="music.js"></script>
   <script src="scent.js"></script>
+  <script src="m_player.js"></script>
   <!-- <script src="music_play.js"></script> -->
 
 </head>
 <body>
-  <section>
+  <header>
+    <div id="bg">
+      <audio id = "bgm" src=bgm.src controls="controls" loop style="margin-left:3vw; margin-top:3vh;"></audio>
+    </div>
+  </header>
+  <section class="content-section" data-scroll>
+    <hr>
     <div>
       <img id="scentImg" data-aos="fade-down-left" data-aos-anchor-placement="top-center" style="width: 50vw; height: 180vh;">
       <div id="text" style="font-size: 8vw; opacity: 0;">공백</div>
@@ -290,10 +312,9 @@
     </div>
   </section>  
   
-  <div style="font-size: 15vw; opacity: 0; z-index: -1;" >공</div>
+  <div style="font-size: 30vw; opacity: 0; z-index: -1;" >공</div>
 <!-- 첫 화면과 음악 플레이리스트 화면 구분 -->
-  </section>
-  <div style="font-size: 15vw; opacity: 0; z-index: -1;" >공</div>
+  <!-- <div style="font-size: 15vw; opacity: 0; z-index: -1;" >공</div> -->
   <section>
     <section id="music" style="align-items:flex-start">  
       <img class="cd" src="images\bubble\speech bubble\4-1speech_b_.png" alt="" data-aos="zoom-in" style="margin-left: 25vw; margin-bottom: 3vh; width: 15vw; height: auto;">
@@ -301,8 +322,8 @@
 
     <section id="cdPlayer">
       <section>
-        <img id="stringEffect" src="images\scent\string.png">
-        <img id="album" src="images\scent\cd_player.png">
+        <!-- <img id="stringEffect" src="images\scent\player_l.png"> -->
+        <img id="album" src="images\scent\player_h.png">
         <img id="cover" class = "hand">
       </section>
     </section>
@@ -318,7 +339,7 @@
       </section>
     </section>
   </section>
-  <div style="font-size: 13vw; opacity: 0; z-index: -1;" >공</div>
+  <div style="font-size: 30vw; opacity: 0; z-index: -1;" >공</div>
 
 <!-- 음악 플레이리스트 화면과 향기 화면 구분 -->
 <!-- 배경 이미지 설정 -->
@@ -372,7 +393,7 @@
 
   <div id="home" style="margin-left: 2vw;">
     <img class = "bubb" id="bubb3" src="images/bubble/home.png" alt="" style="margin-top: 110vh;">
-    <a href="index.html#main" target="_blank">
+    <a href="index.html#main" target="_self">
       <img src="images/home_key2.png" alt="" style="width:2vw; height: auto; margin-left: 3vw; margin-top: 120vh; padding-bottom: 4vh;">
   </div>
 
@@ -397,6 +418,9 @@
       const newImg = document.getElementById("scentImg");
       newImg.src = 'images/'+ localStorage.getItem("randName") + '/' + localStorage.getItem("Img4") + '.jpg';
     }
+    const bgm = document.getElementById("bgm");
+    bgm.src = 'sounds/' + localStorage.getItem("randName") + '.mp3'
+    bgm.play()
   </script>
   <script>  
     AOS.init({

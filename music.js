@@ -111,6 +111,7 @@ function music() {
     var cover = document.querySelector(".hand")
     var stringEffect = document.getElementById("stringEffect")
     var musicPlay = document.getElementById("musicPlay")
+    var bgm = document.getElementById("bgm")
 
     console.log(musicPlay);
 
@@ -119,7 +120,7 @@ function music() {
         if (count == 0){
             cover.classList.add('spinStop')
             cover.classList.remove('spin')
-            
+            bgm.pause();
             setTimeout(function() {
                 musicPlay.play();
               }, 2000);
@@ -128,6 +129,7 @@ function music() {
         else if (count %2 == 0){
             cover.classList.add('spinStop')
             cover.classList.remove('spin')
+            bgm.pause();
             setTimeout(function() {
                 musicPlay.play();
               }, 2000);
@@ -135,6 +137,7 @@ function music() {
         else {
             cover.classList.add('spin')
             cover.classList.remove('spinStop')
+            bgm.play();
             musicPlay.pause();
         }
         count +=1

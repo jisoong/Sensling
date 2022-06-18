@@ -180,6 +180,11 @@
   <script src="teabag.js"></script>
   <script src="smoke.js"></script>
   <script src="textBubble_tea.js"></script>
+  <script>
+    const bgm = document.getElementById("bgm");
+    bgm.src = 'sounds/' + localStorage.getItem("randName") + '.mp3'
+    bgm.play()
+  </script>
   <script>  
     AOS.init({
     });

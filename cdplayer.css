@@ -1,7 +1,0 @@
-window.addEventListener("click", playClick, false);
-
-function playClick(){
-    var spinImg = document.getElementById('cover');
-    
-    document.getElementById('music0').play()
-}

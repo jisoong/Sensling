@@ -92,14 +92,14 @@ function music() {
     
     textMusic = [music1, music2, music3, music4, music5, music6, music7, music8, music9, music10, music11, music12, music13, music14, music15]
     const coverImg = document.getElementById("cover");
-    const coverMusic = document.getElementById("music");
+    const coverMusic = document.getElementById("musicPlay");
 
     randomNum = Math.floor(Math.random() * 15) + 1;
     randName = 'music' + randomNum;
     randMusic = textMusic[randomNum-1];
     coverImg.src = 'images/music/' + randName + '.png';
     coverMusic.src = 'sounds/music/' + randName + '.mp3';
-    coverMusic.src = 'sounds/music/' + localStorage.getItem("randName") + '.mp3';
+    // coverMusic.src = 'sounds/music/' + localStorage.getItem("randName") + '.mp3';
     console.log(randMusic)
     $("#scene").text(randMusic[0]);
     $("#musicTitle").text(randMusic[1]);
@@ -110,55 +110,35 @@ function music() {
 
     var cover = document.querySelector(".hand")
     var stringEffect = document.getElementById("stringEffect")
+    var musicPlay = document.getElementById("musicPlay")
+
+    console.log(musicPlay);
 
     stringEffect.onclick = function(){
+        document.getElementById('music0').play()
+
         if (count == 0){
             cover.classList.add('spinStop')
             cover.classList.remove('spin')
+            
+            setTimeout(function() {
+                musicPlay.play();
+              }, 2000);
         }
 
         else if (count %2 == 0){
-
             cover.classList.add('spinStop')
             cover.classList.remove('spin')
+            setTimeout(function() {
+                musicPlay.play();
+              }, 2000);
         }
         else {
-
             cover.classList.add('spin')
             cover.classList.remove('spinStop')
+            musicPlay.pause();
         }
-
         count +=1
+       
     }
-    // cover.onclick = function(){
-    //     cover.style.animation-play-state= "paused";
-    // }
-
-    // function stop() {
-    //     cover.onclick = function () {
-    //         if(cover.classList.contains('spin')){
-    //             cover.classList.add('spinStop')
-    //             cover.classList.remove('spin')
-    //         }
-    //     }
-
-    // }
-
-    // function setRotate() {
-    //     $('#cover').click('.hand','imgRotate')
-    // }
-
-    // function setRotateStop() {
-    //     $('#cover').click('.hand','imgRotateStop')
-    // }
-    // cover.addEventListener("click", cover.classList.add('spin'))
-
-    // cover.onclick = function() {
-    //     if(cover.classList.contains('spin')){
-    //         cover.classList.remove('spin')
-    //     }
-    // }
-
-
-    // animation-play-state: paused;
 }

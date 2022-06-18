@@ -312,7 +312,8 @@ function setClock(){
         div = div[0]
         html2canvas(div).then(function(canvas){
             var myImage = canvas.toDataURL();
-            downloadURI(myImage, "diary.png") 
+            downloadURI(myImage, "diary.png");
+            myImage.crossOrigin = 'Anonymous'; 
         });
     }
 

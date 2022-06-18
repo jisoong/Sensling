@@ -57,6 +57,10 @@
   .bubb.show{
     opacity: 1;
   }
+  #bubb3{
+    margin-left: 2vw;
+    margin-top: 2vh;
+  }
   </style>
   <script src="images.js"></script>
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
@@ -92,10 +96,14 @@
   
   </div> 
   <div id="text" style="font-size: 35vw; opacity: 0;">공</div> 
+  <!-- <section style="display: flex;">
+    <img class = "bubb" id="bubb3" src="images/bubble/diary_1.png" alt="" style="margin-bottom: 5vh; width: 15vw; height: 15vh; ">
+    <iframe id = "screen" src="scheduler.html" style="width: 100%; height: 100vh; position: static;" scrolling="yes" ></iframe>
+  </section> -->
   <iframe id = "screen" src="scheduler.html" style="width: 100%; height: 100vh; position: static;" scrolling="yes" ></iframe>
   <div id="text" style="font-size: 14vw; opacity: 0;">공백</div> 
   <div id="home" style="margin-left: 2vw;">
-    <img class = "bubb" id="bubb3" src="images/bubble/home.png" alt="" style="margin-top: 5vh;">
+    <img class = "bubb" src="images/bubble/home.png" alt="" style="margin-top: 5vh;">
     <a href="index.html#main" target="_blank">
       <img src="images/home_key.png" alt="" style="width:2vw; height: auto; margin-left: 2vw; margin-top: -2vh; padding-bottom: 4vh;">
   </div>
@@ -116,6 +124,9 @@
       const newImg = document.getElementById("diaryImg");
       newImg.src = 'images/'+ localStorage.getItem("randName") + '/' + localStorage.getItem("Img4") + '.jpg';
     }
+    const bgm = document.getElementById("bgm");
+    bgm.src = 'sounds/' + localStorage.getItem("randName") + '.mp3'
+    bgm.play()
   </script>
   <script>  
     AOS.init({

@@ -92,35 +92,6 @@ function poem() {
     "가도록 그냥 두세요"
   ]
   poem5 = [
-    "별은 너에게로",
-    "박노해",
-    "어두운 길을 걷다가",
-    "빛나는 별 하나 없다고",
-    "절망하지 말아라",
-    " ",
-    " ",
-    "가장 빛나는 별은 아직",
-    "도달하지 않았다",
-    " ",
-    " ",
-    "구름 때문이 아니다",
-    "불운 때문이 아니다",
-    " ",
-    " ",
-    "지금까지 네가 본 별들은",
-    "수억 광년 전에 출발한 빛",
-    " ",
-    " ",
-    "길 없는 어둠을 걷다가",
-    "별의 지도마저 없다고",
-    "주저앉지 말아라",
-    " ",
-    " ",
-    "가장 빛나는 별은 지금",
-    "간절하게 길을 찾는 너에게로",
-    "빛의 속도로 달려오고 있으니"
-  ]
-  poem6 = [
     "하루",
     "정용관",
     "기나긴 하루가 또 갑니다",
@@ -140,7 +111,7 @@ function poem() {
     "시간을 속인 해님 달님이",
     "서로 마주 보고 쓸쓸히 웃고 있습니다"
   ]
-  poem7 = [
+  poem6 = [
     "나를 키우는 말",
     "이해인",
     "행복하다고 말하는 동안은",
@@ -159,7 +130,7 @@ function poem() {
     "좋은 말이 나를 키우는 걸",
     "나는 말하면서 다시 알지"
   ]
-  poem8 = [
+  poem7 = [
     "그날",
     "곽효환",
     "그날 텔레비전 앞에서 늦은 저녁을 먹다가",
@@ -171,7 +142,7 @@ function poem() {
     " ",
     "그 밤, 다시 견디는 힘을 배우기로 했다"
   ]
-  poem9 = [
+  poem8 = [
     "그대 지친 하루 기대고 싶은 날엔",
     "김춘경",
     "사랑하는 사람아",
@@ -199,7 +170,7 @@ function poem() {
     "아름다운 사람아..."
   ]
 
-  randName = [poem0, poem1, poem2, poem3, poem4, poem5, poem6, poem7, poem8, poem9]
+  randName = [poem0, poem1, poem2, poem3, poem4, poem5, poem6, poem7, poem8]
   randomNum = randName[Math.floor(Math.random() * 9)]
   $("#poemTitle").text(randomNum[0]);
   $("#writer").text(randomNum[1]);
@@ -216,29 +187,3 @@ function poem() {
 
 
 }
-
-// $(window).scroll(function(){
-//   $("#poemTitle").text(poem1[0]);
-// });
-
-// $(window).scroll(function(){
-//   $("#writer").text(poem1[1]);
-// });
-
-// $(window).scroll(function(){
-//   for (i=2; (i<poem1.length-2); i++){
-//     id_name = "content" + i
-//     console.log(id_name)
-//     content_name = poem1[i]
-//     $("#id_name").text(content_name);
-//   }
-  
-// });
-
-// for (i=2; (i<poem1.length-2); i++){
-//   var id_name = document.getElementById(i)
-//   id_name.innerText = poem1[i]
-// }
-// $("#poemTitle").text(poem1[0]);
-// $("#writer").text(poem1[1]);
-// }

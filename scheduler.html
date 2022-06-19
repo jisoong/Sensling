@@ -85,7 +85,6 @@
         flex-direction: column;
         margin-top: 3vh;
         margin-left: 11vw;
-        align-items: center;
         justify-content: center;
     }
     #timer{
@@ -106,9 +105,9 @@
     }
     .sticker{
         width: 4vw; 
-        height: auto; 
+        height: auto;    
         margin-top: 1vw;
-        clear: both; 
+        /* clear: both;  */
     }
     #diary_date{
       text-align:right; 
@@ -178,7 +177,6 @@
 <body>
     <div id = "title" style="font-size: 1vw; top: 5vw; margin-right: 5vw; font-family: 'Nanum Myeongjo', serif;"> My daily routine</div>
     <div id="myCanvas" style="width:35%;height:650px;float:left" ></div>
-    
     <section id="diary">
         <div id="diary_date"> </div>
         <hr align="right" style="width: 30vw; margin-right: 2vw;">
@@ -198,7 +196,7 @@
         </section>
         <section style="display: flex; flex-direction:column;">
             <div style="margin-top: 3vh; margin-left: -10vw; font-size: 1vw; font-family: 'Nanum Myeongjo', serif;"> Drag and Drop Stickers</div>
-            <div id="imageBox">
+            <div id="imageBox" ondrop="drop(event)" ondragover="allowDrop(event)">
                 <section>
                     <img class="sticker" id="drag1" src="images/sticker/sticker1.png" draggable="true" ondragstart="drag(event)">
                     <img class="sticker" id="drag2" src="images/sticker/sticker2.png" draggable="true" ondragstart="drag(event)">
@@ -312,8 +310,7 @@ function setClock(){
         div = div[0]
         html2canvas(div).then(function(canvas){
             var myImage = canvas.toDataURL();
-            downloadURI(myImage, "diary.png");
-            myImage.crossOrigin = 'Anonymous'; 
+            downloadURI(myImage, "diary.png") 
         });
     }
 

@@ -28,7 +28,7 @@ function showImage(){
 
   var objImg4 = document.getElementById("randImg4");
   objImg4.src = 'images/'+ randName + '/' + randImg4 + '.jpg';
-
+  
   var bgm = document.getElementById("bgm");
   bgm.src = 'sounds/'+ randName + '.mp3';
   bgm.play()
